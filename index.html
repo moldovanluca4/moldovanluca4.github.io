@@ -3,396 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - CS Student & Researcher</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Optional: Font Awesome for icons -->
+    <title>Luca Moldovan - Computer Science Student & Research Intern</title>
+    <meta name="description" content="Computer Science student at Constructor University, Research Intern at University of Calgary, IBM Z Student Ambassador">
+    <link rel="stylesheet" href="css/cv-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Your Name</div>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="files/cv.pdf" target="_blank" class="btn-cv">CV</a></li>
-            </ul>
-            <!-- Mobile menu toggle -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <!-- Print Button -->
+    <button onclick="window.print()" class="print-btn no-print">
+        <i class="fas fa-print"></i> Print CV
+    </button>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="images/profile.jpg" alt="Your Name" class="profile-img">
-                <h1>Your Name</h1>
-                <p class="subtitle">Computer Science Student | Research Intern | Scholarship Winner</p>
-                <p class="bio">
-                    Passionate about [Your Research Interest]. Currently conducting research at 
-                    [University Name], Canada, focusing on [Brief Research Area].
-                </p>
-                <div class="social-links">
-                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://scholar.google.com/yourid" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+    <div class="cv-container">
+        
+        <!-- ===== HEADER ===== -->
+        <header class="cv-header">
+            <div class="header-content">
+                <h1>Luca Moldovan</h1>
+                <p class="tagline">Computer Science Student | Research Intern | former IBM Z Student Ambassador</p>
+                
+                <div class="contact-info">
+                    <span><i class="fas fa-envelope"></i> moldovanluca1605@gmail.com</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Bremen, Germany</span>
                 </div>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="files/cv.pdf" target="_blank" class="btn btn-secondary">Download CV</a>
+                
+                <div class="links">
+                    <a href="https://github.com/moldovanluca4" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/luca-moldovan" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="files/cv.pdf" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Download CV
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Highlights Section -->
-    <section id="highlights" class="highlights">
-        <div class="container">
-            <h2 class="section-title">Highlights</h2>
-            <div class="highlights-grid">
-                <div class="highlight-card">
-                    <i class="fas fa-flask"></i>
-                    <h3>Research Intern</h3>
-                    <p>[University Name], Canada</p>
-                    <span class="year">2024</span>
-                </div>
-                <div class="highlight-card">
-                    <i class="fas fa-trophy"></i>
-                    <h3>Scholarship Winner</h3>
-                    <p>[Scholarship Name]</p>
-                    <span class="year">2024</span>
-                </div>
-                <div class="highlight-card">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Industry Internship</h3>
-                    <p>[Company Name]</p>
-                    <span class="year">2023</span>
-                </div>
-                <div class="highlight-card">
-                    <i class="fas fa-globe"></i>
-                    <h3>International Experience</h3>
-                    <p>[Countries/Programs]</p>
-                    <span class="year">Multiple</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a Computer Science student with a strong passion for [Your Research Area]. 
-                        My academic journey has been enriched by diverse international experiences and 
-                        hands-on research opportunities.
-                    </p>
-                    <p>
-                        Currently, I am a research intern at [University Name] in Canada, where I am 
-                        working on [Brief Description of Research]. This position was awarded through 
-                        the competitive [Scholarship Name] program.
-                    </p>
-                    <p>
-                        My research interests include:
-                    </p>
-                    <ul class="research-interests">
-                        <li>Research Interest 1</li>
-                        <li>Research Interest 2</li>
-                        <li>Research Interest 3</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
+        <!-- ===== TWO COLUMN LAYOUT ===== -->
+        <div class="cv-body">
             
-            <!-- Experience Item 1 -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3>Research Intern</h3>
-                        <p class="company">[University Name] | [City, Country]</p>
-                    </div>
-                    <span class="date">Month Year - Present</span>
-                </div>
-                <div class="experience-content">
-                    <p class="description">
-                        Brief description of your research work (2-3 sentences). Focus on the problem, 
-                        your approach, and impact.
-                    </p>
-                    <ul class="achievements">
-                        <li>Key achievement or contribution #1 with metrics if possible</li>
-                        <li>Key achievement or contribution #2</li>
-                        <li>Technologies/methods used: Python, TensorFlow, etc.</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Research</span>
-                    </div>
-                    <!-- Optional: Link to detailed page -->
-                    <!-- <a href="projects/research-project.html" class="read-more">Read more →</a> -->
-                </div>
-            </div>
-
-            <!-- Experience Item 2 -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3>Software Engineering Intern</h3>
-                        <p class="company">[Company Name] | [City, Country]</p>
-                    </div>
-                    <span class="date">Month Year - Month Year</span>
-                </div>
-                <div class="experience-content">
-                    <p class="description">
-                        Brief description of your industry internship work.
-                    </p>
-                    <ul class="achievements">
-                        <li>Achievement #1 (e.g., "Improved system performance by 30%")</li>
-                        <li>Achievement #2</li>
-                        <li>Technologies: Java, Spring Boot, AWS, etc.</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">Backend Development</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">AWS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Experience Item 3 - International Experience -->
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <h3>[Program/Position Name]</h3>
-                        <p class="company">[Organization] | [Country]</p>
-                    </div>
-                    <span class="date">Month Year - Month Year</span>
-                </div>
-                <div class="experience-content">
-                    <p class="description">
-                        Brief description of international experience.
-                    </p>
-                    <ul class="achievements">
-                        <li>Key learning or achievement</li>
-                        <li>Skills developed</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Selected Projects</h2>
-            <div class="projects-grid">
+            <!-- LEFT COLUMN (Main Content) -->
+            <div class="cv-main">
                 
-                <!-- Project Card 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <!-- Optional: Add project screenshot -->
-                        <img src="images/project1.jpg" alt="Project 1">
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Title 1</h3>
-                        <p class="project-description">
-                            Brief description of the project (1-2 sentences). What problem did it solve?
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">React</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yourusername/project1" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <!-- Optional: Link to detailed project page -->
-                            <!-- <a href="projects/project1.html">Details →</a> -->
-                        </div>
-                    </div>
-                </div>
+                <!-- About / Summary -->
+                <section class="cv-section">
+                    <h2><i class="fas fa-user"></i> About Me</h2>
+                    <p class="detail">
+                        Driven by curiosity and a passion for technology, I'm a Computer Science student at Constructor University 
+                        and an IBM Z Student Ambassador focused on turning ideas into real, impactful solutions. I'm building my 
+                        expertise in software development, mainframe systems, and cloud computing, with hands-on experience in C, 
+                        C++, Python, HTML, CSS, SQL, Rust, and Kotlin.
+                    </p>
+                    <p class="detail">
+                        Currently conducting research at the University of Calgary while serving as a Teaching Assistant for 
+                        Elements of Calculus at Constructor University. I'm eager to apply my skills in dynamic tech environments, 
+                        contributing to innovative projects and continuing to grow as a developer and problem solver.
+                    </p>
+                </section>
 
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project2.jpg" alt="Project 2">
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Title 2</h3>
-                        <p class="project-description">
-                            Brief description of the project.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yourusername/project2" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://demo-link.com" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Research Interests -->
+                <section class="cv-section">
+                    <h2><i class="fas fa-lightbulb"></i> Research & Focus Areas</h2>
+                    <ul class="interests-list">
+                        <li>Software Development & Engineering</li>
+                        <li>Mainframe & Enterprise Computing</li>
+                        <li>Cloud Computing Technologies</li>
+                        <li>System Administration & Architecture</li>
+                    </ul>
+                </section>
 
-                <!-- Project Card 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project3.jpg" alt="Project 3">
+                <!-- Education -->
+                <section class="cv-section">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    
+                    <div class="cv-item">
+                        <div class="item-header">
+                            <div>
+                                <h3>Bachelor of Science in Computer Science</h3>
+                                <p class="institution">Constructor University, Bremen, Germany</p>
+                            </div>
+                            <span class="date">Sep 2024 - Jun 2027</span>
+                        </div>
+                        <p class="detail"><strong>Current Role:</strong> Teaching Assistant - Elements of Calculus (Feb 2026 - Present)</p>
+                        <p class="detail"><strong>Leadership:</strong> College Representative (Dec 2024 - Jul 2025)</p>
                     </div>
-                    <div class="project-content">
-                        <h3>Project Title 3</h3>
-                        <p class="project-description">
-                            Brief description of the project.
+
+                    <div class="cv-item">
+                        <div class="item-header">
+                            <div>
+                                <h3>High School Diploma - Mathematics & Computer Science</h3>
+                                <p class="institution">Colegiul National Alexandru Papiu Ilarian, Romania</p>
+                            </div>
+                            <span class="date">Sep 2020 - Jun 2024</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Research & Professional Experience -->
+                <section class="cv-section">
+                    <h2><i class="fas fa-flask"></i> Research & Professional Experience</h2>
+                    
+                    <div class="cv-item">
+                        <div class="item-header">
+                            <div>
+                                <h3>Research Intern</h3>
+                                <p class="institution">University of Calgary, Calgary, AB, Canada</p>
+                            </div>
+                            <span class="date">Jun 2026 - Present</span>
+                        </div>
+                        <ul class="achievements">
+                            <li>Conducting research in [your research area - update with specifics]</li>
+                            <li>Collaborating with international research team on [project details]</li>
+                            <li>Applying advanced computer science concepts to real-world problems</li>
+                        </ul>
+                        <a href="research.html" class="detail-link">
+                            → View detailed research description
+                        </a>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="item-header">
+                            <div>
+                                <h3>Summer Internship</h3>
+                                <p class="institution">Living Mainframe GmbH, Böblingen, Germany</p>
+                            </div>
+                            <span class="date">Jun 2025</span>
+                        </div>
+                        <ul class="achievements">
+                            <li>Gained hands-on experience building and developing software tools for enterprise clients</li>
+                            <li>Contributed to real projects in enterprise computing and mainframe systems</li>
+                            <li>Collaborated with skilled professionals in team meetings and development workflows</li>
+                            <li>Strengthened technical problem-solving, communication, and teamwork skills</li>
+                            <li><strong>Technologies:</strong> Enterprise computing systems, mainframe development tools</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <div class="item-header">
+                            <div>
+                                <h3>IBM Z Student Ambassador</h3>
+                                <p class="institution">IBM Z Student Ambassador Program, Constructor University</p>
+                            </div>
+                            <span class="date">Mar 2025 - Present</span>
+                        </div>
+                        <ul class="achievements">
+                            <li>Represent IBM Z and mainframe technology on campus, promoting awareness and fostering learning community</li>
+                            <li>Earned IBM Z Concepts and Advanced badges through technical training</li>
+                            <li>Organized and facilitated technical workshops and events for students</li>
+                            <li>Lead dedicated mainframe club to encourage continuous learning and collaboration</li>
+                            <li>Connected with industry professionals, gaining insights into mainframe ecosystem</li>
+                        </ul>
+                    </div>
+
+                    <a href="experience.html" class="detail-link">
+                        → View full work experience
+                    </a>
+                </section>
+
+                <!-- Leadership & International Experience -->
+                <section class="cv-section">
+                    <h2><i class="fas fa-users"></i> Leadership & International Experience</h2>
+                    
+                    <div class="cv-item compact">
+                        <div class="item-header">
+                            <div>
+                                <h3>Workshop Coordinator - Erasmus+ "Mindful Living"</h3>
+                                <p class="institution">Landessportjugend Sachsen-Anhalt, Saxony, Germany</p>
+                            </div>
+                            <span class="date">Jul 2025</span>
+                        </div>
+                        <p class="detail">
+                            Coordinated "Digital Detox & Self-Management" workshop across 5 sessions with students from 
+                            Latvia, Lithuania, Czech Republic, Hungary, Poland, Germany, and Romania. Focused on self-management 
+                            tools, study habits, screen time reduction, and cross-cultural collaboration.
                         </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">ROS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/yourusername/project3" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
                     </div>
-                </div>
+
+                    <div class="cv-item compact">
+                        <div class="item-header">
+                            <div>
+                                <h3>Workshop Coordinator - Erasmus+ "Young Digitals"</h3>
+                                <p class="institution">Landessportjugend Sachsen-Anhalt, Saxony, Germany</p>
+                            </div>
+                            <span class="date">Jul 2024</span>
+                        </div>
+                        <p class="detail">
+                            Coordinated "Digitalization in the World of Sports" workshop over 5 sessions with international students. 
+                            Explored performance trackers, sport apps, and digital transformation in athletics. Led team in creating 
+                            collaborative website documenting workshop experience.
+                        </p>
+                    </div>
+
+                    <div class="cv-item compact">
+                        <div class="item-header">
+                            <div>
+                                <h3>College Representative</h3>
+                                <p class="institution">Constructor University, Bremen, Germany</p>
+                            </div>
+                            <span class="date">Dec 2024 - Jul 2025</span>
+                        </div>
+                        <p class="detail">
+                            Served as Student Representative for College 3 residents. Acted as liaison between students, 
+                            university staff, and residential life managers. Collaborated with representatives from other 
+                            colleges to improve campus life and student well-being.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Projects & Hackathons -->
+                <section class="cv-section">
+                    <h2><i class="fas fa-code"></i> Projects & Hackathons</h2>
+                    
+                    <div class="cv-item compact">
+                        <div class="item-header">
+                            <div>
+                                <h3>BMW Group x Constructor University Hackathon</h3>
+                            </div>
+                            <span class="tech-tags">Nov 2024</span>
+                        </div>
+                        <p class="detail">
+                            Participated in collaborative hackathon with BMW Group, working on innovative solutions 
+                            and gaining exposure to industry challenges and team-based problem solving.
+                        </p>
+                    </div>
+
+                    <div class="cv-item compact">
+                        <div class="item-header">
+                            <div>
+                                <h3>[Add Your Personal Projects Here]</h3>
+                            </div>
+                            <span class="tech-tags">C++ • Python • Rust</span>
+                        </div>
+                        <p class="detail">Brief description of your personal coding projects, GitHub repositories, etc.</p>
+                        <a href="https://github.com/yourusername" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+
+                    <a href="projects.html" class="detail-link">
+                        → View all projects with detailed descriptions
+                    </a>
+                </section>
+
+                <!-- Certifications -->
+                <section class="cv-section">
+                    <h2><i class="fas fa-certificate"></i> Certifications & Achievements</h2>
+                    
+                    <div class="cv-item compact">
+                        <ul class="achievements">
+                            <li><strong>IBM Z XPLORE - Advanced</strong> - IBM</li>
+                            <li><strong>IBM Z XPLORE - Concepts</strong> - IBM</li>
+                            <li><strong>Cloud Computing: Understanding Core Concepts</strong></li>
+                            <li><strong>Automations with AI: Build Agents that Sense, Decide, and Act to Automate Real Tasks</strong></li>
+                        </ul>
+                    </div>
+                </section>
 
             </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Education</h2>
-            <div class="skills-grid">
+            <!-- RIGHT COLUMN (Sidebar) -->
+            <div class="cv-sidebar">
                 
+                <!-- Profile Photo -->
+                <div class="profile-section">
+                    <img src="images/profile.jpg" alt="Luca Moldovan" class="profile-photo">
+                </div>
+
+                <!-- Quick Stats -->
+                <section class="sidebar-section">
+                    <h3>At a Glance</h3>
+                    
+                    <div class="stat-item">
+                        <i class="fas fa-flask"></i>
+                        <div>
+                            <strong>Research Intern</strong>
+                            <p>University of Calgary</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <strong>IBM Z Ambassador</strong>
+                            <p>Since March 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>International Experience</strong>
+                            <p>7+ countries</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <div>
+                            <strong>Teaching Assistant</strong>
+                            <p>Elements of Calculus</p>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Technical Skills -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>Java</span>
-                        <span>C++</span>
-                        <span>JavaScript</span>
-                        <span>SQL</span>
+                <section class="sidebar-section">
+                    <h3>Technical Skills</h3>
+                    
+                    <div class="skill-group">
+                        <h4>Programming Languages</h4>
+                        <div class="skill-tags">
+                            <span>C</span>
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>Rust</span>
+                            <span>Kotlin</span>
+                            <span>SQL</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Frameworks & Tools -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Frameworks & Tools</h3>
-                    <div class="skill-tags">
-                        <span>TensorFlow</span>
-                        <span>PyTorch</span>
-                        <span>React</span>
-                        <span>Spring Boot</span>
-                        <span>Git</span>
-                        <span>Docker</span>
+                    <div class="skill-group">
+                        <h4>Web Technologies</h4>
+                        <div class="skill-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Research Skills -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-flask"></i> Research & Methods</h3>
-                    <div class="skill-tags">
-                        <span>Machine Learning</span>
-                        <span>Data Analysis</span>
-                        <span>Statistical Modeling</span>
-                        <span>Literature Review</span>
+                    <div class="skill-group">
+                        <h4>Specialized Areas</h4>
+                        <div class="skill-tags">
+                            <span>Mainframe Systems</span>
+                            <span>Cloud Computing</span>
+                            <span>System Administration</span>
+                            <span>Enterprise Computing</span>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="skill-group">
+                        <h4>Mathematics</h4>
+                        <div class="skill-tags">
+                            <span>Calculus</span>
+                            <span>Computer Science Theory</span>
+                        </div>
+                    </div>
+                </section>
 
                 <!-- Languages -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-language"></i> Languages</h3>
-                    <div class="skill-tags">
-                        <span>English (Fluent)</span>
-                        <span>Language 2</span>
-                        <span>Language 3</span>
-                    </div>
-                </div>
+                <section class="sidebar-section">
+                    <h3>Languages</h3>
+                    <ul class="simple-list">
+                        <li><strong>English:</strong> Native/Bilingual</li>
+                        <li><strong>Romanian:</strong> Native/Bilingual</li>
+                        <li><strong>Italian:</strong> Professional Working</li>
+                        <li><strong>German:</strong> Elementary</li>
+                        <li><strong>Romansh:</strong> Limited Working</li>
+                        <li><strong>Aromână:</strong> Elementary</li>
+                    </ul>
+                </section>
+
+                <!-- Key Strengths -->
+                <section class="sidebar-section">
+                    <h3>Key Strengths</h3>
+                    <ul class="simple-list">
+                        <li>Technical Problem-Solving</li>
+                        <li>Cross-Cultural Communication</li>
+                        <li>Workshop Facilitation</li>
+                        <li>Team Collaboration</li>
+                        <li>Leadership & Advocacy</li>
+                        <li>Community Building</li>
+                    </ul>
+                </section>
+
+                <!-- Interests -->
+                <section class="sidebar-section">
+                    <h3>Professional Interests</h3>
+                    <ul class="simple-list">
+                        <li>Mainframe Technology</li>
+                        <li>Enterprise Systems</li>
+                        <li>Software Development</li>
+                        <li>Cloud Architecture</li>
+                        <li>Digital Transformation</li>
+                        <li>International Collaboration</li>
+                    </ul>
+                </section>
 
             </div>
 
-            <!-- Education -->
-            <div class="education">
-                <h3 class="subsection-title">Education</h3>
-                <div class="education-item">
-                    <div class="education-header">
-                        <div>
-                            <h4>Bachelor of Science in Computer Science</h4>
-                            <p>[University Name] | [City, Country]</p>
-                        </div>
-                        <span class="date">Expected Graduation: Month Year</span>
-                    </div>
-                    <p class="gpa">GPA: X.XX/4.0</p>
-                    <p><strong>Relevant Coursework:</strong> Machine Learning, Algorithms, Data Structures, 
-                    Database Systems, Software Engineering, etc.</p>
-                </div>
-            </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-intro">
-                I'm currently seeking opportunities for graduate studies in [Your Field]. 
-                Feel free to reach out if you'd like to discuss research collaborations or have any questions.
+        <!-- ===== FOOTER ===== -->
+        <footer class="cv-footer no-print">
+            <p>Last updated: <span id="last-updated"></span></p>
+            <p class="footer-links">
+                <a href="research.html">Research Details</a> • 
+                <a href="projects.html">Project Portfolio</a> • 
+                <a href="experience.html">Full Experience</a> • 
+                <a href="files/cv.pdf" target="_blank">Download PDF</a>
             </p>
-            <div class="contact-methods">
-                <a href="mailto:your.email@example.com" class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>your.email@example.com</p>
-                </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-card">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <p>Connect with me</p>
-                </a>
-                <a href="https://github.com/yourusername" target="_blank" class="contact-card">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p>View my code</p>
-                </a>
-            </div>
-        </div>
-    </section>
+            <p class="footer-note">
+                <i class="fas fa-info-circle"></i> 
+                Seeking opportunities for internships and graduate studies in Computer Science. 
+                Open to collaborations in software development, mainframe systems, and cloud computing.
+            </p>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
-            <p>Last updated: Month Year</p>
-        </div>
-    </footer>
+    </div>
 
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
