@@ -2,11 +2,15 @@
 
 // ===== TYPING EFFECT =====
 const roles = [
-    "Full-Stack Developer",
+    "Software Engineer",
     "Research Intern",
-    "IBM Z Ambassador",
     "Teaching Assistant",
-    "Problem Solver"
+    "Problem Solver",
+    "Fast Learner",
+    "Operating Systems Enthusiast",
+    "Homelabbing Fanatic",
+    "Triathlete"
+
 ];
 
 let roleIndex = 0;
