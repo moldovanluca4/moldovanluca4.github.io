@@ -267,6 +267,135 @@ function debounce(func, wait = 10, immediate = true) {
     };
 }
 
+// ===== ANTI-SCRAPING & SCREENSHOT PROTECTION =====
+
+// Disable right-click
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    return false;
+});
+
+// Disable specific keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    if (
+        e.keyCode === 123 || // F12
+        (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
+        (e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
+        (e.ctrlKey && e.keyCode === 85) || // Ctrl+U
+        (e.ctrlKey && e.shiftKey && e.keyCode === 67) || // Ctrl+Shift+C
+        (e.metaKey && e.altKey && e.keyCode === 73) || // Cmd+Option+I (Mac)
+        (e.metaKey && e.altKey && e.keyCode === 74) // Cmd+Option+J (Mac)
+    ) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Print Screen
+    if (e.keyCode === 44) {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Detect DevTools
+(function() {
+    const devtools = /./;
+    devtools.toString = function() {
+        this.opened = true;
+    };
+    
+    const checkDevTools = setInterval(() => {
+        console.log('%c', devtools);
+        if (devtools.opened) {
+            // Optional: Redirect or show warning
+            // window.location.href = 'about:blank';
+        }
+        devtools.opened = false;
+    }, 1000);
+})();
+
+// Disable drag and drop for images
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.setAttribute('draggable', 'false');
+        img.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+            return false;
+        });
+    });
+});
+
+// Detect screenshot attempts (Windows/Mac)
+document.addEventListener('keyup', (e) => {
+    // Print Screen detection
+    if (e.key === 'PrintScreen') {
+        navigator.clipboard.writeText('');
+        alert('Screenshots are disabled on this website.');
+    }
+});
+
+// Blur content when window loses focus (screenshot protection)
+let blurTimeout;
+window.addEventListener('blur', () => {
+    blurTimeout = setTimeout(() => {
+        document.body.style.filter = 'blur(5px)';
+    }, 100);
+});
+
+window.addEventListener('focus', () => {
+    clearTimeout(blurTimeout);
+    document.body.style.filter = 'none';
+});
+
+// Watermark protection for screenshots
+function addDynamicWatermark() {
+    const watermark = document.createElement('div');
+    watermark.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        font-size: 100px;
+        color: rgba(37, 99, 235, 0.05);
+        pointer-events: none;
+        z-index: 9998;
+        white-space: nowrap;
+        user-select: none;
+    `;
+    watermark.textContent = 'LUCA MOLDOVAN © ' + new Date().getFullYear();
+    document.body.appendChild(watermark);
+}
+
+// Add watermark on load
+document.addEventListener('DOMContentLoaded', addDynamicWatermark);
+
+// Disable text selection for scraping protection (already in CSS, but adding JS backup)
+document.onselectstart = function() {
+    return false;
+};
+
+// Detect and prevent automated scraping
+let mouseMovements = 0;
+document.addEventListener('mousemove', () => {
+    mouseMovements++;
+});
+
+setInterval(() => {
+    if (mouseMovements === 0) {
+        // Possible bot detected
+        console.log('Suspicious activity detected');
+    }
+    mouseMovements = 0;
+}, 5000);
+
+// Console warning message
+console.log('%cSTOP!', 'color: red; font-size: 50px; font-weight: bold;');
+console.log('%cThis is a browser feature intended for developers.', 'font-size: 20px;');
+console.log('%cIf someone told you to copy-paste something here, it is a scam.', 'font-size: 16px;');
+console.log('%c© ' + new Date().getFullYear() + ' Luca Moldovan. All rights reserved.', 'font-size: 14px; color: #2563eb;');
+
 // Apply debounce to scroll-heavy functions
 window.addEventListener('scroll', debounce(highlightNavigation));
 

@@ -12,8 +12,67 @@
     <meta property="og:description" content="Computer Science student & Research Intern specializing in software development, computational methods and operating systems">
     <meta property="og:type" content="website">
     
+    <!-- Anti-scraping meta tags -->
+    <meta name="robots" content="noarchive">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
     <link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Disable text selection */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* Allow selection only for form inputs */
+        input, textarea {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+        
+        /* Prevent right-click context menu on images */
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+        }
+        
+        /* Watermark overlay for screenshot protection */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 100px,
+                rgba(37, 99, 235, 0.02) 100px,
+                rgba(37, 99, 235, 0.02) 200px
+            );
+        }
+        
+        /* Print protection */
+        @media print {
+            body {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 <body>
     
@@ -91,7 +150,7 @@
                         <p><span class="terminal-prompt">moldovanluca4@fedora:~$</span> cat skills.txt</p>
                         <p class="terminal-output">Languages: C, C++, Python, Rust, Kotlin</p>
                         <p class="terminal-output">Focus: Software Engineering, Cloud Computing, Operating Systems, Deep Learning</p>
-                        <p class="terminal-output">Status: Learning as much as I can </p>
+                        <p class="terminal-output">Status: Learning as much as I can</p>
                         <p><span class="terminal-prompt">moldovanluca4@fedora:~$</span> <span class="terminal-cursor-blink">_</span></p>
                     </div>
                 </div>
@@ -131,12 +190,9 @@
                     </p>
                     <p>
                         I'm building my expertise in software development, operating systems, and bioinformatics, 
-                        with hands-on experience in <strong>C, C++, Python, Rust, and Kotlin</strong>.
+                        with hands-on experience in <strong>C, C++, Python</strong>.
                     </p>
-                    <p>
-                        Currently conducting research at the <strong>University of Calgary</strong> while serving 
-                        as a Teaching Assistant for Elements of Calculus at Constructor University.
-                    </p>
+                   
                     
                     <div class="about-stats">
                         <div class="stat-card">
@@ -146,8 +202,8 @@
                         </div>
                         <div class="stat-card">
                             <i class="fas fa-trophy"></i>
-                            <h3>IBM Z Ambassador</h3>
-                            <p>Since March 2025</p>
+                            <h3>Former IBM Z Ambassador</h3>
+                            <p>Mar 2025 - Present</p>
                         </div>
                         <div class="stat-card">
                             <i class="fas fa-globe"></i>
@@ -164,7 +220,7 @@
                 
                 <div class="about-image">
                     <div class="image-wrapper">
-                        <img src="images/profile.jpg" alt="Luca Moldovan">
+                        <img src="images/luca.jpeg" alt="Luca Moldovan" draggable="false" oncontextmenu="return false;">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
@@ -281,36 +337,17 @@
                         <h3>Research Intern</h3>
                         <h4>University of Calgary, Calgary, AB, Canada</h4>
                         <ul>
-                            <li>Conducting advanced research in computer science applications</li>
-                            <li>Collaborating with international research team on innovative projects</li>
+                            <li>Conducting advanced research in genomics and bioinformatics</li>
+                            <li>Collaborating with international research team on innovative projects in Bioinformatics</li>
                             <li>Applying theoretical concepts to solve real-world problems</li>
+                            <li>Learning representations of genomics data to characterize biology and predict diseases</li>
                         </ul>
                         <div class="tech-stack">
                             <span>Research</span>
                             <span>Data Analysis</span>
-                            <span>Academic Writing</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- IBM Z Ambassador -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Mar 2025 - Present</span>
-                        <h3>IBM Z Student Ambassador</h3>
-                        <h4>IBM Z Student Ambassador Program, Constructor University</h4>
-                        <ul>
-                            <li>Represent IBM Z and mainframe technology on campus</li>
-                            <li>Earned IBM Z Concepts and Advanced badges through technical training</li>
-                            <li>Organized technical workshops and events for students</li>
-                            <li>Lead dedicated mainframe club fostering continuous learning</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span>IBM Z</span>
-                            <span>Mainframe</span>
-                            <span>Leadership</span>
-                            <span>Community Building</span>
+                            <span>Genomics</span>
+                            <span>Deep Learning</span>
+                            <span>Python</span>
                         </div>
                     </div>
                 </div>
@@ -327,11 +364,14 @@
                             <li>Contributed to real projects in enterprise computing and mainframe systems</li>
                             <li>Collaborated with professionals in development workflows</li>
                             <li>Strengthened technical problem-solving and teamwork skills</li>
+                            <li>Gained hands-on experience with IBM Z/OS and mainframe development</li>
                         </ul>
                         <div class="tech-stack">
+                            <span>IBM Z/OS</span>
                             <span>Enterprise Computing</span>
                             <span>Mainframe Development</span>
                             <span>Software Engineering</span>
+                            <span>C Programming</span>
                         </div>
                     </div>
                 </div>
@@ -344,14 +384,40 @@
                         <h3>Teaching Assistant - Elements of Calculus</h3>
                         <h4>Constructor University, Bremen, Germany</h4>
                         <ul>
-                            <li>Assist students in understanding calculus concepts</li>
-                            <li>Conduct tutorial sessions and office hours</li>
-                            <li>Grade assignments and provide constructive feedback</li>
+                            <li>Assist students in understanding calculus concepts and problem-solving techniques</li>
+                            <li>Conduct tutorial sessions and office hours for personalized support</li>
+                            <li>Grade assignments and provide constructive feedback to enhance learning</li>
+                            <li>Develop supplementary materials to clarify complex mathematical topics</li>
                         </ul>
                         <div class="tech-stack">
                             <span>Mathematics</span>
+                            <span>Calculus</span>
                             <span>Teaching</span>
                             <span>Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- IBM Z Ambassador -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Mar 2025 - Present</span>
+                        <h3>IBM Z Student Ambassador</h3>
+                        <h4>IBM Z Student Ambassador Program, Constructor University</h4>
+                        <ul>
+                            <li>Represent IBM Z and mainframe technology on campus, promoting awareness</li>
+                            <li>Earned IBM Z Concepts and Advanced badges through technical training</li>
+                            <li>Organized and facilitated technical workshops and events for students</li>
+                            <li>Lead dedicated mainframe club fostering continuous learning and collaboration</li>
+                            <li>Connected with industry professionals to gain insights into mainframe ecosystem</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>IBM Z</span>
+                            <span>Mainframe</span>
+                            <span>Leadership</span>
+                            <span>Community Building</span>
+                            <span>Technical Workshops</span>
                         </div>
                     </div>
                 </div>
@@ -368,10 +434,10 @@
             </h2>
             
             <div class="projects-grid">
-                <!-- Project 1: Portfolio Website -->
+                <!-- Project 1: Market Research Automation -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/project-portfolio.jpg" alt="Portfolio Website" onerror="this.src='https://via.placeholder.com/600x400/2563eb/ffffff?text=Portfolio+Website'">
+                        <img src="images/project-portfolio.jpg" alt="Market Research Automation" draggable="false" oncontextmenu="return false;" onerror="this.src='https://via.placeholder.com/600x400/2563eb/ffffff?text=Market+Research+AI'">
                         <div class="project-overlay">
                             <a href="#" class="project-link" target="_blank">
                                 <i class="fas fa-external-link-alt"></i>
@@ -385,13 +451,13 @@
                         <h3>Hackathon Winning Project - Market Research Automation Agent</h3>
                         <p>
                             Built an award-winning AI automation agent for market research that discovers EdTech/LMS competitors, extracts company websites from blogs and search results, and enriches the dataset with structured LinkedIn information such as company size, headquarters, industry, products, and specialties. The project also collects forum discussion links from platforms like Reddit and Quora to analyze authentic user opinions, complaints, pros, and cons. The final data is cleaned, consolidated into a SQLite master table, and prepared for integration with n8n workflows and Google Sheets.
-
                         </p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>Playwright</span>
                             <span>Pandas</span>
                             <span>SQLite</span>
+                            <span>AI Automation</span>
                         </div>
                     </div>
                 </div>
@@ -399,7 +465,7 @@
                 <!-- Project 2: Mainframe Project -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/project-mainframe.jpg" alt="Mainframe Project" onerror="this.src='https://via.placeholder.com/600x400/1e40af/ffffff?text=Mainframe+Project'">
+                        <img src="images/project-mainframe.jpg" alt="Mainframe Project" draggable="false" oncontextmenu="return false;" onerror="this.src='https://via.placeholder.com/600x400/1e40af/ffffff?text=Mainframe+Project'">
                         <div class="project-overlay">
                             <a href="#" class="project-link" target="_blank">
                                 <i class="fas fa-external-link-alt"></i>
@@ -410,26 +476,25 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Internship Project - Mainframe</h3>
+                        <h3>Internship Project - Mainframe Integration</h3>
                         <p>
-                           Built a Flask-based web application that integrates a C program into a Python workflow, processes the program’s output, stores the results in an SQLite database, and displays them through a web interface. The project was designed as a self-contained system where Flask acts as the middle layer between the C executable, the database, and the frontend, making the application feel like one cohesive software product rather than separate scripts. Through this project, I explored Flask, SQLite, SQL, Python-C integration, Linux runtime environments, and web interface design.
-
+                           Built a Flask-based web application that integrates a C program into a Python workflow, processes the program's output, stores the results in an SQLite database, and displays them through a web interface. The project was designed as a self-contained system where Flask acts as the middle layer between the C executable, the database, and the frontend, making the application feel like one cohesive software product rather than separate scripts. Through this project, I explored Flask, SQLite, SQL, Python-C integration, Linux runtime environments, and web interface design.
                         </p>
                         <div class="project-tech">
-                            <span>IBM Z/os</span>
-                            <span>C Programming Language</span>
+                            <span>IBM Z/OS</span>
+                            <span>C Programming</span>
                             <span>Python</span>
                             <span>Flask</span>
+                            <span>SQLite</span>
                             <span>Linux</span>
-                            
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 3: Research Project -->
+                <!-- Project 3: Database Project -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/project-research.jpg" alt="Research Project" onerror="this.src='https://via.placeholder.com/600x400/3b82f6/ffffff?text=Research+Project'">
+                        <img src="images/project-research.jpg" alt="Database Project" draggable="false" oncontextmenu="return false;" onerror="this.src='https://via.placeholder.com/600x400/3b82f6/ffffff?text=Database+Project'">
                         <div class="project-overlay">
                             <a href="#" class="project-link" target="_blank">
                                 <i class="fas fa-external-link-alt"></i>
@@ -440,24 +505,24 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>University Databases Project</h3>
+                        <h3>University Databases Project - Campus Information Center</h3>
                         <p>
                             Built the Campus Information Center (CIC) as part of the Fall 2025 Database course, a database-driven Flask web application for managing and visualizing a university campus ecosystem. The project focused on clean relational database design, using normalized SQL schemas and ISA hierarchies to model buildings, events, academic departments, lecture halls, research facilities, and campus personnel. The application combines a Flask backend, SQL database, and HTML/CSS/Jinja2 frontend to provide a structured platform for managing campus resources and academic information.
-
                         </p>
                         <div class="project-tech">
                             <span>Python</span>
-                            <span>HTML</span>
-                            <span>SQL</span>
                             <span>Flask</span>
+                            <span>SQL</span>
+                            <span>HTML/CSS</span>
+                            <span>Jinja2</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 4: Add Your Project -->
+                <!-- Project 4: Software Engineering -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/project-custom.jpg" alt="Custom Project" onerror="this.src='https://via.placeholder.com/600x400/10b981/ffffff?text=Your+Project'">
+                        <img src="images/project-custom.jpg" alt="Software Engineering Project" draggable="false" oncontextmenu="return false;" onerror="this.src='https://via.placeholder.com/600x400/10b981/ffffff?text=Software+Engineering'">
                         <div class="project-overlay">
                             <a href="#" class="project-link" target="_blank">
                                 <i class="fas fa-external-link-alt"></i>
@@ -468,15 +533,15 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>University Software Engineering Project</h3>
+                        <h3>University Software Engineering Project - Bug Simulator</h3>
                         <p>
                             This repository contains my contributions to the Software Engineering Spring 2026 course at Constructor University, where we work in a realistic industry-style environment with rotating teams, two-week sprints, rapid onboarding, and structured project handovers. The main objective of the course project is to build a real-life bug simulator with a proper professional user interface, while maintaining a clean, modular, and sustainable C++ codebase. My work focuses on contributing production-ready features, improving maintainability, writing clear documentation, and ensuring that future teams can easily understand and continue the project.
-
                         </p>
                         <div class="project-tech">
                             <span>C++</span>
-                            <span>Qt</span>
-                            <span>GUI</span>
+                            <span>Qt Framework</span>
+                            <span>GUI Development</span>
+                            <span>Agile/Scrum</span>
                         </div>
                     </div>
                 </div>
@@ -531,11 +596,11 @@
                     </div>
                     <h3>Hackathons & Events</h3>
                     <ul>
+                        <li>Constructor University x Constructor Tech Hackathon Winner</li>
+                        <li>Speaker at AMC Young Talents Mainframe Convention 2025</li>
                         <li>BMW Group x Constructor University Hackathon</li>
                         <li>IBM Z Student Ambassador Events - Technical Workshop Facilitation</li>
                         <li>International Erasmus+ Workshops</li>
-                        <li>Constructor University x Constructor Tech Hackathon Winner</li>
-                        <li>Speaker at AMC Young Talents Mainframe Convention 2025</li>
                     </ul>
                 </div>
             </div>
