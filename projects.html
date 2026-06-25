@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Luca Moldovan</title>
+    <meta name="description" content="Projects, homelab work, and future technical plans for Luca Moldovan.">
+    <meta name="robots" content="noarchive, noimageindex">
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="protected-page">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">LM<span class="terminal-cursor">_</span></a>
+            <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">CV</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li><a href="mailto:moldovanluca1605@gmail.com" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="detail-page protected-content">
+        <header class="detail-header">
+            <div class="container">
+                <p class="eyebrow">Projects</p>
+                <h1>Detailed work across automation, mainframe integration, databases, software engineering, and homelab systems.</h1>
+                <p>
+                    This page expands on the short CV summaries with more context about what I built, why each project mattered, and what I learned from the work.
+                </p>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container detail-grid">
+                <article class="detail-card">
+                    <i class="fas fa-robot"></i>
+                    <h2>Hackathon Winning Project - Market Research Automation Agent</h2>
+                    <p>
+                        Built an award-winning AI automation agent for market research that discovers EdTech/LMS competitors, extracts company websites from blogs and search results, and enriches the dataset with structured LinkedIn information such as company size, headquarters, industry, products, and specialties.
+                    </p>
+                    <p>
+                        The project also collects forum discussion links from platforms like Reddit and Quora to analyze authentic user opinions, complaints, pros, and cons. The final data is cleaned, consolidated into a SQLite master table, and prepared for integration with n8n workflows and Google Sheets.
+                    </p>
+                    <div class="compact-tags"><span>Python</span><span>Playwright</span><span>Pandas</span><span>SQLite</span><span>AI Automation</span></div>
+                    <a href="https://github.com/moldovanluca4/Automation-with-AI-Build-agents-that-sense-decide-and-act-to-automate-real-tasks" class="text-link" target="_blank" rel="noopener noreferrer">View repository <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="detail-card">
+                    <i class="fas fa-server"></i>
+                    <h2>Internship Project - Mainframe Integration</h2>
+                    <p>
+                        Built a Flask-based web application that integrates a C program into a Python workflow, processes the program's output, stores the results in an SQLite database, and displays them through a web interface.
+                    </p>
+                    <p>
+                        The project was designed as a self-contained system where Flask acts as the middle layer between the C executable, the database, and the frontend, making the application feel like one cohesive software product rather than separate scripts.
+                    </p>
+                    <div class="compact-tags"><span>IBM Z/OS</span><span>C</span><span>Python</span><span>Flask</span><span>SQLite</span><span>Linux</span></div>
+                    <a href="https://github.com/moldovanluca4/sqlite-flask-c-mainframe-proj/tree/main" class="text-link" target="_blank" rel="noopener noreferrer">View repository <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="detail-card">
+                    <i class="fas fa-database"></i>
+                    <h2>University Databases Project - Campus Information Center</h2>
+                    <p>
+                        Built the Campus Information Center as part of the Fall 2025 Database course, a database-driven Flask web application for managing and visualizing a university campus ecosystem.
+                    </p>
+                    <p>
+                        The project focused on clean relational database design, using normalized SQL schemas and ISA hierarchies to model buildings, events, academic departments, lecture halls, research facilities, and campus personnel.
+                    </p>
+                    <div class="compact-tags"><span>Python</span><span>Flask</span><span>SQL</span><span>HTML/CSS</span><span>Jinja2</span></div>
+                    <a href="https://github.com/moldovanluca4/Database-project" class="text-link" target="_blank" rel="noopener noreferrer">View repository <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="detail-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h2>University Software Engineering Project - Bug Simulator</h2>
+                    <p>
+                        Contributed to the Software Engineering Spring 2026 course project at Constructor University, working in a realistic industry-style environment with rotating teams, two-week sprints, rapid onboarding, and structured project handovers.
+                    </p>
+                    <p>
+                        The main objective is to build a real-life bug simulator with a proper professional user interface while maintaining a clean, modular, and sustainable C++ codebase.
+                    </p>
+                    <div class="compact-tags"><span>C++</span><span>Qt Framework</span><span>GUI Development</span><span>Agile/Scrum</span></div>
+                    <a href="https://github.com/moldovanluca4/Software-Engineering-Spring-2026" class="text-link" target="_blank" rel="noopener noreferrer">View repository <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="detail-section cv-muted" id="homelab">
+            <div class="container readable-grid">
+                <article class="detail-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h2>Home Lab</h2>
+                    <p>
+                        My homelab currently consists of a Raspberry Pi 5 running OMV, OpenMediaVault, a dedicated operating system that turns the board into a homemade network-attached server.
+                    </p>
+                    <p>
+                        Setting it up pushed me to research practical security and network security so I could keep personal documents safer and understand the operational side of running services at home.
+                    </p>
+                    <div class="compact-tags"><span>Raspberry Pi 5</span><span>OMV</span><span>NAS</span><span>Linux</span><span>Network Security</span></div>
+                </article>
+
+                <article class="detail-card">
+                    <i class="fas fa-diagram-project"></i>
+                    <h2>Future Projects</h2>
+                    <p>
+                        I plan to work on MentOS and Linux From Scratch to deepen my kernel and operating systems development skills. I also want to build more C++ and Rust projects to explore the capabilities, tradeoffs, and design patterns of both languages.
+                    </p>
+                    <p>
+                        These projects connect directly to my long-term interest in systems programming, operating systems, and building software that helps me understand computers below the surface level.
+                    </p>
+                    <div class="compact-tags"><span>MentOS</span><span>Linux From Scratch</span><span>C++</span><span>Rust</span><span>Operating Systems</span></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p class="footer-copyright">© <span id="currentYear"></span> Luca Moldovan. All rights reserved.</p></div>
+    </footer>
+    <div class="copy-warning" id="copyWarning" role="status" aria-live="polite">Content protection is active.</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

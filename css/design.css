@@ -275,6 +275,11 @@ textarea:focus-visible {
     color: var(--primary-color);
 }
 
+.timeline-content .text-link,
+.detail-card .text-link {
+    margin-top: var(--spacing-sm);
+}
+
 .cv-section,
 .detail-section {
     padding: var(--spacing-xl) 0;
