@@ -97,11 +97,61 @@ button {
     background: none;
 }
 
+.protected-page {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.protected-page input,
+.protected-page textarea {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+.protected-page img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.protected-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 120px,
+        rgba(37, 99, 235, 0.025) 120px,
+        rgba(37, 99, 235, 0.025) 240px
+    );
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 3px;
+}
+
 /* ===== UTILITY CLASSES ===== */
 .container {
     max-width: var(--container-max);
     margin: 0 auto;
     padding: 0 var(--container-padding);
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-title {
@@ -112,6 +162,308 @@ button {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+}
+
+/* ===== CV OVERVIEW & DETAIL PAGES ===== */
+.cv-page,
+.detail-page {
+    padding-top: 78px;
+}
+
+.cv-hero {
+    background: var(--bg-white);
+    padding: var(--spacing-2xl) 0 var(--spacing-xl);
+}
+
+.cv-hero-grid,
+.detail-header-grid,
+.cv-two-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr);
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+}
+
+.cv-intro h1,
+.detail-header h1 {
+    color: var(--text-dark);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    margin-bottom: var(--spacing-md);
+}
+
+.cv-summary,
+.detail-header p,
+.cv-panel p {
+    color: var(--text-medium);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.cv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.cv-profile-card,
+.cv-panel,
+.detail-card,
+.cv-project-grid article {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.cv-profile-card {
+    overflow: hidden;
+}
+
+.protected-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.protected-image img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.image-shield {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 0.5rem 0.75rem;
+    background: rgba(15, 23, 42, 0.72);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.quick-contact {
+    display: grid;
+    gap: 0.7rem;
+    padding: var(--spacing-md);
+}
+
+.quick-contact a,
+.quick-contact span,
+.text-link {
+    color: var(--text-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-wrap: anywhere;
+}
+
+.quick-contact a:hover,
+.text-link:hover {
+    color: var(--primary-color);
+}
+
+.cv-section,
+.detail-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.cv-muted {
+    background: var(--bg-light);
+}
+
+.cv-panel,
+.detail-card {
+    padding: var(--spacing-xl);
+}
+
+.cv-panel h2,
+.detail-card h2,
+.compact-heading {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.cv-list {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.cv-list div {
+    border-left: 3px solid var(--primary-color);
+    padding-left: var(--spacing-sm);
+}
+
+.cv-list strong,
+.stat-strip strong {
+    color: var(--text-dark);
+    display: block;
+    font-size: 1rem;
+}
+
+.cv-list span,
+.stat-strip span {
+    color: var(--text-light);
+    display: block;
+    font-size: 0.92rem;
+    margin-top: 0.15rem;
+}
+
+.compact-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.compact-tags span {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.45rem 0.75rem;
+}
+
+.cv-project-grid,
+.detail-grid,
+.readable-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.cv-project-grid article {
+    padding: var(--spacing-lg);
+}
+
+.cv-project-grid h3 {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cv-project-grid p,
+.detail-card p {
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cv-project-grid a {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.clean-list {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.clean-list li {
+    color: var(--text-medium);
+    line-height: 1.55;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.clean-list li::before {
+    content: '';
+    background: var(--primary-color);
+    border-radius: 50%;
+    height: 0.45rem;
+    left: 0;
+    position: absolute;
+    top: 0.6rem;
+    width: 0.45rem;
+}
+
+.detail-header {
+    background: linear-gradient(135deg, var(--bg-light), var(--bg-white));
+    padding: var(--spacing-2xl) 0;
+}
+
+.detail-header h1 {
+    max-width: 900px;
+}
+
+.detail-header p {
+    max-width: 760px;
+}
+
+.detail-card > i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.stat-strip div {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+}
+
+.copy-warning {
+    background: var(--bg-darker);
+    border-radius: var(--radius-md);
+    bottom: 1rem;
+    box-shadow: var(--shadow-lg);
+    color: white;
+    font-weight: 700;
+    opacity: 0;
+    padding: 0.75rem 1rem;
+    pointer-events: none;
+    position: fixed;
+    right: 1rem;
+    transform: translateY(12px);
+    transition: opacity var(--transition-base), transform var(--transition-base);
+    z-index: 10000;
+}
+
+.copy-warning.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.is-protected-blurred .protected-content {
+    filter: blur(7px);
+}
+
+@media print {
+    body.protected-page {
+        visibility: hidden;
+    }
+
+    body.protected-page::after {
+        content: 'Printing is disabled for this page.';
+        display: block;
+        font-size: 20px;
+        padding: 2rem;
+        visibility: visible;
+    }
 }
 
 .title-number {
@@ -1351,5 +1703,61 @@ button {
         font-size: 48px;
         color: rgba(0, 0, 0, 0.1);
         z-index: 99999;
+    }
+}
+
+@media (max-width: 968px) {
+    .cv-hero-grid,
+    .detail-header-grid,
+    .cv-two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-profile-card {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-page,
+    .detail-page {
+        padding-top: 70px;
+    }
+
+    .cv-hero,
+    .detail-header {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .cv-intro h1,
+    .detail-header h1 {
+        font-size: 2.35rem;
+    }
+
+    .cv-panel,
+    .detail-card,
+    .cv-project-grid article {
+        padding: var(--spacing-md);
+    }
+
+    .copy-warning {
+        left: 1rem;
+        right: 1rem;
+        text-align: center;
+    }
+}
+
+@media print {
+    body.protected-page * {
+        visibility: hidden !important;
+    }
+
+    body.protected-page::after {
+        content: 'Printing is disabled for this page.';
+        color: #111827;
+        display: block;
+        font-size: 20px;
+        padding: 2rem;
+        visibility: visible !important;
     }
 }

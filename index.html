@@ -3,712 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luca Moldovan - Computer Science Student & Research Intern</title>
-    <meta name="description" content="Computer Science student, Research Intern, IBM Z Ambassador. Specializing in software development, mainframe systems, and cloud computing.">
-    <meta name="keywords" content="developer portfolio, computer science, software engineer, mainframe, cloud computing, full-stack developer">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Luca Moldovan - Developer Portfolio">
-    <meta property="og:description" content="Computer Science student & Research Intern specializing in software development, computational methods and operating systems">
+    <title>Luca Moldovan - CV Overview</title>
+    <meta name="description" content="CV overview for Luca Moldovan, Computer Science student, Research Intern, Teaching Assistant, and former IBM Z Student Ambassador.">
+    <meta name="keywords" content="Luca Moldovan, CV, computer science, research intern, software engineer, mainframe, bioinformatics">
+    <meta name="robots" content="noarchive, noimageindex">
+    <meta property="og:title" content="Luca Moldovan - CV Overview">
+    <meta property="og:description" content="Fast CV-style overview with detailed pages for experience, skills, achievements, and leadership.">
     <meta property="og:type" content="website">
-    
-    <!-- Anti-scraping meta tags -->
-    <meta name="robots" content="noarchive">
-    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    
     <link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* Disable text selection */
-        * {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        /* Allow selection only for form inputs */
-        input, textarea {
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
-        }
-        
-        /* Prevent right-click context menu on images */
-        img {
-            pointer-events: none;
-            -webkit-user-drag: none;
-            -khtml-user-drag: none;
-            -moz-user-drag: none;
-            -o-user-drag: none;
-        }
-        
-        /* Watermark overlay for screenshot protection */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            background-image: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 100px,
-                rgba(37, 99, 235, 0.02) 100px,
-                rgba(37, 99, 235, 0.02) 200px
-            );
-        }
-        
-        /* Print protection */
-        @media print {
-            body {
-                display: none !important;
-            }
-        }
-    </style>
 </head>
-<body>
-    
-    <!-- ===== NAVIGATION ===== -->
+<body class="protected-page">
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">LM<span class="terminal-cursor">_</span></a>
-            
+            <a href="index.html" class="nav-logo">LM<span class="terminal-cursor">_</span></a>
+
             <button class="hamburger" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            
+
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="files/cv.pdf" class="nav-link nav-cta" target="_blank">
-                    <i class="fas fa-download"></i> Resume
-                </a></li>
+                <li><a href="index.html" class="nav-link active">CV</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <p class="hero-greeting">Hi, I'm</p>
-                <h1 class="hero-name">Luca Moldovan</h1>
-                <div class="hero-roles">
-                    <span class="role-prefix">I'm a</span>
-                    <span class="typing-text" id="typing-text"></span>
-                    <span class="cursor">|</span>
-                </div>
-                <p class="hero-description">
-                    Computer Science student passionate about building impactful software solutions. 
-                    Currently researching in Bioinformatics at University of Calgary.
-                </p>
-                
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i> View Projects
-                    </a>
-                    <a href="files/cv.pdf" class="btn btn-secondary" target="_blank">
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
-                </div>
-                
-                <div class="social-links">
-                    <a href="https://github.com/moldovanluca4" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/luca-moldovan" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:moldovanluca1605@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-visual">
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                    </div>
-                    <div class="terminal-body">
-                        <p><span class="terminal-prompt">moldovanluca4@fedora:~$</span> cat skills.txt</p>
-                        <p class="terminal-output">Languages: C, C++, Python, Rust, Kotlin</p>
-                        <p class="terminal-output">Focus: Software Engineering, Cloud Computing, Operating Systems, Deep Learning</p>
-                        <p class="terminal-output">Status: Learning as much as I can</p>
-                        <p><span class="terminal-prompt">moldovanluca4@fedora:~$</span> <span class="terminal-cursor-blink">_</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </section>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">01.</span> About Me
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Driven by curiosity, ambition, and a deep passion for technology, I am a
-                        Computer Science student at <strong>Constructor University</strong>, pursuing
-                        a minor in <strong>Mathematics</strong>. I am eager to learn as much as
-                        possible across the tech industry and apply that knowledge to real-world,
-                        impactful problems.
+    <main class="cv-page protected-content">
+        <section class="cv-hero">
+            <div class="container cv-hero-grid">
+                <div class="cv-intro">
+                    <p class="eyebrow">Computer Science Student / Research Intern</p>
+                    <h1>Luca Moldovan</h1>
+                    <p class="cv-summary">
+                        Computer Science student at Constructor University with a Mathematics minor, currently researching bioinformatics at the University of Calgary. Focused on software development, operating systems, deep learning, mainframe systems, and cloud computing.
                     </p>
-                    <p>
-                        I am a former <strong>IBM Z Student Ambassador</strong> and currently a
-                        scholarship recipient and research intern at the
-                        <strong>University of Calgary</strong>, where I work on
-                        <strong>
-                        learning representations of genomics data to characterize biology and
-                        predict diseases
-                        </strong>.
-                    </p>
-                    <p>
-                        I'm building my expertise in software development, operating systems, and bioinformatics, 
-                        with hands-on experience in <strong>C, C++, Python</strong>.
-                    </p>
-                   
-                    
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <i class="fas fa-flask"></i>
-                            <h3>Research Intern</h3>
-                            <p>University of Calgary</p>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fas fa-trophy"></i>
-                            <h3>Former IBM Z Ambassador</h3>
-                            <p>Mar 2025 - Present</p>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fas fa-globe"></i>
-                            <h3>International</h3>
-                            <p>7+ Countries</p>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <h3>Teaching Assistant</h3>
-                            <p>Elements of Calculus</p>
-                        </div>
+                    <div class="cv-actions">
+                        <a href="experience.html" class="btn btn-primary"><i class="fas fa-briefcase"></i> Experience</a>
+                        <a href="skills.html" class="btn btn-secondary"><i class="fas fa-code"></i> Skills</a>
                     </div>
                 </div>
-                
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="images/luca.jpeg" alt="Luca Moldovan" draggable="false" oncontextmenu="return false;">
-                        <div class="image-overlay"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">02.</span> Technical Skills
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="category-icon">
-                        <i class="fas fa-code"></i>
+                <aside class="cv-profile-card">
+                    <div class="protected-image image-wrapper">
+                        <img src="images/luca.jpeg" alt="Luca Moldovan" draggable="false">
+                        <div class="image-shield" aria-hidden="true">Protected Preview</div>
                     </div>
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Rust</span>
-                        <span class="skill-tag">Kotlin</span>
-                        <span class="skill-tag">SQL</span>
+                    <div class="quick-contact">
+                        <a href="mailto:moldovanluca1605@gmail.com"><i class="fas fa-envelope"></i> moldovanluca1605@gmail.com</a>
+                        <span><i class="fas fa-map-marker-alt"></i> Bremen, Germany</span>
+                        <a href="https://github.com/moldovanluca4" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/luca-moldovan" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
                     </div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="category-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Responsive Design</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="category-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Specialized Areas</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Mainframe Systems</span>
-                        <span class="skill-tag">Cloud Computing</span>
-                        <span class="skill-tag">System Administration</span>
-                        <span class="skill-tag">Enterprise Computing</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="category-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Tools & Platforms</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git & GitHub</span>
-                        <span class="skill-tag">IBM Z</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">VS Code</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="category-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Team Collaboration</span>
-                        <span class="skill-tag">Leadership</span>
-                        <span class="skill-tag">Communication</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="category-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">English (Native)</span>
-                        <span class="skill-tag">Romanian (Native)</span>
-                        <span class="skill-tag">Italian (Professional)</span>
-                        <span class="skill-tag">German (Elementary)</span>
-                    </div>
-                </div>
+                </aside>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== EXPERIENCE SECTION ===== -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">03.</span> Experience
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="timeline">
-                <!-- Research Intern -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Jun 2026 - Present</span>
-                        <h3>Research Intern</h3>
-                        <h4>University of Calgary, Calgary, AB, Canada</h4>
-                        <ul>
-                            <li>Conducting advanced research in genomics and bioinformatics</li>
-                            <li>Collaborating with international research team on innovative projects in Bioinformatics</li>
-                            <li>Applying theoretical concepts to solve real-world problems</li>
-                            <li>Learning representations of genomics data to characterize biology and predict diseases</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span>Research</span>
-                            <span>Data Analysis</span>
-                            <span>Genomics</span>
-                            <span>Deep Learning</span>
-                            <span>Python</span>
+        <section class="cv-section">
+            <div class="container cv-two-column">
+                <article class="cv-panel">
+                    <h2>Current Snapshot</h2>
+                    <div class="cv-list">
+                        <div>
+                            <strong>Research Intern</strong>
+                            <span>University of Calgary / Jun 2026 - Present</span>
+                        </div>
+                        <div>
+                            <strong>Teaching Assistant - Elements of Calculus</strong>
+                            <span>Constructor University / Feb 2026 - Present</span>
+                        </div>
+                        <div>
+                            <strong>Former IBM Z Student Ambassador</strong>
+                            <span>IBM Z Student Ambassador Program / Mar 2025 - Present</span>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Living Mainframe Internship -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Jun 2025</span>
-                        <h3>Summer Internship</h3>
-                        <h4>Living Mainframe GmbH, Böblingen, Germany</h4>
-                        <ul>
-                            <li>Built and developed software tools for enterprise clients</li>
-                            <li>Contributed to real projects in enterprise computing and mainframe systems</li>
-                            <li>Collaborated with professionals in development workflows</li>
-                            <li>Strengthened technical problem-solving and teamwork skills</li>
-                            <li>Gained hands-on experience with IBM Z/OS and mainframe development</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span>IBM Z/OS</span>
-                            <span>Enterprise Computing</span>
-                            <span>Mainframe Development</span>
-                            <span>Software Engineering</span>
-                            <span>C Programming</span>
-                        </div>
+                    <a href="experience.html" class="text-link">Read detailed experience <i class="fas fa-arrow-right"></i></a>
+                </article>
+
+                <article class="cv-panel">
+                    <h2>Core Skills</h2>
+                    <div class="compact-tags">
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>Python</span>
+                        <span>Rust</span>
+                        <span>Kotlin</span>
+                        <span>SQL</span>
+                        <span>Linux</span>
+                        <span>IBM Z</span>
+                        <span>Flask</span>
+                        <span>SQLite</span>
+                        <span>Deep Learning</span>
+                        <span>Cloud Computing</span>
                     </div>
-                </div>
-                
-                <!-- Teaching Assistant -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Feb 2026 - Present</span>
-                        <h3>Teaching Assistant - Elements of Calculus</h3>
-                        <h4>Constructor University, Bremen, Germany</h4>
-                        <ul>
-                            <li>Assist students in understanding calculus concepts and problem-solving techniques</li>
-                            <li>Conduct tutorial sessions and office hours for personalized support</li>
-                            <li>Grade assignments and provide constructive feedback to enhance learning</li>
-                            <li>Develop supplementary materials to clarify complex mathematical topics</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span>Mathematics</span>
-                            <span>Calculus</span>
-                            <span>Teaching</span>
-                            <span>Mentoring</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- IBM Z Ambassador -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Mar 2025 - Present</span>
-                        <h3>IBM Z Student Ambassador</h3>
-                        <h4>IBM Z Student Ambassador Program, Constructor University</h4>
-                        <ul>
-                            <li>Represent IBM Z and mainframe technology on campus, promoting awareness</li>
-                            <li>Earned IBM Z Concepts and Advanced badges through technical training</li>
-                            <li>Organized and facilitated technical workshops and events for students</li>
-                            <li>Lead dedicated mainframe club fostering continuous learning and collaboration</li>
-                            <li>Connected with industry professionals to gain insights into mainframe ecosystem</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span>IBM Z</span>
-                            <span>Mainframe</span>
-                            <span>Leadership</span>
-                            <span>Community Building</span>
-                            <span>Technical Workshops</span>
-                        </div>
-                    </div>
-                </div>
+                    <a href="skills.html" class="text-link">Explore technical skills <i class="fas fa-arrow-right"></i></a>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">04.</span> Featured Projects
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="projects-grid">
-                <!-- Project 1: Market Research Automation -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project-portfolio.jpg" alt="Market Research Automation" draggable="false" oncontextmenu="return false;" onerror="this.src='https://via.placeholder.com/600x400/2563eb/ffffff?text=Market+Research+AI'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/moldovanluca4/Automation-with-AI-Build-agents-that-sense-decide-and-act-to-automate-real-tasks" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
+        <section class="cv-section cv-muted">
+            <div class="container">
+                <h2 class="compact-heading">Selected Projects</h2>
+                <div class="cv-project-grid">
+                    <article>
                         <h3>Hackathon Winning Project - Market Research Automation Agent</h3>
-                        <p>
-                            Built an award-winning AI automation agent for market research that discovers EdTech/LMS competitors, extracts company websites from blogs and search results, and enriches the dataset with structured LinkedIn information such as company size, headquarters, industry, products, and specialties. The project also collects forum discussion links from platforms like Reddit and Quora to analyze authentic user opinions, complaints, pros, and cons. The final data is cleaned, consolidated into a SQLite master table, and prepared for integration with n8n workflows and Google Sheets.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Playwright</span>
-                            <span>Pandas</span>
-                            <span>SQLite</span>
-                            <span>AI Automation</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2: Mainframe Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project-mainframe.jpg" alt="Mainframe Project" draggable="false" oncontextmenu="return false;" onerror="this.src='https://via.placeholder.com/600x400/1e40af/ffffff?text=Mainframe+Project'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/moldovanluca4/sqlite-flask-c-mainframe-proj/tree/main" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
+                        <p>AI automation agent for EdTech/LMS market research, structured LinkedIn enrichment, forum link collection, SQLite consolidation, and Google Sheets/n8n workflow readiness.</p>
+                        <a href="https://github.com/moldovanluca4/Automation-with-AI-Build-agents-that-sense-decide-and-act-to-automate-real-tasks" target="_blank" rel="noopener noreferrer">Repository</a>
+                    </article>
+                    <article>
                         <h3>Internship Project - Mainframe Integration</h3>
-                        <p>
-                           Built a Flask-based web application that integrates a C program into a Python workflow, processes the program's output, stores the results in an SQLite database, and displays them through a web interface. The project was designed as a self-contained system where Flask acts as the middle layer between the C executable, the database, and the frontend, making the application feel like one cohesive software product rather than separate scripts. Through this project, I explored Flask, SQLite, SQL, Python-C integration, Linux runtime environments, and web interface design.
-                        </p>
-                        <div class="project-tech">
-                            <span>IBM Z/OS</span>
-                            <span>C Programming</span>
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>SQLite</span>
-                            <span>Linux</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3: Database Project -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project-research.jpg" alt="Database Project" draggable="false" oncontextmenu="return false;" onerror="this.src='https://via.placeholder.com/600x400/3b82f6/ffffff?text=Database+Project'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/moldovanluca4/Database-project" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
+                        <p>Flask application integrating a C program, Python processing, SQLite storage, and a web interface into one cohesive software product.</p>
+                        <a href="https://github.com/moldovanluca4/sqlite-flask-c-mainframe-proj/tree/main" target="_blank" rel="noopener noreferrer">Repository</a>
+                    </article>
+                    <article>
                         <h3>University Databases Project - Campus Information Center</h3>
-                        <p>
-                            Built the Campus Information Center (CIC) as part of the Fall 2025 Database course, a database-driven Flask web application for managing and visualizing a university campus ecosystem. The project focused on clean relational database design, using normalized SQL schemas and ISA hierarchies to model buildings, events, academic departments, lecture halls, research facilities, and campus personnel. The application combines a Flask backend, SQL database, and HTML/CSS/Jinja2 frontend to provide a structured platform for managing campus resources and academic information.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>SQL</span>
-                            <span>HTML/CSS</span>
-                            <span>Jinja2</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4: Software Engineering -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project-custom.jpg" alt="Software Engineering Project" draggable="false" oncontextmenu="return false;" onerror="this.src='https://via.placeholder.com/600x400/10b981/ffffff?text=Software+Engineering'">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/moldovanluca4/Software-Engineering-Spring-2026" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
+                        <p>Database-driven Flask web application for a university campus ecosystem using normalized SQL schemas and ISA hierarchies.</p>
+                        <a href="https://github.com/moldovanluca4/Database-project" target="_blank" rel="noopener noreferrer">Repository</a>
+                    </article>
+                    <article>
                         <h3>University Software Engineering Project - Bug Simulator</h3>
-                        <p>
-                            This repository contains my contributions to the Software Engineering Spring 2026 course at Constructor University, where we work in a realistic industry-style environment with rotating teams, two-week sprints, rapid onboarding, and structured project handovers. The main objective of the course project is to build a real-life bug simulator with a proper professional user interface, while maintaining a clean, modular, and sustainable C++ codebase. My work focuses on contributing production-ready features, improving maintainability, writing clear documentation, and ensuring that future teams can easily understand and continue the project.
-                        </p>
-                        <div class="project-tech">
-                            <span>C++</span>
-                            <span>Qt Framework</span>
-                            <span>GUI Development</span>
-                            <span>Agile/Scrum</span>
-                        </div>
-                    </div>
+                        <p>Professional C++/Qt software engineering course project with rotating teams, sprints, handovers, and maintainable feature work.</p>
+                        <a href="https://github.com/moldovanluca4/Software-Engineering-Spring-2026" target="_blank" rel="noopener noreferrer">Repository</a>
+                    </article>
                 </div>
             </div>
-            
-            <div class="projects-cta">
-                <a href="https://github.com/moldovanluca4" class="btn btn-outline" target="_blank">
-                    <i class="fab fa-github"></i> View More on GitHub
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== ACHIEVEMENTS SECTION ===== -->
-    <section id="achievements" class="achievements">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">05.</span> Achievements & Leadership
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Certifications</h3>
-                    <ul>
-                        <li>IBM Z XPLORE - Advanced</li>
-                        <li>IBM Z XPLORE - Concepts</li>
-                        <li>Cloud Computing: Core Concepts</li>
-                        <li>AI Automations & Agents</li>
-                    </ul>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Leadership</h3>
-                    <ul>
-                        <li>Workshop Coordinator - Erasmus+ "Mindful Living"</li>
-                        <li>Workshop Coordinator - Erasmus+ "Young Digitals"</li>
-                        <li>College Representative - Constructor University</li>
-                        <li>Mainframe Club Leader</li>
-                    </ul>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Hackathons & Events</h3>
-                    <ul>
+        <section class="cv-section">
+            <div class="container cv-two-column">
+                <article class="cv-panel">
+                    <h2>Achievements</h2>
+                    <ul class="clean-list">
                         <li>Constructor University x Constructor Tech Hackathon Winner</li>
                         <li>Speaker at AMC Young Talents Mainframe Convention 2025</li>
-                        <li>BMW Group x Constructor University Hackathon</li>
-                        <li>IBM Z Student Ambassador Events - Technical Workshop Facilitation</li>
-                        <li>International Erasmus+ Workshops</li>
+                        <li>IBM Z XPLORE - Advanced</li>
+                        <li>IBM Z XPLORE - Concepts</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <a href="achievements.html" class="text-link">Achievements and leadership <i class="fas fa-arrow-right"></i></a>
+                </article>
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">06.</span> Get In Touch
-                <span class="title-line"></span>
-            </h2>
-            
-            <div class="contact-content">
-                <div class="contact-text">
-                    <h3>Interested in working together?</h3>
-                    <p>
-                        I'm currently seeking opportunities for internships, research collaborations, 
-                        and full-time positions in software development, mainframe systems, machine learning and deep learning. 
-                        Let's connect and build something amazing together!
-                    </p>
-                    <p class="response-time">
-                        <i class="fas fa-clock"></i> I typically respond within 24-48 hours
-                    </p>
-                    
-                    <div class="contact-info-cards">
-                        <div class="info-card">
-                            <i class="fas fa-envelope"></i>
-                            <h4>Email</h4>
-                            <a href="mailto:moldovanluca1605@gmail.com">moldovanluca1605@gmail.com</a>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h4>Location</h4>
-                            <p>Bremen, Germany</p>
-                        </div>
-                        <div class="info-card">
-                            <i class="fas fa-briefcase"></i>
-                            <h4>Open To</h4>
-                            <p>Internships, Full-time, Research</p>
-                        </div>
+                <article class="cv-panel" id="contact">
+                    <h2>Contact</h2>
+                    <p>Open to internships, full-time roles, and research collaborations in software development, mainframe systems, machine learning, and deep learning.</p>
+                    <div class="cv-actions">
+                        <a href="mailto:moldovanluca1605@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
+                        <a href="about.html" class="btn btn-secondary"><i class="fas fa-user"></i> More About Me</a>
                     </div>
-                </div>
-                
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-social">
-                    <a href="https://github.com/moldovanluca4" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/moldovanluca4" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/luca-moldovan" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/luca-moldovan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="mailto:moldovanluca1605@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
-                
-                <p class="footer-text">
-                    Designed & Built by Luca Moldovan
-                </p>
-                
-                <p class="footer-copyright">
-                    © <span id="currentYear"></span> Luca Moldovan. All rights reserved.
-                </p>
+                <p class="footer-text">Designed & Built by Luca Moldovan</p>
+                <p class="footer-copyright">© <span id="currentYear"></span> Luca Moldovan. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <div class="copy-warning" id="copyWarning" role="status" aria-live="polite">Content protection is active.</div>
     <script src="js/script.js"></script>
 </body>
 </html>
