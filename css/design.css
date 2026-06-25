@@ -1761,3 +1761,257 @@ body.is-protected-blurred .protected-content {
         visibility: visible !important;
     }
 }
+
+/* ===== RESPONSIVE STABILITY LAYER ===== */
+html {
+    text-size-adjust: 100%;
+}
+
+body {
+    min-width: 320px;
+}
+
+.container,
+.nav-container,
+.hero-container {
+    width: min(100%, var(--container-max));
+}
+
+.container,
+.nav-container,
+.cv-hero-grid,
+.detail-header-grid,
+.cv-two-column,
+.cv-project-grid,
+.detail-grid,
+.readable-grid,
+.stat-strip,
+.timeline-content,
+.cv-panel,
+.detail-card,
+.cv-project-grid article {
+    min-width: 0;
+}
+
+.cv-intro h1,
+.detail-header h1,
+.hero-name,
+.section-title,
+.cv-panel h2,
+.detail-card h2,
+.cv-project-grid h3,
+.timeline-content h3,
+.timeline-content h4,
+.quick-contact a,
+.quick-contact span,
+.btn,
+.nav-link {
+    overflow-wrap: anywhere;
+}
+
+.cv-hero-grid,
+.detail-header-grid,
+.cv-two-column {
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.9fr);
+}
+
+.cv-project-grid,
+.detail-grid,
+.readable-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.stat-strip {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+}
+
+.cv-profile-card,
+.protected-image,
+.image-wrapper {
+    width: 100%;
+}
+
+.cv-profile-card {
+    justify-self: stretch;
+}
+
+.protected-image img {
+    max-height: min(62vh, 560px);
+}
+
+.cv-actions,
+.hero-cta,
+.compact-tags,
+.tech-stack,
+.project-tech,
+.skill-tags {
+    min-width: 0;
+}
+
+.btn {
+    max-width: 100%;
+    white-space: normal;
+}
+
+.nav-container {
+    min-height: 70px;
+}
+
+.nav-menu {
+    min-width: 0;
+}
+
+.timeline {
+    max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+    :root {
+        --container-padding: 1.5rem;
+        --spacing-xl: 2.5rem;
+        --spacing-2xl: 3.25rem;
+        --spacing-3xl: 4.5rem;
+    }
+
+    .nav-menu {
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 968px) {
+    .cv-hero-grid,
+    .detail-header-grid,
+    .cv-two-column,
+    .hero-container,
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-profile-card,
+    .detail-header .protected-image {
+        justify-self: start;
+        max-width: min(100%, 420px);
+    }
+
+    .protected-image img {
+        max-height: 520px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+        --spacing-2xl: 2.5rem;
+        --spacing-3xl: 3rem;
+    }
+
+    .nav-container {
+        min-height: 64px;
+        padding-block: 0.75rem;
+    }
+
+    .nav-menu {
+        max-height: calc(100dvh - 64px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        top: 64px;
+    }
+
+    .cv-page,
+    .detail-page {
+        padding-top: 64px;
+    }
+
+    .cv-hero,
+    .detail-header,
+    .cv-section,
+    .detail-section {
+        padding-block: var(--spacing-xl);
+    }
+
+    .cv-intro h1,
+    .detail-header h1 {
+        font-size: clamp(2rem, 11vw, 2.75rem);
+        line-height: 1.08;
+    }
+
+    .cv-summary,
+    .detail-header p,
+    .cv-panel p,
+    .detail-card p {
+        font-size: 1rem;
+    }
+
+    .cv-actions,
+    .hero-cta {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .cv-actions .btn,
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    .cv-panel,
+    .detail-card,
+    .cv-project-grid article,
+    .timeline-content,
+    .contact-form-wrapper,
+    .skill-category,
+    .achievement-card {
+        border-radius: var(--radius-md);
+        padding: var(--spacing-md);
+    }
+
+    .timeline {
+        padding-left: 1.25rem;
+    }
+
+    .timeline-dot {
+        left: -1.72rem;
+    }
+
+    .footer-content,
+    .footer-social {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 0.875rem;
+    }
+
+    .nav-logo {
+        font-size: 1.25rem;
+    }
+
+    .cv-panel h2,
+    .detail-card h2,
+    .compact-heading,
+    .timeline-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .compact-tags span,
+    .tech-stack span,
+    .project-tech span,
+    .skill-tag {
+        max-width: 100%;
+    }
+
+    .quick-contact {
+        padding: var(--spacing-sm);
+    }
+
+    .copy-warning {
+        bottom: 0.75rem;
+        left: 0.75rem;
+        right: 0.75rem;
+    }
+}
