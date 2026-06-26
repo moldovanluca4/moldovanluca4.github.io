@@ -68,7 +68,7 @@ function initTerminalLanding() {
     const lines = [
         { command: "whoami", response: "luca-moldovan" },
         { command: "pwd", response: "/home/luca/portfolio" },
-        { command: "ls --skills", response: "systems  software-engineering  mainframe  research" },
+        { command: "ls --skills", response: "operating systems  software-engineering  research" },
         { command: "git status", response: "On branch: building-things-that-matter" },
         { command: "echo $READY", response: "portfolio online" }
     ];
