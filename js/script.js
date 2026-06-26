@@ -60,6 +60,57 @@ function initTypingEffect() {
     window.setTimeout(typeRole, 1000);
 }
 
+function initTerminalLanding() {
+    const output = qs("#terminalOutput");
+    const enterCv = qs("#enterCv");
+    if (!output || !enterCv) return;
+
+    const lines = [
+        { command: "whoami", response: "luca-moldovan" },
+        { command: "pwd", response: "/home/luca/portfolio" },
+        { command: "ls --skills", response: "systems  software-engineering  mainframe  research" },
+        { command: "git status", response: "On branch: building-things-that-matter" },
+        { command: "echo $READY", response: "portfolio online" }
+    ];
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const addLine = (line) => {
+        const commandLine = document.createElement("p");
+        commandLine.className = "terminal-command";
+        commandLine.innerHTML = '<span>luca@portfolio</span>:<span>~</span>$ ';
+        const command = document.createElement("span");
+        command.textContent = line.command;
+        commandLine.append(command);
+        output.append(commandLine);
+
+        const response = document.createElement("p");
+        response.className = "terminal-response";
+        response.textContent = line.response;
+        output.append(response);
+    };
+
+    if (reducedMotion) {
+        lines.forEach(addLine);
+        enterCv.hidden = false;
+        return;
+    }
+
+    let lineIndex = 0;
+    const renderNextLine = () => {
+        if (lineIndex >= lines.length) {
+            enterCv.hidden = false;
+            enterCv.classList.add("is-ready");
+            return;
+        }
+
+        addLine(lines[lineIndex]);
+        lineIndex += 1;
+        window.setTimeout(renderNextLine, 520);
+    };
+
+    window.setTimeout(renderNextLine, 450);
+}
+
 function initMobileNavigation() {
     const hamburger = qs(".hamburger");
     const navMenu = qs(".nav-menu");
@@ -327,6 +378,7 @@ initImageFallbacks();
 
 document.addEventListener("DOMContentLoaded", () => {
     initTypingEffect();
+    initTerminalLanding();
     initMobileNavigation();
     initNavbarScroll();
     initSmoothScrolling();

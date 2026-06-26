@@ -108,6 +108,133 @@ button {
     user-select: text;
 }
 
+.landing-page {
+    background: #0b1117;
+    color: #d6e4ee;
+}
+
+.terminal-landing {
+    align-items: center;
+    display: flex;
+    min-height: 100svh;
+    padding: clamp(1rem, 4vw, 3rem);
+}
+
+.terminal-window {
+    background: #101a23;
+    border: 1px solid #2b4050;
+    border-radius: var(--radius-md);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.38);
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.terminal-titlebar {
+    align-items: center;
+    background: #172530;
+    border-bottom: 1px solid #2b4050;
+    color: #91a6b5;
+    display: flex;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    gap: 0.8rem;
+    padding: 0.7rem 0.9rem;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 0.45rem;
+}
+
+.terminal-controls span {
+    background: #547080;
+    border-radius: 50%;
+    height: 0.65rem;
+    width: 0.65rem;
+}
+
+.terminal-controls span:first-child {
+    background: #d96c61;
+}
+
+.terminal-controls span:nth-child(2) {
+    background: #d6a354;
+}
+
+.terminal-controls span:last-child {
+    background: #67b87a;
+}
+
+.terminal-screen {
+    font-family: var(--font-mono);
+    min-height: 31rem;
+    padding: clamp(1.25rem, 4vw, 2.75rem);
+}
+
+.terminal-banner {
+    color: #f0f6fa;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.terminal-subtitle {
+    color: #91a6b5;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.terminal-output {
+    min-height: 12.5rem;
+}
+
+.terminal-command,
+.terminal-response,
+.terminal-prompt {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.terminal-command {
+    color: #edf5f8;
+}
+
+.terminal-command > span:first-child,
+.terminal-prompt > span:first-child {
+    color: #67d391;
+}
+
+.terminal-command > span:nth-child(2),
+.terminal-prompt > span:nth-child(2) {
+    color: #6eb8e5;
+}
+
+.terminal-response {
+    color: #9fb3bf;
+    margin-bottom: 0.55rem;
+    white-space: pre-wrap;
+}
+
+.terminal-prompt {
+    color: #edf5f8;
+    margin-bottom: var(--spacing-lg);
+}
+
+.terminal-enter {
+    background: #2d9d61;
+    border: 1px solid #67d391;
+    color: #07130b;
+}
+
+.terminal-enter:hover,
+.terminal-enter:focus-visible {
+    background: #67d391;
+    color: #07130b;
+}
+
 .protected-page img {
     pointer-events: none;
     -webkit-user-drag: none;
@@ -416,6 +543,84 @@ textarea:focus-visible {
     color: var(--primary-color);
     font-size: 1.8rem;
     margin-bottom: var(--spacing-sm);
+}
+
+.experience-story {
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    max-width: 920px;
+    padding: var(--spacing-xl) 0;
+}
+
+.experience-story h2 {
+    color: var(--text-dark);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.experience-story p:not(.eyebrow) {
+    color: var(--text-medium);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.protected-photo-gallery {
+    display: grid;
+    gap: var(--spacing-md);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: var(--spacing-lg);
+}
+
+.protected-trip-photo {
+    aspect-ratio: 4 / 3;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.protected-trip-photo::after {
+    bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.78);
+    content: "Luca Moldovan";
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    position: absolute;
+    right: 0.65rem;
+    text-transform: uppercase;
+}
+
+.protected-trip-photo img {
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+    width: 100%;
+}
+
+.trip-photo-placeholder {
+    align-items: center;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.trip-photo-placeholder i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    .protected-photo-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 .achievement-feature-section {
