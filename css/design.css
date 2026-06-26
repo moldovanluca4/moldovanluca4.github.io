@@ -1730,6 +1730,32 @@ body.is-protected-blurred .protected-content {
     min-height: 120px;
 }
 
+.form-hint {
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+.form-status {
+    min-height: 1.25rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.form-status.success {
+    color: #047857;
+}
+
+.form-status.error {
+    color: #b91c1c;
+}
+
+.contact-form button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: var(--bg-darker);

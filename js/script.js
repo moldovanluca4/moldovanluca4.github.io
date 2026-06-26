@@ -231,7 +231,7 @@ function initContactForm() {
     const contactForm = qs("#contactForm");
     if (!contactForm) return;
 
-    contactForm.addEventListener("submit", (event) => {
+    contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const formData = new FormData(contactForm);
@@ -239,8 +239,21 @@ function initContactForm() {
         const email = formData.get("email").trim();
         const subject = formData.get("subject").trim();
         const message = formData.get("message").trim();
-        const recipient = contactForm.dataset.recipient;
+        const nameInput = qs("#name", contactForm);
+        const messageInput = qs("#message", contactForm);
+        const status = qs("#contactStatus", contactForm);
+        const submitButton = qs("button[type='submit']", contactForm);
         const isPlainText = (value) => !/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/.test(value);
+        const validName = /^[\p{L} ]{2,80}$/u.test(name);
+        const validMessage = /^[\p{L}\p{N}\s!?.,]{1,2000}$/u.test(message);
+        const setStatus = (messageText, type = "") => {
+            if (!status) return;
+            status.textContent = messageText;
+            status.className = `form-status ${type}`.trim();
+        };
+
+        nameInput.setCustomValidity(validName ? "" : "Use letters and spaces only.");
+        messageInput.setCustomValidity(validMessage ? "" : "Use letters, numbers, spaces, and ! ? , . only.");
 
         if (!contactForm.checkValidity() || !isPlainText(name) || !isPlainText(email) || !isPlainText(subject) || !isPlainText(message)) {
             contactForm.reportValidity();
@@ -248,12 +261,34 @@ function initContactForm() {
             return;
         }
 
-        // Keep user input as text only and prevent newline-based email header injection.
-        const safeSubject = subject.replace(/[\r\n]/g, " ");
-        const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+        formData.set("name", name);
+        formData.set("email", email);
+        formData.set("subject", subject.replace(/[\r\n]/g, " "));
+        formData.set("message", message);
 
-        window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(safeSubject)}&body=${encodeURIComponent(body)}`;
-        contactForm.reset();
+        setStatus("Sending message...");
+        submitButton.disabled = true;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error("Formspree rejected the submission.");
+            }
+
+            contactForm.reset();
+            setStatus("Message sent. Thank you for reaching out.", "success");
+        } catch (error) {
+            setStatus("The message could not be sent. Please try again or email me directly.", "error");
+        } finally {
+            submitButton.disabled = false;
+        }
     });
 }
 
