@@ -182,7 +182,26 @@ function initContactForm() {
 
     contactForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        window.alert("Thank you for your message! I will get back to you soon.");
+
+        const formData = new FormData(contactForm);
+        const name = formData.get("name").trim();
+        const email = formData.get("email").trim();
+        const subject = formData.get("subject").trim();
+        const message = formData.get("message").trim();
+        const recipient = contactForm.dataset.recipient;
+        const isPlainText = (value) => !/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/.test(value);
+
+        if (!contactForm.checkValidity() || !isPlainText(name) || !isPlainText(email) || !isPlainText(subject) || !isPlainText(message)) {
+            contactForm.reportValidity();
+            showProtectionWarning("Please use plain text in the contact form.");
+            return;
+        }
+
+        // Keep user input as text only and prevent newline-based email header injection.
+        const safeSubject = subject.replace(/[\r\n]/g, " ");
+        const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+
+        window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(safeSubject)}&body=${encodeURIComponent(body)}`;
         contactForm.reset();
     });
 }
