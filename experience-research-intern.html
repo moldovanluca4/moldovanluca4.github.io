@@ -19,8 +19,14 @@
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="skills.html" class="nav-link">Skills</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="experience.html" class="nav-link active">Experience</a></li>
-                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle active" type="button" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="experience.html" class="nav-dropdown-link active">Experience</a></li>
+                        <li><a href="extracurricular-activities.html" class="nav-dropdown-link">Extracurricular</a></li>
+                        <li><a href="achievements.html" class="nav-dropdown-link">Achievements</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
             </ul>
         </div>
@@ -63,8 +69,57 @@
                     <i class="fas fa-brain"></i>
                     <h2>Skills Used</h2>
                     <div class="compact-tags"><span>Research</span><span>Data Analysis</span><span>Genomics</span><span>Bioinformatics</span><span>Deep Learning</span><span>Python</span></div>
-                    <a href="experience.html" class="text-link">Back to experience <i class="fas fa-arrow-right"></i></a>
                 </article>
+            </div>
+        </section>
+
+        <section class="detail-section cv-muted">
+            <article class="container experience-story">
+                <p class="eyebrow">Further Reading</p>
+                <h2>Research, Genomics, and Learning From Real Scientific Problems</h2>
+                <p>
+                    My research internship at the <strong>University of Calgary</strong> gives me the opportunity to step into academic research and apply computer science to biological data. As a <strong>RISE-Globalink Research Internship Scholarship Recipient</strong>, I am working on a project focused on learning representations of genomics data to characterize biology and support disease prediction.
+                </p>
+                <p>
+                    So far, this experience has been extremely valuable. I have learned a lot, but I also realize that there is still much more to learn, which makes the internship even more motivating. The atmosphere in <strong>Dr. Long's lab</strong> is very welcoming, and the research group is made up of kind and supportive people with whom I can communicate openly, ask questions, and discuss ideas freely.
+                </p>
+                <p>
+                    What makes this experience especially important to me is the connection between abstract technical concepts and real scientific questions. Concepts from data analysis, machine learning, and deep learning become much more meaningful when they are used to understand biological systems and help researchers reason about complex genomic patterns.
+                </p>
+                <p>
+                    During the internship, I have deepened my knowledge of molecular biology, learned computational biology algorithms, and gained practical experience with genomics and bioinformatics workflows. I have also learned how to run large deep learning models with many parameters and how to use the <strong>Advanced Research Computing</strong> platform to submit and manage large GPU jobs. This has helped me understand not only the theory behind computational research, but also the practical infrastructure needed to run serious experiments.
+                </p>
+                <p>
+                    The internship has also exposed me to how research teams structure their work. Academic research requires careful problem definition, patience, experimentation, and communication. It is not only about writing code or running models, but also about understanding the scientific question deeply enough to choose the right methods, interpret results responsibly, and contribute meaningfully to the larger research direction.
+                </p>
+                <p>
+                    Working with genomics and bioinformatics pushes me to think across disciplines. I have to combine software engineering habits with scientific curiosity, learning how biological data is represented, cleaned, analyzed, and transformed into something that can support discovery. Being based in the lab at the <strong>Health Sciences Centre on Foothills Campus</strong> has also made the experience feel even more connected to real biomedical research.
+                </p>
+                <p>
+                    This internship is an important step in my technical development because it connects my interests in deep learning, data analysis, and systems thinking with research that can have real-world impact. It helps me see computer science not only as a way to build software, but also as a tool for exploring difficult scientific problems. I am grateful for the experience so far and look forward to the next two months of learning, contributing, and growing in this research environment.
+                </p>
+            </article>
+        </section>
+
+        <section class="detail-section" id="research-photos">
+            <div class="container">
+                <div class="achievement-section-heading">
+                    <p class="eyebrow">Photo Journal</p>
+                    <h2>University of Calgary Research Internship</h2>
+                </div>
+                <div class="protected-photo-gallery">
+                    <!-- Replace each placeholder with an image inside the figure, preserving the figure class and descriptive alt text. -->
+                    <figure class="protected-trip-photo">
+                        <div class="trip-photo-placeholder"><i class="fas fa-university" aria-hidden="true"></i><span>University of Calgary</span></div>
+                    </figure>
+                    <figure class="protected-trip-photo">
+                        <div class="trip-photo-placeholder"><i class="fas fa-dna" aria-hidden="true"></i><span>Genomics Research</span></div>
+                    </figure>
+                    <figure class="protected-trip-photo">
+                        <div class="trip-photo-placeholder"><i class="fas fa-chart-line" aria-hidden="true"></i><span>Data Analysis</span></div>
+                    </figure>
+                </div>
+                <a href="experience.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Experience</a>
             </div>
         </section>
     </main>

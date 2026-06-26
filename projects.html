@@ -19,8 +19,14 @@
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="skills.html" class="nav-link">Skills</a></li>
                 <li><a href="projects.html" class="nav-link active">Projects</a></li>
-                <li><a href="experience.html" class="nav-link">Experience</a></li>
-                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="experience.html" class="nav-dropdown-link">Experience</a></li>
+                        <li><a href="extracurricular-activities.html" class="nav-dropdown-link">Extracurricular</a></li>
+                        <li><a href="achievements.html" class="nav-dropdown-link">Achievements</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
             </ul>
         </div>
@@ -30,10 +36,15 @@
         <header class="detail-header">
             <div class="container">
                 <p class="eyebrow">Projects</p>
-                <h1>A closer look at the projects I’m currently building and the systems I’ve developed along the way.
-</h1>
+                <h1>A closer look at the projects I’m currently building and the systems I’ve developed along the way.</h1>
+                <p>
                     This page expands on the short CV summaries with more context about what I built, why each project mattered, and what I learned from the work.
                 </p>
+                <div class="detail-actions">
+                    <a href="https://github.com/moldovanluca4" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> Find Me on GitHub
+                    </a>
+                </div>
             </div>
         </header>
 

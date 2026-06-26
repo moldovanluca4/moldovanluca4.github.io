@@ -129,12 +129,56 @@ function initMobileNavigation() {
         hamburger.setAttribute("aria-expanded", String(isOpen));
     });
 
-    qsa(".nav-link").forEach((link) => link.addEventListener("click", closeMenu));
+    qsa(".nav-menu a").forEach((link) => link.addEventListener("click", closeMenu));
 
     document.addEventListener("click", (event) => {
         if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
             closeMenu();
         }
+    });
+}
+
+function initNavigationDropdowns() {
+    qsa(".nav-dropdown").forEach((dropdown) => {
+        const toggle = qs(".nav-dropdown-toggle", dropdown);
+        if (!toggle) return;
+
+        const setExpanded = (isExpanded) => {
+            dropdown.classList.toggle("is-open", isExpanded);
+            toggle.setAttribute("aria-expanded", String(isExpanded));
+        };
+
+        toggle.addEventListener("click", (event) => {
+            event.stopPropagation();
+            setExpanded(!dropdown.classList.contains("is-open"));
+        });
+
+        dropdown.addEventListener("mouseenter", () => setExpanded(true));
+        dropdown.addEventListener("mouseleave", () => setExpanded(false));
+        dropdown.addEventListener("focusin", () => setExpanded(true));
+        dropdown.addEventListener("focusout", (event) => {
+            if (!dropdown.contains(event.relatedTarget)) {
+                setExpanded(false);
+            }
+        });
+    });
+
+    document.addEventListener("click", (event) => {
+        qsa(".nav-dropdown.is-open").forEach((dropdown) => {
+            if (dropdown.contains(event.target)) return;
+
+            dropdown.classList.remove("is-open");
+            qs(".nav-dropdown-toggle", dropdown)?.setAttribute("aria-expanded", "false");
+        });
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape") return;
+
+        qsa(".nav-dropdown.is-open").forEach((dropdown) => {
+            dropdown.classList.remove("is-open");
+            qs(".nav-dropdown-toggle", dropdown)?.setAttribute("aria-expanded", "false");
+        });
     });
 }
 
@@ -415,6 +459,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initTypingEffect();
     initTerminalLanding();
     initMobileNavigation();
+    initNavigationDropdowns();
     initNavbarScroll();
     initSmoothScrolling();
     initRevealAnimations();
