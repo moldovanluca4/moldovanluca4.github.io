@@ -1,5 +1,3 @@
-// ===== MODERN PORTFOLIO JAVASCRIPT =====
-
 const roles = [
     "Software Engineer",
     "Research Intern",
