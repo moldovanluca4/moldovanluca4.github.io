@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Skills - Luca Moldovan</title>
-    <meta name="description" content="Technical skills for Luca Moldovan across programming, web technologies, mainframe systems, cloud computing, tools, and languages.">
+    <title>Skill Tree Roadmap - Luca Moldovan</title>
+    <meta name="description" content="Interactive single-screen skill tree roadmap for Luca Moldovan across systems programming, AI & genomics, enterprise mainframes, and engineering leadership.">
     <meta name="robots" content="noarchive, noimageindex">
     <link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +14,7 @@
         <div class="nav-container">
             <a href="index.html" class="nav-logo">LM<span class="terminal-cursor">_</span></a>
             <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-                        <ul class="nav-menu">
+            <ul class="nav-menu">
                 <li><a href="cv.html" class="nav-link">CV</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="experience.html" class="nav-link">Experience</a></li>
@@ -26,57 +26,429 @@
         </div>
     </nav>
 
-    <main class="detail-page protected-content">
-        <header class="detail-header">
-            <div class="container">
-                <p class="eyebrow">Technical Skills</p>
-                <h1>Tools and technologies I use to build, research, and learn.</h1>
-            </div>
-        </header>
+    <main class="roadmap-page protected-content">
+        <div class="roadmap-container">
+            <!-- Header Banner matching rest of website -->
+            <header class="roadmap-header">
+                <p class="eyebrow"><i class="fas fa-sitemap" aria-hidden="true"></i> Interactive Roadmap</p>
+                <h1 class="roadmap-banner-title">Engineering Skill Tree</h1>
+                <p class="roadmap-banner-sub">Luca Moldovan · Systems · AI &amp; Genomics · Enterprise Mainframe · Software Engineering</p>
+            </header>
 
-        <section class="detail-section">
-            <div class="container detail-grid">
-                <article class="detail-card">
-                    <i class="fas fa-code"></i>
-                    <h2>Languages</h2>
-                    <div class="compact-tags"><span>C</span><span>C++</span><span>Python</span><span>Rust</span><span>Kotlin</span><span>SQL</span></div>
-                </article>
-                <article class="detail-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h2>Web Technologies</h2>
-                    <div class="compact-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span></div>
-                </article>
-                <article class="detail-card">
-                    <i class="fas fa-layer-group"></i>
-                    <h2>Frameworks</h2>
-                    <div class="compact-tags"><span>Flask</span><span>Pytorch</span><span>Qt Framework</span><span>Playwright</span><span>Pandas</span><span>SQLite3</span><span>SQLAlchemy</span></div>
-                </article>
-                <article class="detail-card">
-                    <i class="fas fa-server"></i>
-                    <h2>Specialized Areas</h2>
-                    <div class="compact-tags"><span>Mainframe Systems</span><span>Cloud Computing</span><span>System Administration</span><span>Enterprise Computing</span><span>Databases</span></div>
-                </article>
-                <article class="detail-card">
-                    <i class="fas fa-tools"></i>
-                    <h2>Tools & Platforms</h2>
-                    <div class="compact-tags"><span>Git & GitHub</span><span>IBM Z</span><span>Linux</span><span>VS Code</span></div>
-                </article>
-                <article class="detail-card">
-                    <i class="fas fa-brain"></i>
-                    <h2>Soft Skills</h2>
-                    <div class="compact-tags"><span>Problem Solving</span><span>Team Collaboration</span><span>Leadership</span><span>Communication</span></div>
-                </article>
-                <article class="detail-card">
-                    <i class="fas fa-language"></i>
-                    <h2>Languages</h2>
-                    <div class="compact-tags"><span>English (Native)</span><span>Romanian (Native)</span><span>Italian (Professional)</span><span>German (Elementary)</span></div>
-                </article>
+            <!-- Interactive Toolbar: Switcher Pills & Instant Search -->
+            <div class="roadmap-toolbar" role="toolbar" aria-label="Roadmap View and Search">
+                <div class="roadmap-tab-group" role="tablist">
+                    <button class="roadmap-tab-btn is-active" data-view="tech" role="tab" aria-selected="true">
+                        <i class="fas fa-microchip" aria-hidden="true"></i> Technologies I Used
+                    </button>
+                    <button class="roadmap-tab-btn" data-view="general" role="tab" aria-selected="false">
+                        <i class="fas fa-compass" aria-hidden="true"></i> Overall General Skills
+                    </button>
+                    <button class="roadmap-tab-btn" data-view="complete" role="tab" aria-selected="false">
+                        <i class="fas fa-layer-group" aria-hidden="true"></i> Complete View
+                    </button>
+                </div>
+                <div class="roadmap-search-wrap">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" id="roadmapSearchInput" class="roadmap-search-input" placeholder="Quick search (e.g. C++, PyTorch, z/OS, Agile)..." aria-label="Search skills">
+                </div>
             </div>
-        </section>
+
+            <!-- Central Keystone Root Node -->
+            <div class="roadmap-root-wrapper">
+                <a href="cv.html" class="roadmap-root-node" title="View Academic Background &amp; Foundations">
+                    <div class="roadmap-root-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
+                    <span>Core Computer Science &amp; Mathematics</span>
+                    <span class="roadmap-root-tag">Constructor University '26</span>
+                </a>
+                <div class="roadmap-stem-line" aria-hidden="true"></div>
+                <div class="roadmap-bus-line" aria-hidden="true"></div>
+            </div>
+
+            <!-- ======================================================== -->
+            <!-- VIEW 1: TECHNOLOGIES I USED (THE APPLIED TECH STACK)    -->
+            <!-- ======================================================== -->
+            <div id="techRoadmapGrid" class="roadmap-tracks-grid" role="region" aria-label="Technologies I Used">
+                <!-- Track 1: Systems & Low-Level -->
+                <section class="roadmap-track-col">
+                    <header class="roadmap-track-header track-color-blue">
+                        <h3><i class="fas fa-microchip" aria-hidden="true"></i> Systems &amp; Low-Level</h3>
+                    </header>
+                    <div class="roadmap-nodes-stream">
+                        <a href="projects.html" class="roadmap-node" data-tags="c c++ cpp systems memory pointers posix low-level">
+                            <div class="roadmap-node-icon icon-blue"><i class="fas fa-code" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">C &amp; C++</span>
+                                <span class="roadmap-node-mention">Pointers · Memory · POSIX</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="projects.html" class="roadmap-node" data-tags="rust memory safety cargo borrow checker zero-cost">
+                            <div class="roadmap-node-icon icon-purple"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Rust</span>
+                                <span class="roadmap-node-mention">Borrow Checker · Zero-Cost</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience.html" class="roadmap-node" data-tags="linux posix bash unix cli arch kernel ipc">
+                            <div class="roadmap-node-icon icon-gold"><i class="fab fa-linux" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Linux &amp; POSIX CLI</span>
+                                <span class="roadmap-node-mention">Arch Linux · Bash · SysCalls · IPC</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="projects.html" class="roadmap-node" data-tags="homelab proxmox truenas zfs docker networking server vlan">
+                            <div class="roadmap-node-icon icon-emerald"><i class="fas fa-server" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Home Lab &amp; Infra</span>
+                                <span class="roadmap-node-mention">Proxmox · TrueNAS ZFS · Docker</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Track 2: AI, Deep Learning & Genomics -->
+                <section class="roadmap-track-col">
+                    <header class="roadmap-track-header track-color-purple">
+                        <h3><i class="fas fa-dna" aria-hidden="true"></i> AI &amp; Genomics</h3>
+                    </header>
+                    <div class="roadmap-nodes-stream">
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="python numpy pandas scipy scikit-learn machine-learning data">
+                            <div class="roadmap-node-icon icon-blue"><i class="fab fa-python" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Python Scientific</span>
+                                <span class="roadmap-node-mention">NumPy · Pandas · Vectorized</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="pytorch deep-learning neural-networks enformer transfer-learning gpu">
+                            <div class="roadmap-node-icon icon-purple"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">PyTorch &amp; Enformer</span>
+                                <span class="roadmap-node-mention">Attention · Transfer Learning · Loss</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="ism tism in-silico mutagenesis genomics variants enformer scoring">
+                            <div class="roadmap-node-icon icon-rose"><i class="fas fa-dna" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">In-Silico Mutagenesis</span>
+                                <span class="roadmap-node-mention">Exact ISM · Taylor TISM Gradients</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="slurm hpc arc cluster distributed gpu batch parquet">
+                            <div class="roadmap-node-icon icon-gold"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Slurm HPC Cluster</span>
+                                <span class="roadmap-node-mention">ARC Slurm · Multi-GPU · Batch</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="vep spliceai encode ccres cistrome fantom5 meme fimo multi-omics">
+                            <div class="roadmap-node-icon icon-emerald"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Multi-Omics Suite</span>
+                                <span class="roadmap-node-mention">VEP · SpliceAI · cCREs · FIMO</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Track 3: Enterprise Mainframe -->
+                <section class="roadmap-track-col">
+                    <header class="roadmap-track-header track-color-gold">
+                        <h3><i class="fas fa-server" aria-hidden="true"></i> Enterprise Mainframe</h3>
+                    </header>
+                    <div class="roadmap-nodes-stream">
+                        <a href="experience-mainframe-internship.html" class="roadmap-node" data-tags="ibm ibm-z z/os mainframe enterprise uss z-architecture">
+                            <div class="roadmap-node-icon icon-blue"><i class="fas fa-cube" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">IBM Z &amp; z/OS</span>
+                                <span class="roadmap-node-mention">USS · Enterprise Workloads</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-mainframe-internship.html" class="roadmap-node" data-tags="jcl batch enterprise dataset dd statements scheduling">
+                            <div class="roadmap-node-icon icon-purple"><i class="fas fa-file-code" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">JCL Batch Pipelines</span>
+                                <span class="roadmap-node-mention">DD Statements · Datasets · Jobs</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="projects.html" class="roadmap-node" data-tags="gateway c sockets http rest mainframe bridging legacy">
+                            <div class="roadmap-node-icon icon-gold"><i class="fas fa-exchange-alt" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">C-to-Web Gateway</span>
+                                <span class="roadmap-node-mention">C Sockets · REST Bridge · SQLite</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-ibm-z-ambassador.html" class="roadmap-node" data-tags="ibm ambassador leadership community tech-talks outreach">
+                            <div class="roadmap-node-icon icon-rose"><i class="fas fa-bullhorn" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">IBM Z Ambassador</span>
+                                <span class="roadmap-node-mention">Developer Outreach · Workshops</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Track 4: Web, Databases & QA -->
+                <section class="roadmap-track-col">
+                    <header class="roadmap-track-header track-color-emerald">
+                        <h3><i class="fas fa-layer-group" aria-hidden="true"></i> Web, DB &amp; QA</h3>
+                    </header>
+                    <div class="roadmap-nodes-stream">
+                        <a href="projects.html" class="roadmap-node" data-tags="flask python web rest api sqlalchemy sqlite backend">
+                            <div class="roadmap-node-icon icon-blue"><i class="fas fa-globe" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Flask Web APIs</span>
+                                <span class="roadmap-node-mention">REST Microservices · MVC · SQLite</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="projects.html" class="roadmap-node" data-tags="qt cpp c++ desktop gui signal slot model-view">
+                            <div class="roadmap-node-icon icon-emerald"><i class="fas fa-window-maximize" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Qt Desktop (C++)</span>
+                                <span class="roadmap-node-mention">Signals &amp; Slots · Native GUI</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="projects.html" class="roadmap-node" data-tags="sql sqlite postgresql database schema acid transactions relational">
+                            <div class="roadmap-node-icon icon-purple"><i class="fas fa-database" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Relational SQL</span>
+                                <span class="roadmap-node-mention">Schema Design · ACID · Indexing</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="projects.html" class="roadmap-node" data-tags="playwright testing qa automation headless browser end-to-end">
+                            <div class="roadmap-node-icon icon-gold"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Playwright E2E QA</span>
+                                <span class="roadmap-node-mention">Headless Browser · Test Automation</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://github.com/moldovanluca4" target="_blank" rel="noopener noreferrer" class="roadmap-node" data-tags="git github version-control ci-cd branching rebase collaboration">
+                            <div class="roadmap-node-icon icon-rose"><i class="fab fa-git-alt" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Git &amp; CI/CD</span>
+                                <span class="roadmap-node-mention">Interactive Rebase · Actions · PRs</span>
+                            </div>
+                            <i class="fas fa-external-link-alt roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ======================================================== -->
+            <!-- VIEW 2: OVERALL GENERAL SKILLS (METHODOLOGIES & PILLARS) -->
+            <!-- ======================================================== -->
+            <div id="generalRoadmapGrid" class="roadmap-tracks-grid is-hidden" role="region" aria-label="Overall General Skills">
+                <!-- Pillar 1: Systems Architecture -->
+                <section class="roadmap-track-col">
+                    <header class="roadmap-track-header track-color-blue">
+                        <h3><i class="fas fa-microchip" aria-hidden="true"></i> Systems Architecture</h3>
+                    </header>
+                    <div class="roadmap-nodes-stream">
+                        <a href="projects.html" class="roadmap-node" data-tags="memory allocation pointers cache layout systems architecture">
+                            <div class="roadmap-node-icon icon-blue"><i class="fas fa-memory" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Memory Architecture</span>
+                                <span class="roadmap-node-mention">Direct Pointers · Zero Leaks · Cache</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="projects.html" class="roadmap-node" data-tags="concurrency posix threads mutex race ipc">
+                            <div class="roadmap-node-icon icon-purple"><i class="fas fa-random" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">POSIX Concurrency</span>
+                                <span class="roadmap-node-mention">Threads · Mutex Locks · Race-Free</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-mainframe-internship.html" class="roadmap-node" data-tags="reliability fault tolerance atomic transactions enterprise failover">
+                            <div class="roadmap-node-icon icon-gold"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Enterprise Reliability</span>
+                                <span class="roadmap-node-mention">Fault Tolerance · Atomic Transactions</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="cv.html" class="roadmap-node" data-tags="algorithms big-o data structures complexity graph search">
+                            <div class="roadmap-node-icon icon-emerald"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Algorithms &amp; Big-O</span>
+                                <span class="roadmap-node-mention">Space/Time Optimization · Graph Search</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Pillar 2: Scientific ML Research -->
+                <section class="roadmap-track-col">
+                    <header class="roadmap-track-header track-color-purple">
+                        <h3><i class="fas fa-flask" aria-hidden="true"></i> Scientific ML Research</h3>
+                    </header>
+                    <div class="roadmap-nodes-stream">
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="deep learning transformers attention tuning loss landscape research">
+                            <div class="roadmap-node-icon icon-blue"><i class="fas fa-brain" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Deep Trunk Tuning</span>
+                                <span class="roadmap-node-mention">Transformer Attention · Loss Landscape</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="statistical auditing hybrid candidate selection z-scores metrics">
+                            <div class="roadmap-node-icon icon-purple"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Statistical Auditing</span>
+                                <span class="roadmap-node-mention">Calibrated Hybrid Selection · Z-Scores</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="slurm hpc batch cluster resilience checkpoint resume parquet">
+                            <div class="roadmap-node-icon icon-gold"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">HPC Resilience</span>
+                                <span class="roadmap-node-mention">Slurm Batch · Checkpoint/Resume · I/O</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="multi-omic harmonization genomics integration dataframes cross-dataset">
+                            <div class="roadmap-node-icon icon-emerald"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Multi-Omic Harmonization</span>
+                                <span class="roadmap-node-mention">Cross-Dataset Genomics Integration</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Pillar 3: Software Craftsmanship -->
+                <section class="roadmap-track-col">
+                    <header class="roadmap-track-header track-color-emerald">
+                        <h3><i class="fas fa-laptop-code" aria-hidden="true"></i> Software Craftsmanship</h3>
+                    </header>
+                    <div class="roadmap-nodes-stream">
+                        <a href="projects.html" class="roadmap-node" data-tags="agile scrum 2-week sprints daily standups sprint reviews delivery">
+                            <div class="roadmap-node-icon icon-blue"><i class="fas fa-sync-alt" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Agile &amp; Scrum Delivery</span>
+                                <span class="roadmap-node-mention">2-Week Sprints · Standups · Reviews</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-research-intern.html" class="roadmap-node" data-tags="pep 517 cmake ruff packaging modular encapsulation clean code">
+                            <div class="roadmap-node-icon icon-purple"><i class="fas fa-box" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Modular Packaging</span>
+                                <span class="roadmap-node-mention">PEP 517 · CMake · Ruff Linting</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="projects.html" class="roadmap-node" data-tags="pytest testing playwright end-to-end edge-case fuzzing quality">
+                            <div class="roadmap-node-icon icon-gold"><i class="fas fa-vial" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Test-Driven Reliability</span>
+                                <span class="roadmap-node-mention">Pytest · Playwright E2E · Edge Cases</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://github.com/moldovanluca4" target="_blank" rel="noopener noreferrer" class="roadmap-node" data-tags="code review pr pull requests semver versioning ci/cd governance">
+                            <div class="roadmap-node-icon icon-emerald"><i class="fas fa-code-branch" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Code Review Governance</span>
+                                <span class="roadmap-node-mention">Disciplined PRs · Semantic Versioning</span>
+                            </div>
+                            <i class="fas fa-external-link-alt roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Pillar 4: Pedagogy & Leadership -->
+                <section class="roadmap-track-col">
+                    <header class="roadmap-track-header track-color-rose">
+                        <h3><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> Pedagogy &amp; Leadership</h3>
+                    </header>
+                    <div class="roadmap-nodes-stream">
+                        <a href="experience-teaching-assistant.html" class="roadmap-node" data-tags="teaching assistant calculus tutorials constructor university instruction">
+                            <div class="roadmap-node-icon icon-blue"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">TA - Elements of Calculus</span>
+                                <span class="roadmap-node-mention">Tutorials · Proof Intuition · Mentorship</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="experience-ibm-z-ambassador.html" class="roadmap-node" data-tags="ibm ambassador leadership outreach developer bootcamps talks">
+                            <div class="roadmap-node-icon icon-purple"><i class="fas fa-bullhorn" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">IBM Z Ambassador</span>
+                                <span class="roadmap-node-mention">Developer Outreach &amp; Bootcamps</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="about.html" class="roadmap-node" data-tags="mentorship students guidance peer systems debugging algorithms">
+                            <div class="roadmap-node-icon icon-gold"><i class="fas fa-users" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">Technical Mentorship</span>
+                                <span class="roadmap-node-mention">Peer Guidance in Systems &amp; Code</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="cv.html" class="roadmap-node" data-tags="languages multilingual english romanian italian german communication">
+                            <div class="roadmap-node-icon icon-rose"><i class="fas fa-globe-americas" aria-hidden="true"></i></div>
+                            <div class="roadmap-node-body">
+                                <span class="roadmap-node-title">4 Spoken Languages</span>
+                                <span class="roadmap-node-mention">English · Romanian · Italian · German</span>
+                            </div>
+                            <i class="fas fa-chevron-right roadmap-node-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
-        <div class="container"><p class="footer-copyright">© <span id="currentYear"></span> Luca Moldovan. All rights reserved.</p></div>
+        <div class="container"><p class="footer-copyright">&copy; <span id="currentYear"></span> Luca Moldovan. All rights reserved.</p></div>
     </footer>
     <div class="copy-warning" id="copyWarning" role="status" aria-live="polite">Content protection is active.</div>
     <script src="js/script.js"></script>

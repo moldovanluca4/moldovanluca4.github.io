@@ -690,6 +690,64 @@ function initPhotoLightbox() {
     });
 }
 
+function initSkillsPortal() {
+    const page = qs(".roadmap-page");
+    if (!page) return;
+
+    const tabs = qsa(".roadmap-tab-btn");
+    const searchInput = qs("#roadmapSearchInput");
+    const techGrid = qs("#techRoadmapGrid");
+    const generalGrid = qs("#generalRoadmapGrid");
+    const nodes = qsa(".roadmap-node");
+
+    // 1. Tab View Switcher
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(t => {
+                t.classList.remove("is-active");
+                t.setAttribute("aria-selected", "false");
+            });
+            tab.classList.add("is-active");
+            tab.setAttribute("aria-selected", "true");
+
+            const view = tab.dataset.view;
+            if (view === "tech") {
+                if (techGrid) techGrid.classList.remove("is-hidden");
+                if (generalGrid) generalGrid.classList.add("is-hidden");
+            } else if (view === "general") {
+                if (techGrid) techGrid.classList.add("is-hidden");
+                if (generalGrid) generalGrid.classList.remove("is-hidden");
+            } else if (view === "complete") {
+                if (techGrid) techGrid.classList.remove("is-hidden");
+                if (generalGrid) generalGrid.classList.remove("is-hidden");
+            }
+        });
+    });
+
+    // 2. Real-Time Search & Highlight
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            const query = e.target.value.toLowerCase().trim();
+
+            nodes.forEach(node => {
+                const title = (qs(".roadmap-node-title", node)?.textContent || "").toLowerCase();
+                const mention = (qs(".roadmap-node-mention", node)?.textContent || "").toLowerCase();
+                const tags = (node.dataset.tags || "").toLowerCase();
+
+                if (!query) {
+                    node.classList.remove("is-dimmed", "is-highlighted");
+                } else if (title.includes(query) || mention.includes(query) || tags.includes(query)) {
+                    node.classList.remove("is-dimmed");
+                    node.classList.add("is-highlighted");
+                } else {
+                    node.classList.add("is-dimmed");
+                    node.classList.remove("is-highlighted");
+                }
+            });
+        });
+    }
+}
+
 initImageFallbacks();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -708,6 +766,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initWebsiteStructureModal();
     initCvPreviewModal();
     initPhotoLightbox();
+    initSkillsPortal();
 });
 
 console.log("%cHello, Developer!", "color: #2563eb; font-size: 20px; font-weight: bold;");
