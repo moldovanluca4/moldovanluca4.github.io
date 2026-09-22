@@ -24,20 +24,14 @@
                 <span></span>
             </button>
 
-            <ul class="nav-menu">
+                                    <ul class="nav-menu">
                 <li><a href="cv.html" class="nav-link active">CV</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li class="nav-dropdown">
-                    <button class="nav-link nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">More <i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-                    <ul class="nav-dropdown-menu">
-                        <li><a href="experience.html" class="nav-dropdown-link">Experience</a></li>
-                        <li><a href="extracurricular-activities.html" class="nav-dropdown-link">Extracurricular</a></li>
-                        <li><a href="achievements.html" class="nav-dropdown-link">Achievements</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li><a href="extracurricular-activities.html" class="nav-link">Extracurricular</a></li>
             </ul>
         </div>
     </nav>
@@ -51,16 +45,144 @@
                     <p class="cv-summary">
                         Computer Science student at Constructor University with a Mathematics minor, currently researching bioinformatics at the University of Calgary. Focused on software development, operating systems, deep learning, mainframe systems, and cloud computing.
                     </p>
-                    <div class="site-guide" aria-label="Website structure">
-                        <p>Website Structure</p>
-                        <div>
-                            <span><strong>CV</strong> fast overview</span>
-                            <span><strong>About</strong> background and direction</span>
-                            <span><strong>Skills</strong> tools and frameworks</span>
-                            <span><strong>Projects</strong> technical work</span>
-                            <span><strong>More</strong> experience, achievements, and extracurriculars</span>
+                    <nav class="site-tree" id="websiteStructure" aria-label="Website structure tree">
+                        <div class="site-tree-header">
+                            <span class="site-tree-title">
+                                <i class="fas fa-sitemap" aria-hidden="true"></i> Website Structure
+                            </span>
+                            <span class="site-tree-badge">Interactive Map</span>
                         </div>
-                    </div>
+                        <div class="site-tree-body">
+                            <div class="tree-group">
+                                <div class="tree-group-label"><i class="fas fa-layer-group" aria-hidden="true"></i> Main Pages</div>
+                                <ul class="tree-list">
+                                    <li class="tree-node is-current">
+                                        <a href="cv.html" class="tree-link" aria-current="page">
+                                            <span class="tree-node-icon"><i class="fas fa-id-card" aria-hidden="true"></i></span>
+                                            <span class="tree-link-name">CV</span>
+                                            <span class="tree-node-desc">Overview</span>
+                                        </a>
+                                    </li>
+                                    <li class="tree-node">
+                                        <a href="about.html" class="tree-link">
+                                            <span class="tree-node-icon"><i class="fas fa-user" aria-hidden="true"></i></span>
+                                            <span class="tree-link-name">About</span>
+                                            <span class="tree-node-desc">Background</span>
+                                        </a>
+                                    </li>
+                                    <li class="tree-node">
+                                        <a href="skills.html" class="tree-link">
+                                            <span class="tree-node-icon"><i class="fas fa-code" aria-hidden="true"></i></span>
+                                            <span class="tree-link-name">Skills</span>
+                                            <span class="tree-node-desc">Tech Stack</span>
+                                        </a>
+                                    </li>
+                                    <li class="tree-node">
+                                        <a href="projects.html" class="tree-link">
+                                            <span class="tree-node-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></span>
+                                            <span class="tree-link-name">Projects</span>
+                                            <span class="tree-node-desc">Technical Work</span>
+                                        </a>
+                                    </li>
+                                    <li class="tree-node">
+                                        <a href="achievements.html" class="tree-link">
+                                            <span class="tree-node-icon"><i class="fas fa-trophy" aria-hidden="true"></i></span>
+                                            <span class="tree-link-name">Achievements</span>
+                                            <span class="tree-node-desc">Awards & Honors</span>
+                                        </a>
+                                    </li>
+                                    <li class="tree-node">
+                                        <a href="contact.html" class="tree-link">
+                                            <span class="tree-node-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                                            <span class="tree-link-name">Contact</span>
+                                            <span class="tree-node-desc">Get in Touch</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tree-group">
+                                <div class="tree-group-label"><i class="fas fa-folder-tree" aria-hidden="true"></i> Hubs & Subpages</div>
+                                <ul class="tree-list">
+                                    <li class="tree-node tree-parent">
+                                        <a href="experience.html" class="tree-link tree-hub-link">
+                                            <span class="tree-node-icon"><i class="fas fa-briefcase" aria-hidden="true"></i></span>
+                                            <span class="tree-link-name">Experience</span>
+                                            <span class="tree-hub-badge">Hub</span>
+                                        </a>
+                                        <ul class="tree-sublist" aria-label="Experience subpages">
+                                            <li class="tree-subnode">
+                                                <a href="experience-research-intern.html" class="tree-sublink">
+                                                    <span class="tree-branch" aria-hidden="true">├──</span>
+                                                    <span class="tree-sublink-name">Research Intern</span>
+                                                    <span class="tree-sublink-meta">U of Calgary</span>
+                                                </a>
+                                            </li>
+                                            <li class="tree-subnode">
+                                                <a href="experience-teaching-assistant.html" class="tree-sublink">
+                                                    <span class="tree-branch" aria-hidden="true">├──</span>
+                                                    <span class="tree-sublink-name">Teaching Assistant</span>
+                                                    <span class="tree-sublink-meta">Calculus</span>
+                                                </a>
+                                            </li>
+                                            <li class="tree-subnode">
+                                                <a href="experience-mainframe-internship.html" class="tree-sublink">
+                                                    <span class="tree-branch" aria-hidden="true">├──</span>
+                                                    <span class="tree-sublink-name">Mainframe Intern</span>
+                                                    <span class="tree-sublink-meta">Living Mainframe</span>
+                                                </a>
+                                            </li>
+                                            <li class="tree-subnode">
+                                                <a href="experience-ibm-z-ambassador.html" class="tree-sublink">
+                                                    <span class="tree-branch" aria-hidden="true">└──</span>
+                                                    <span class="tree-sublink-name">IBM Z Ambassador</span>
+                                                    <span class="tree-sublink-meta">Leadership</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="tree-node tree-parent">
+                                        <a href="extracurricular-activities.html" class="tree-link tree-hub-link">
+                                            <span class="tree-node-icon"><i class="fas fa-compass" aria-hidden="true"></i></span>
+                                            <span class="tree-link-name">Extracurricular</span>
+                                            <span class="tree-hub-badge">Hub</span>
+                                        </a>
+                                        <ul class="tree-sublist" aria-label="Extracurricular subpages">
+                                            <li class="tree-subnode">
+                                                <a href="extracurricular-sports.html" class="tree-sublink">
+                                                    <span class="tree-branch" aria-hidden="true">├──</span>
+                                                    <span class="tree-sublink-name">Sport</span>
+                                                    <span class="tree-sublink-meta">Triathlon & Fitness</span>
+                                                </a>
+                                            </li>
+                                            <li class="tree-subnode">
+                                                <a href="extracurricular-hobbies.html" class="tree-sublink">
+                                                    <span class="tree-branch" aria-hidden="true">├──</span>
+                                                    <span class="tree-sublink-name">Hobbies</span>
+                                                    <span class="tree-sublink-meta">Homelab & Systems</span>
+                                                </a>
+                                            </li>
+                                            <li class="tree-subnode">
+                                                <a href="extracurricular-travels.html" class="tree-sublink">
+                                                    <span class="tree-branch" aria-hidden="true">├──</span>
+                                                    <span class="tree-sublink-name">Travels</span>
+                                                    <span class="tree-sublink-meta">Cultures</span>
+                                                </a>
+                                            </li>
+                                            <li class="tree-subnode">
+                                                <a href="extracurricular-international.html" class="tree-sublink">
+                                                    <span class="tree-branch" aria-hidden="true">└──</span>
+                                                    <span class="tree-sublink-name">International</span>
+                                                    <span class="tree-sublink-meta">Erasmus+</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                     <div class="cv-actions">
                         <a href="experience.html" class="btn btn-primary"><i class="fas fa-briefcase"></i> Experience</a>
                         <a href="skills.html" class="btn btn-secondary"><i class="fas fa-code"></i> Skills</a>
