@@ -451,6 +451,164 @@ function initContentProtection() {
     });
 }
 
+function initWebsiteStructureModal() {
+    const openBtn = qs("#openSiteStructure");
+    const modal = qs("#siteStructureModal");
+    const backdrop = qs("#siteStructureBackdrop");
+    const closeBtn = qs("#closeSiteStructure");
+    if (!openBtn || !modal) return;
+
+    const expandAllBtn = qs("#treeExpandAll");
+    const collapseAllBtn = qs("#treeCollapseAll");
+    const branchToggles = qsa(".tree-toggle-btn", modal);
+    const animNodes = qsa(".anim-node", modal);
+
+    const openModal = () => {
+        modal.hidden = false;
+        void modal.offsetWidth; // force reflow for smooth CSS transitions
+        modal.classList.add("is-visible");
+        document.body.classList.add("modal-open");
+        openBtn.setAttribute("aria-expanded", "true");
+
+        // Stagger entrance animation for tree items
+        animNodes.forEach((node, index) => {
+            node.style.animationDelay = `${0.035 * (index + 1)}s`;
+            node.classList.add("is-animated");
+        });
+
+        closeBtn?.focus();
+    };
+
+    const closeModal = () => {
+        modal.classList.remove("is-visible");
+        document.body.classList.remove("modal-open");
+        openBtn.setAttribute("aria-expanded", "false");
+
+        window.setTimeout(() => {
+            if (!modal.classList.contains("is-visible")) {
+                modal.hidden = true;
+                animNodes.forEach(node => {
+                    node.classList.remove("is-animated");
+                    node.style.animationDelay = "";
+                });
+            }
+        }, 280);
+
+        openBtn.focus();
+    };
+
+    openBtn.addEventListener("click", openModal);
+    closeBtn?.addEventListener("click", closeModal);
+    backdrop?.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden && modal.classList.contains("is-visible")) {
+            closeModal();
+        }
+    });
+
+    branchToggles.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const isExpanded = btn.getAttribute("aria-expanded") === "true";
+            const targetId = btn.getAttribute("aria-controls");
+            const targetSublist = qs(`#${targetId}`);
+            if (!targetSublist) return;
+
+            btn.setAttribute("aria-expanded", String(!isExpanded));
+            targetSublist.classList.toggle("is-collapsed", isExpanded);
+        });
+    });
+
+    expandAllBtn?.addEventListener("click", () => {
+        branchToggles.forEach(btn => {
+            btn.setAttribute("aria-expanded", "true");
+            const targetId = btn.getAttribute("aria-controls");
+            qs(`#${targetId}`)?.classList.remove("is-collapsed");
+        });
+    });
+
+    collapseAllBtn?.addEventListener("click", () => {
+        branchToggles.forEach(btn => {
+            btn.setAttribute("aria-expanded", "false");
+            const targetId = btn.getAttribute("aria-controls");
+            qs(`#${targetId}`)?.classList.add("is-collapsed");
+        });
+    });
+}
+
+function initCvPreviewModal() {
+    const openBtn = qs("#openCvPreview");
+    const modal = qs("#cvPreviewModal");
+    const backdrop = qs("#cvPreviewBackdrop");
+    const closeBtn = qs("#closeCvPreview");
+    const printBtn = qs("#printCvBtn");
+    const tabDetailed = qs("#tabBtnDetailed");
+    const tabSummary = qs("#tabBtnSummary");
+    const paneDetailed = qs("#paneDetailed");
+    const paneSummary = qs("#paneSummary");
+    if (!openBtn || !modal) return;
+
+    const setPreviewTab = (isDetailed) => {
+        tabDetailed?.classList.toggle("active", isDetailed);
+        tabDetailed?.setAttribute("aria-selected", String(isDetailed));
+        tabSummary?.classList.toggle("active", !isDetailed);
+        tabSummary?.setAttribute("aria-selected", String(!isDetailed));
+
+        if (paneDetailed) {
+            paneDetailed.classList.toggle("active", isDetailed);
+            paneDetailed.hidden = !isDetailed;
+        }
+        if (paneSummary) {
+            paneSummary.classList.toggle("active", !isDetailed);
+            paneSummary.hidden = isDetailed;
+        }
+    };
+
+    tabDetailed?.addEventListener("click", () => setPreviewTab(true));
+    tabSummary?.addEventListener("click", () => setPreviewTab(false));
+
+    const openModal = () => {
+        modal.hidden = false;
+        void modal.offsetWidth; // force reflow for smooth CSS transitions
+        modal.classList.add("is-visible");
+        document.body.classList.add("modal-open");
+        openBtn.setAttribute("aria-expanded", "true");
+        closeBtn?.focus();
+    };
+
+    const closeModal = () => {
+        modal.classList.remove("is-visible");
+        document.body.classList.remove("modal-open");
+        openBtn.setAttribute("aria-expanded", "false");
+
+        window.setTimeout(() => {
+            if (!modal.classList.contains("is-visible")) {
+                modal.hidden = true;
+            }
+        }, 280);
+
+        openBtn.focus();
+    };
+
+    openBtn.addEventListener("click", openModal);
+    closeBtn?.addEventListener("click", closeModal);
+    backdrop?.addEventListener("click", closeModal);
+
+    printBtn?.addEventListener("click", () => {
+        setPreviewTab(false);
+        window.setTimeout(() => {
+            window.print();
+        }, 60);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden && modal.classList.contains("is-visible")) {
+            closeModal();
+        }
+    });
+}
+
 initImageFallbacks();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -466,6 +624,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initFooterYear();
     initLazyImages();
     initContentProtection();
+    initWebsiteStructureModal();
+    initCvPreviewModal();
 });
 
 console.log("%cHello, Developer!", "color: #2563eb; font-size: 20px; font-weight: bold;");
