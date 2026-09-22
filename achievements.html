@@ -93,7 +93,25 @@
                 </div>
                 <div class="achievement-records">
                     <article class="achievement-record"><i class="fas fa-trophy" aria-hidden="true"></i><p>Constructor University x Constructor Tech Hackathon Winner - Built a winning project for the "Build Agents That Sense, Decide, and Act to Automate Real Tasks" theme. Winning the hackathon resulted in an internship offer from Constructor Tech.</p></article>
-                    <article class="achievement-record"><i class="fas fa-microphone" aria-hidden="true"></i><p>Speaker at AMC Young Talents Mainframe Convention 2025 - Presented "Enhancing Skills and Opportunities with IBM Z XPLORE."</p></article>
+                    <article class="achievement-record achievement-record-highlight">
+                        <div class="record-icon-badge" aria-hidden="true"><i class="fas fa-microphone"></i></div>
+                        <div class="record-content">
+                            <div class="record-header-row">
+                                <span class="record-badge">Keynote Presentation</span>
+                                <span class="record-date">2025</span>
+                            </div>
+                            <h3>Speaker at AMC Young Talents Mainframe Convention 2025</h3>
+                            <p>Delivered the keynote presentation <em>"Enhancing Skills and Opportunities with IBM ZXPLORE"</em> highlighting mainframe enterprise computing, hands-on digital credentials, and pathways for next-generation systems talent.</p>
+                            <div class="record-actions">
+                                <button type="button" class="btn btn-primary btn-sm" id="openPresentationBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="presentationModal">
+                                    <i class="fas fa-file-pdf" aria-hidden="true"></i> View Presentation (PDF)
+                                </button>
+                                <a href="contact.html?subject=Presentation%20Request%20-%20AMC%20Mainframe%20Convention" class="btn btn-ghost btn-sm">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i> Request Slide Deck
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                     <article class="achievement-record"><i class="fas fa-code" aria-hidden="true"></i><p>BMW Group x Constructor University Hackathon</p></article>
                     <article class="achievement-record"><i class="fas fa-people-group" aria-hidden="true"></i><p>IBM Z Student Ambassador Events - Technical Workshop Facilitation</p></article>
                     <article class="achievement-record"><i class="fas fa-globe" aria-hidden="true"></i><p>International Erasmus+ Workshops</p></article>
@@ -101,6 +119,57 @@
             </div>
         </section>
     </main>
+
+    <!-- ===== PROTECTED PRESENTATION VIEWER MODAL ===== -->
+    <div class="presentation-modal" id="presentationModal" role="dialog" aria-modal="true" aria-labelledby="presentationModalTitle" hidden>
+        <div class="presentation-modal-backdrop" id="presentationBackdrop"></div>
+        <div class="presentation-modal-dialog">
+            <!-- Modal Header -->
+            <header class="presentation-modal-header">
+                <div class="presentation-header-info">
+                    <span class="presentation-eyebrow"><i class="fas fa-microphone" aria-hidden="true"></i> AMC Young Talents Mainframe Convention 2025</span>
+                    <h2 id="presentationModalTitle">Enhancing Skills and Opportunities with IBM ZXPLORE</h2>
+                    <p class="presentation-meta">Presenter: Moldovan Luca · 12 Pages · Read-Only Protected Preview</p>
+                </div>
+                <div class="presentation-header-controls">
+                    <span class="presentation-counter-badge"><i class="fas fa-file-pdf" aria-hidden="true"></i> 12 Pages PDF</span>
+                    <a href="contact.html?subject=Presentation%20Request%20-%20AMC%20Mainframe%20Convention" class="btn btn-primary btn-sm" title="Request full authorized deck">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i> Request Deck
+                    </a>
+                    <button type="button" class="presentation-close-btn" id="closePresentationBtn" aria-label="Close presentation preview">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Protection Notice Strip -->
+            <div class="presentation-notice-strip">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                <span>
+                    <strong>Protected Preview:</strong> Downloading is disabled for this presentation. To obtain an authorized copy of the slide deck, please
+                    <a href="contact.html?subject=Presentation%20Request%20-%20AMC%20Mainframe%20Convention">request it via the contact form</a>.
+                </span>
+            </div>
+
+            <!-- Embedded PDF Document Viewport (Direct Scrollable PDF Viewer) -->
+            <div class="presentation-pdf-viewport" id="presentationPdfViewport">
+                <iframe src="files/amc-mainframe-convention-presentation.pdf#toolbar=0&navpanes=0&scrollbar=1" title="Enhancing Skills and Opportunities with IBM ZXPLORE Presentation PDF" class="presentation-pdf-iframe"></iframe>
+            </div>
+
+            <!-- Modal Footer -->
+            <footer class="presentation-modal-footer">
+                <div class="presentation-footer-left">
+                    <span>&copy; Luca Moldovan · AMC Young Talents Mainframe Convention 2025</span>
+                </div>
+                <div class="presentation-footer-actions">
+                    <a href="contact.html?subject=Presentation%20Request%20-%20AMC%20Mainframe%20Convention" class="btn btn-primary btn-sm">
+                        <i class="fas fa-envelope" aria-hidden="true"></i> Request Deck via Contact Form
+                    </a>
+                    <button type="button" class="btn btn-secondary btn-sm" id="closePresentationFooterBtn">Close Preview</button>
+                </div>
+            </footer>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container"><p class="footer-copyright">© <span id="currentYear"></span> Luca Moldovan. All rights reserved.</p></div>

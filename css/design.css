@@ -4835,3 +4835,347 @@ body {
         max-width: 100%;
     }
 }
+
+/* ===== PRESENTATION VIEWER & HIGHLIGHTED ACHIEVEMENTS ===== */
+
+.btn-sm {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.84rem;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid #bfdbfe;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.btn-ghost:hover {
+    background: #eff6ff;
+    color: var(--primary-dark);
+    border-color: var(--primary-color);
+}
+
+/* Highlighted Achievement Record */
+.achievement-record-highlight {
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+    padding: 1.25rem 1.5rem;
+    margin: 0.75rem 0;
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+    transition: all var(--transition-fast);
+}
+
+.achievement-record-highlight:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.15);
+}
+
+.record-icon-badge {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.record-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.record-header-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.record-badge {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #eff6ff;
+    color: var(--primary-color);
+    border: 1px solid #bfdbfe;
+    padding: 0.15rem 0.55rem;
+    border-radius: 9999px;
+}
+
+.record-date {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-medium);
+}
+
+.record-content h3 {
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.record-content p {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+.record-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.4rem;
+}
+
+/* Presentation Viewer Modal */
+.presentation-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.presentation-modal[hidden] {
+    display: none;
+}
+
+.presentation-modal.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.presentation-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+}
+
+.presentation-modal-dialog {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 1100px;
+    height: 92vh;
+    max-height: 94vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.presentation-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    background: #ffffff;
+    flex-shrink: 0;
+}
+
+.presentation-header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.presentation-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.presentation-modal-header h2 {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.presentation-meta {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.presentation-header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.presentation-counter-badge {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: #f1f5f9;
+    color: var(--text-dark);
+    border: 1px solid #cbd5e1;
+    padding: 0.3rem 0.65rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.presentation-close-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.presentation-close-btn:hover {
+    background: #fee2e2;
+    color: #ef4444;
+    border-color: #fca5a5;
+    transform: rotate(90deg);
+}
+
+.presentation-notice-strip {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 1.5rem;
+    background: #eff6ff;
+    border-bottom: 1px solid #bfdbfe;
+    font-size: 0.84rem;
+    color: #1e40af;
+    flex-shrink: 0;
+}
+
+.presentation-notice-strip i {
+    font-size: 1rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.presentation-notice-strip a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.presentation-notice-strip a:hover {
+    color: var(--primary-dark);
+}
+
+.presentation-pdf-viewport {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    background: #1e293b;
+    overflow: hidden;
+    position: relative;
+}
+
+.presentation-pdf-iframe {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    border: none;
+    display: block;
+    background: #334155;
+}
+
+.presentation-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.presentation-footer-left {
+    font-size: 0.82rem;
+    color: var(--text-medium);
+}
+
+.presentation-footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+@media (max-width: 768px) {
+    .achievement-record-highlight {
+        grid-template-columns: 1fr;
+    }
+    .record-icon-badge {
+        display: none;
+    }
+    .presentation-modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .presentation-header-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .presentation-modal-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .presentation-footer-actions {
+        flex-direction: column;
+    }
+}

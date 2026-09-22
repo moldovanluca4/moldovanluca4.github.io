@@ -273,6 +273,17 @@ function initContactForm() {
     const contactForm = qs("#contactForm");
     if (!contactForm) return;
 
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const subjectParam = urlParams.get("subject");
+        if (subjectParam) {
+            const subjectInput = qs("#subject", contactForm);
+            if (subjectInput) {
+                subjectInput.value = subjectParam;
+            }
+        }
+    } catch (_) {}
+
     contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
@@ -748,6 +759,60 @@ function initSkillsPortal() {
     }
 }
 
+function initPresentationModal() {
+    const openBtn = qs("#openPresentationBtn");
+    const modal = qs("#presentationModal");
+    if (!openBtn || !modal) return;
+
+    const backdrop = qs("#presentationBackdrop", modal);
+    const closeBtn = qs("#closePresentationBtn", modal);
+    const closeFooterBtn = qs("#closePresentationFooterBtn", modal);
+    const iframe = qs(".presentation-pdf-iframe", modal);
+
+    let lastFocusedElement = null;
+
+    const openModal = () => {
+        lastFocusedElement = document.activeElement;
+        modal.hidden = false;
+        void modal.offsetWidth; // Force layout reflow for animation
+        modal.classList.add("is-visible");
+        document.body.classList.add("modal-open");
+        openBtn.setAttribute("aria-expanded", "true");
+        closeBtn?.focus();
+
+        if (iframe && !iframe.getAttribute("src")) {
+            iframe.src = "files/amc-mainframe-convention-presentation.pdf#toolbar=0&navpanes=0&scrollbar=1";
+        }
+    };
+
+    const closeModal = () => {
+        modal.classList.remove("is-visible");
+        document.body.classList.remove("modal-open");
+        openBtn.setAttribute("aria-expanded", "false");
+
+        window.setTimeout(() => {
+            if (!modal.classList.contains("is-visible")) {
+                modal.hidden = true;
+            }
+        }, 280);
+
+        if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+            lastFocusedElement.focus();
+        }
+    };
+
+    openBtn.addEventListener("click", openModal);
+    closeBtn?.addEventListener("click", closeModal);
+    closeFooterBtn?.addEventListener("click", closeModal);
+    backdrop?.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden && modal.classList.contains("is-visible")) {
+            closeModal();
+        }
+    });
+}
+
 initImageFallbacks();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -767,6 +832,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCvPreviewModal();
     initPhotoLightbox();
     initSkillsPortal();
+    initPresentationModal();
 });
 
 console.log("%cHello, Developer!", "color: #2563eb; font-size: 20px; font-weight: bold;");
