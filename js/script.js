@@ -609,6 +609,87 @@ function initCvPreviewModal() {
     });
 }
 
+function initPhotoLightbox() {
+    const modal = qs("#photoLightboxModal");
+    if (!modal) return;
+
+    const backdrop = qs("#lightboxBackdrop", modal);
+    const closeBtn = qs("#closeLightboxBtn", modal);
+    const lightboxImg = qs("#lightboxImg", modal);
+    const lightboxCaption = qs("#lightboxCaption", modal);
+    const lightboxTitle = qs("#lightboxTitle", modal);
+    const cards = qsa(".photo-feature-card");
+    if (!cards.length) return;
+
+    let lastFocusedElement = null;
+
+    const openLightbox = (card) => {
+        lastFocusedElement = document.activeElement;
+        const fullSrc = card.getAttribute("data-full");
+        const caption = card.getAttribute("data-caption") || "";
+        const titleEl = qs("h3", card);
+        const titleText = titleEl ? titleEl.textContent.trim() : "Photo Preview";
+        const imgEl = qs("img", card);
+        const altText = imgEl ? (imgEl.getAttribute("alt") || titleText) : titleText;
+
+        if (lightboxImg && fullSrc) {
+            lightboxImg.src = fullSrc;
+            lightboxImg.alt = altText;
+        }
+        if (lightboxTitle) {
+            lightboxTitle.textContent = titleText;
+        }
+        if (lightboxCaption) {
+            lightboxCaption.textContent = caption;
+        }
+
+        modal.hidden = false;
+        void modal.offsetWidth;
+        modal.classList.add("is-visible");
+        document.body.classList.add("modal-open");
+        closeBtn?.focus();
+    };
+
+    const closeLightbox = () => {
+        modal.classList.remove("is-visible");
+        document.body.classList.remove("modal-open");
+
+        window.setTimeout(() => {
+            if (!modal.classList.contains("is-visible")) {
+                modal.hidden = true;
+                if (lightboxImg) lightboxImg.src = "";
+            }
+        }, 280);
+
+        if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+            lastFocusedElement.focus();
+        }
+    };
+
+    cards.forEach((card) => {
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("role", "button");
+        card.setAttribute("aria-label", `View full photo: ${qs("h3", card)?.textContent?.trim() || "photo"}`);
+
+        card.addEventListener("click", () => openLightbox(card));
+        card.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openLightbox(card);
+            }
+        });
+    });
+
+    closeBtn?.addEventListener("click", closeLightbox);
+    backdrop?.addEventListener("click", closeLightbox);
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden && modal.classList.contains("is-visible")) {
+            closeLightbox();
+        }
+    });
+}
+
 initImageFallbacks();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -626,6 +707,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initContentProtection();
     initWebsiteStructureModal();
     initCvPreviewModal();
+    initPhotoLightbox();
 });
 
 console.log("%cHello, Developer!", "color: #2563eb; font-size: 20px; font-weight: bold;");

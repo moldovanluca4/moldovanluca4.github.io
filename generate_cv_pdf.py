@@ -129,15 +129,15 @@ def create_cv_pdf(filename="files/cv.pdf"):
 
     experiences = [
         {
-            "role": "Research Intern — Genomics & Bioinformatics",
-            "org": "University of Calgary",
+            "role": "Research Intern — Computational Genomics & Deep Learning",
+            "org": "University of Calgary (ARC HPC Cluster)",
             "location": "Calgary, AB, Canada",
             "dates": "Jun 2026 - Aug 2026",
             "bullets": [
-                "Awarded 2026 Mitacs Globalink Research Internship & DAAD-RISE Worldwide Scholarship in Dr. Long's lab.",
-                "Researched deep learning representations for high-dimensional genomics data to characterize biology and predict diseases.",
-                "Orchestrated large-scale multi-GPU model training workflows on the Advanced Research Computing (ARC) cluster platform.",
-                "Acquired deep knowledge of molecular biology, bioinformatics algorithms, and cross-disciplinary biomedical workflows."
+                "Awarded 2026 Mitacs Globalink & DAAD-RISE Worldwide Scholarship in Dr. Long's lab; developed TL-Prot-ISM.",
+                "Engineered In-Silico Mutagenesis (ISM) scoring for TL-Prot, predicting steady-state lung protein abundance from 196 kb DNA windows.",
+                "Discovered first-order Taylor gradient (TISM) failure; formulated calibrated Hybrid Selection & Audit pipeline (>90% top-hit recall).",
+                "Built 12,000-line multi-omic annotation suite (VEP, SpliceAI, MEME/FIMO, cCREs) and orchestrated Slurm GPU jobs via PyArrow Parquet."
             ]
         },
         {
@@ -251,4 +251,5 @@ def create_cv_pdf(filename="files/cv.pdf"):
     print(f"Successfully generated {filename}")
 
 if __name__ == "__main__":
-    create_cv_pdf()
+    create_cv_pdf("files/Luca_Moldovan_CV_Summary.pdf")
+    create_cv_pdf("files/cv-summary.pdf")

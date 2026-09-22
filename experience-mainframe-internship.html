@@ -104,21 +104,56 @@
                     <p class="eyebrow">Photo Journal</p>
                     <h2>Living Mainframe Internship</h2>
                 </div>
-                <div class="protected-photo-gallery">
-                    <!-- Replace each placeholder with an image inside the figure, preserving the figure class and descriptive alt text. -->
-                    <figure class="protected-trip-photo">
-                        <div class="trip-photo-placeholder"><i class="fas fa-building" aria-hidden="true"></i><span>Living Mainframe</span></div>
+                <div class="protected-photo-gallery gallery-two-up">
+                    <figure class="protected-trip-photo photo-feature-card" data-full="images/living-mainframe-office.jpg" data-caption="Workstation & Office Environment — Living Mainframe GmbH, Böblingen">
+                        <div class="photo-container">
+                            <img src="images/living-mainframe-office.jpg" alt="Workstation and curved dual-display setup at Living Mainframe GmbH headquarters in Böblingen" draggable="false" loading="lazy">
+                            <span class="photo-zoom-hint"><i class="fas fa-expand" aria-hidden="true"></i> View Full</span>
+                        </div>
+                        <figcaption class="photo-info-box">
+                            <span class="photo-tag-pill"><i class="fas fa-building" aria-hidden="true"></i> Office Setup</span>
+                            <h3>Workstation & Office Environment</h3>
+                            <p>Dual-display desk setup at the Living Mainframe headquarters in Böblingen, Germany, featuring the curved ultrawide display, ThinkPad workstation, architecture diagram board, and IBM Z posters.</p>
+                        </figcaption>
                     </figure>
-                    <figure class="protected-trip-photo">
-                        <div class="trip-photo-placeholder"><i class="fas fa-server" aria-hidden="true"></i><span>Mainframe Work</span></div>
-                    </figure>
-                    <figure class="protected-trip-photo">
-                        <div class="trip-photo-placeholder"><i class="fas fa-code" aria-hidden="true"></i><span>Software Project</span></div>
+
+                    <figure class="protected-trip-photo photo-feature-card" data-full="images/living-mainframe-workstation.jpg" data-caption="Codebase & Development Workflows — ThinkPad, Linux, C & Python">
+                        <div class="photo-container photo-container-portrait">
+                            <img src="images/living-mainframe-workstation.jpg" alt="Development environment displaying C and Python codebase on ThinkPad laptop at Living Mainframe" draggable="false" loading="lazy">
+                            <span class="photo-zoom-hint"><i class="fas fa-expand" aria-hidden="true"></i> View Full</span>
+                        </div>
+                        <figcaption class="photo-info-box">
+                            <span class="photo-tag-pill"><i class="fas fa-laptop-code" aria-hidden="true"></i> Development</span>
+                            <h3>Codebase & Development Workflows</h3>
+                            <p>Direct workstation view running VS Code on Linux, integrating compiled C routines with a Python/Flask backend and SQLite database to support enterprise mainframe tooling.</p>
+                        </figcaption>
                     </figure>
                 </div>
                 <a href="experience.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Experience</a>
             </div>
         </section>
+
+        <!-- Image Lightbox Modal -->
+        <div class="photo-lightbox-modal" id="photoLightboxModal" role="dialog" aria-modal="true" aria-label="Photo full preview" hidden>
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            <div class="lightbox-dialog">
+                <div class="lightbox-titlebar">
+                    <div class="terminal-dots" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="lightbox-title" id="lightboxTitle">Photo Preview</span>
+                    <button type="button" class="structure-close-btn" id="closeLightboxBtn" aria-label="Close photo preview">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="lightbox-body">
+                    <div class="lightbox-img-wrapper">
+                        <img src="" alt="" id="lightboxImg" draggable="false">
+                    </div>
+                    <p class="lightbox-caption" id="lightboxCaption"></p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">

@@ -29,68 +29,318 @@
     <main class="detail-page protected-content">
         <header class="detail-header">
             <div class="container">
-                <p class="eyebrow">Experience Detail</p>
-                <h1>Research Intern</h1>
-                <p>University of Calgary, Calgary, AB, Canada / Jun 2026 - Aug 2026</p>
+                <p class="eyebrow">Research Internship • Computational Biology & Deep Learning</p>
+                <h1>Representation Learning for Genomic Data</h1>
+                <p>TL-Prot-ISM Project • University of Calgary, Calgary, AB, Canada • Jun 2026 – Aug 2026 • Host: Advanced Research Computing (ARC) HPC Cluster</p>
             </div>
         </header>
 
         <section class="detail-section">
             <div class="container readable-grid">
                 <article class="detail-card">
-                    <i class="fas fa-flask"></i>
-                    <h2>Role Overview</h2>
+                    <i class="fas fa-dna"></i>
+                    <h2>Deep Transfer Learning</h2>
                     <p>
-                        As a RISE-Globalink Research Internship Scholarship Recipient at the University of Calgary, I worked in the research world on a project focused on learning representations of genomics data to characterize biology and predict diseases.
+                        Engineered an end-to-end In-Silico Mutagenesis (ISM) scoring engine for <strong>TL-Prot</strong>, a 250M-parameter deep transfer learning model adapting Enformer transformer layers with spatial attention pooling and gene-body exon masking.
                     </p>
                     <p>
-                        This experience gave me space to apply computer science, data analysis, and deep learning ideas to biological data while learning how academic research teams structure problems, experiments, and collaboration.
+                        Directly predicts steady-state human lung tissue protein abundance from 196,608 base-pair (bp) genomic DNA windows, bridging the post-transcriptional gap between mRNA and protein.
                     </p>
                 </article>
 
                 <article class="detail-card">
-                    <i class="fas fa-dna"></i>
-                    <h2>What I Work On</h2>
+                    <i class="fas fa-microchip"></i>
+                    <h2>Algorithmic Innovation</h2>
                     <ul class="clean-list">
-                        <li>Conducted advanced research in genomics and bioinformatics.</li>
-                        <li>Collaborated with an international research team on innovative bioinformatics work.</li>
-                        <li>Applied theoretical concepts to real-world scientific problems.</li>
-                        <li>Learned representations of genomics data to characterize biology and predict diseases.</li>
+                        <li><strong>Exact ISM:</strong> Paired forward passes computing exact standardized effect sizes (&Delta;z = z<sub>mut</sub> - z<sub>ref</sub>).</li>
+                        <li><strong>TISM Empirical Crisis:</strong> Discovered first-order Taylor gradients fail in deep attention models (0% recall at top-10 hits).</li>
+                        <li><strong>Calibrated Hybrid Pipeline:</strong> Formulated multi-view stratified ranking with deterministic hash auditing, guaranteeing &gt;90% recall at ~50&times; compute savings.</li>
+                        <li><strong>Comparative Epigenomics:</strong> Contrasted TL-Prot against 5,313 base Enformer chromatin/CAGE tracks to isolate protein-specific regulatory grammar.</li>
                     </ul>
                 </article>
 
                 <article class="detail-card">
-                    <i class="fas fa-brain"></i>
-                    <h2>Skills Used</h2>
-                    <div class="compact-tags"><span>Research</span><span>Data Analysis</span><span>Genomics</span><span>Bioinformatics</span><span>Deep Learning</span><span>Python</span></div>
+                    <i class="fas fa-network-wired"></i>
+                    <h2>Multi-Omics & HPC Stack</h2>
+                    <p>
+                        Authored 12,000+ lines in a modular Python package (<code>tlprot_ism</code>) deployed across Tesla V100 GPU nodes via Slurm on the ARC cluster.
+                    </p>
+                    <div class="compact-tags">
+                        <span>PyTorch 2.6</span>
+                        <span>Enformer</span>
+                        <span>HPC Slurm</span>
+                        <span>In-Silico Mutagenesis</span>
+                        <span>Apache PyArrow</span>
+                        <span>Ensembl VEP</span>
+                        <span>Illumina SpliceAI</span>
+                        <span>MEME / FIMO</span>
+                        <span>ENCODE cCREs</span>
+                        <span>Cistrome DB</span>
+                        <span>FANTOM5</span>
+                    </div>
                 </article>
             </div>
         </section>
 
         <section class="detail-section cv-muted">
             <article class="container experience-story">
-                <p class="eyebrow">Further Reading</p>
-                <h2>Research, Genomics, and Learning From Real Scientific Problems</h2>
+                <p class="eyebrow">Scientific Research & Architectural Report</p>
+                <h2>Representation Learning for Genomic Data: In-Silico Mutagenesis & Variant Effect Prediction for Lung Protein Abundance</h2>
+
+                <div class="research-meta-strip">
+                    <div class="research-meta-item"><i class="fas fa-user-circle"></i> <strong>Author:</strong> Luca Moldovan</div>
+                    <div class="research-meta-item"><i class="fas fa-project-diagram"></i> <strong>Project:</strong> TL-Prot-ISM (<code>tl-prot-ism</code>)</div>
+                    <div class="research-meta-item"><i class="fas fa-server"></i> <strong>Host:</strong> Advanced Research Computing (ARC) HPC Cluster</div>
+                    <div class="research-meta-item"><i class="fas fa-hospital"></i> <strong>Lab:</strong> Dr. Long's Lab, Health Sciences Centre, Foothills Campus</div>
+                    <div class="research-meta-item"><i class="fas fa-award"></i> <strong>Scholarship:</strong> Mitacs Globalink & DAAD-RISE Worldwide</div>
+                    <div class="research-meta-item"><i class="fas fa-calendar-check"></i> <strong>Date:</strong> August 2026</div>
+                </div>
+
+                <h3><i class="fas fa-file-alt"></i> Executive Summary</h3>
                 <p>
-                    My research internship at the <strong>University of Calgary</strong> gave me the opportunity to step into academic research and apply computer science to biological data. As a <strong>RISE-Globalink Research Internship Scholarship Recipient</strong>, I worked on a project focused on learning representations of genomics data to characterize biology and support disease prediction.
+                    This report documents the research, architectural development, and scientific evaluation conducted during my research internship at the <strong>University of Calgary</strong> on <strong>genomic representation learning and in-silico mutagenesis (ISM)</strong>. The primary objective was to transform <strong>TL-Prot</strong>—a deep transfer learning model that predicts steady-state lung tissue protein abundance from 196,608 base-pair (bp) genomic DNA windows—into an end-to-end, auditable, high-throughput variant effect scoring engine.
                 </p>
                 <p>
-                    This experience was exceptionally valuable and rewarding. The atmosphere in <strong>Dr. Long's lab</strong> was very welcoming, and the research group was made up of kind and supportive people with whom I could communicate openly, ask questions, and discuss ideas freely.
+                    While deep learning architectures like Enformer successfully map non-coding sequence features to chromatin accessibility and transcription, predicting post-transcriptional protein abundance in human tissues represents a critical open challenge. Over the course of the project, I developed:
+                </p>
+                <ul>
+                    <li>An exact, coordinate-validated <strong>In-Silico Mutagenesis (ISM)</strong> engine operating in standardized z-score space.</li>
+                    <li>An analytical and empirical evaluation of <strong>Taylor In-Silico Mutagenesis (TISM)</strong>, uncovering fundamental failure modes of first-order gradient approximations in deep attention-based genomic models.</li>
+                    <li>A mathematically rigorous <strong>Hybrid Candidate Selection and Audit Pipeline</strong> that guarantees high hit recall while minimizing expensive GPU evaluations.</li>
+                    <li>A multi-omic biological integration suite combining Ensembl <strong>VEP</strong>, Illumina <strong>SpliceAI</strong>, <strong>MEME/FIMO</strong> motif analysis, <strong>ENCODE cCREs</strong>, <strong>Cistrome DB</strong>, and <strong>FANTOM5</strong>.</li>
+                    <li>Comparative benchmarks against base <strong>Enformer</strong> to isolate lung protein abundance-specific regulatory grammar from generic chromatin accessibility.</li>
+                </ul>
+
+                <h3><i class="fas fa-microscope"></i> 1. The Biological Problem: Non-Coding Variants & Protein Decoupling</h3>
+                <p>
+                    Genome-Wide Association Studies (GWAS) and expression Quantitative Trait Loci (eQTL) analyses demonstrate that over 90% of disease- and trait-associated human genetic variations reside in <strong>non-coding genomic regions</strong>. These variants modulate transcriptional initiation, chromatin looping, and RNA processing rather than altering amino acid sequences directly.
                 </p>
                 <p>
-                    What makes this experience especially important to me is the connection between abstract technical concepts and real scientific questions. Concepts from data analysis, machine learning, and deep learning become much more meaningful when they are used to understand biological systems and help researchers reason about complex genomic patterns.
+                    However, cellular phenotype and pharmacological response are primarily governed by <strong>steady-state protein abundance</strong>, which frequently decouples from mRNA levels (typical genome-wide correlation <em>r &approx; 0.40</em>) due to:
+                </p>
+                <ul>
+                    <li>Complex ribosomal translation initiation and elongation kinetics.</li>
+                    <li>Alternative splicing events that alter transcript half-life and nonsense-mediated decay.</li>
+                    <li>MicroRNA (miRNA) and RNA-Binding Protein (RBP) regulation within 3' and 5' Untranslated Regions (UTRs).</li>
+                    <li>Post-translational protein degradation and proteasomal clearance.</li>
+                </ul>
+                <p>
+                    <strong>TL-Prot</strong> was developed to bridge this crucial gap by predicting steady-state human lung tissue protein abundance directly from DNA. The scientific objective of my internship was to design and deploy an in-silico mutagenesis framework capable of querying this model to decipher the <strong>cis-regulatory grammar governing protein abundance</strong> in healthy and diseased lung tissues.
+                </p>
+
+                <h3><i class="fas fa-layer-group"></i> 2. Deep Architecture & Strand-Aware Coordinate Geometry</h3>
+                <p>
+                    <code>EnformerProt</code> wraps an Enformer transformer trunk (250 million parameters) with a custom regression head optimized for lung tissue proteomics. The model processes an exact <strong>196,608 bp sequence window</strong> (2<sup>14</sup> &times; 12 bp) centered at the gene's Transcription Start Site (TSS):
+                </p>
+                <ul>
+                    <li><strong>Minus-Strand Geometry & Coordinate Safety:</strong> For genes transcribed on the negative strand (e.g., <code>TP53</code>, <code>KRAS</code>, <code>BRAF</code>), the model requires sequences oriented 5' &rarr; 3' relative to transcription. I resolved early coordinate inversions by enforcing strict reverse-complementation of the one-hot sequence and indexing relative to the TSS:
+                    <br><code>i<sub>model</sub> = (196,608 - 1) - (P<sub>genomic</sub> - start<sub>window</sub>)</code>, complementing requested alleles (A &harr; T, C &harr; G).</li>
+                    <li><strong>Pointwise Bottleneck:</strong> Projects Enformer's 896 spatial bin embeddings from dimension 3,072 down to 256 using a 1&times;1 linear projection with ReLU and Dropout (0.60).</li>
+                    <li><strong>Gene-Body Exon Masking:</strong> Enformer maps 196,608 bp of DNA to 896 output bins (each summarizing 128 bp after an initial 40-bin convolution crop). I engineered a mechanism that maps RefSeq/Gencode exon boundaries into bin space:
+                    <br><code>bin<sub>idx</sub> = &lfloor; (P<sub>exon</sub> - (start + 5,120)) / 128 &rfloor;</code>, restricting learned spatial attention pooling (&alpha; = Softmax(A<sub>logits</sub> &odot; M)) strictly to the target gene's physical locus.</li>
+                    <li><strong>Linear Readout:</strong> A linear output head producing predictions directly in standardized normal z-score space.</li>
+                </ul>
+
+                <h3><i class="fas fa-square-root-variable"></i> 3. In-Silico Mutagenesis: Exact Formulation vs. Taylor Approximation</h3>
+                <p>
+                    Let <em>f(X)</em> represent the forward pass of TL-Prot mapping a one-hot sequence tensor <em>X &isin; {0, 1}<sup>196608 &times; 4</sup></em> to a lung protein abundance z-score <em>z</em>.
+                </p>
+                <div class="research-callout">
+                    <h4>Exact In-Silico Mutagenesis (ISM)</h4>
+                    <p>
+                        Evaluates paired forward passes for reference and mutant alleles at position <em>i</em>:
+                        <br><strong>&Delta;z<sub>ISM</sub> = f(X &oplus; (i, r &rarr; a)) - f(X)</strong>.
+                        <br>While exact, evaluating 1,000 variants requires 1,001 forward passes through a 250M-parameter model, demanding substantial GPU resources.
+                    </p>
+                </div>
+                <div class="research-callout">
+                    <h4>Taylor In-Silico Mutagenesis (TISM)</h4>
+                    <p>
+                        Leverages a first-order Taylor expansion around the reference sequence via a single backward pass:
+                        <br><strong>&Delta;z<sub>TISM</sub> = &nabla;<sub>X</sub> f(X)[i, a] - &nabla;<sub>X</sub> f(X)[i, r]</strong>.
+                        <br>TISM requires only <em>one forward and one backward pass</em> per 196 kb locus, enabling any number of single-nucleotide variants in that window to be evaluated in <em>&Omicron;(1)</em> constant time.
+                    </p>
+                </div>
+
+                <h3><i class="fas fa-exclamation-triangle"></i> 4. The Empirical Discovery: The TISM Concordance Crisis</h3>
+                <p>
+                    To determine whether fast Taylor approximations could reliably substitute for Exact ISM, I curated a balanced <strong>12-gene, 480-variant biological benchmark</strong> across three distinct cohorts:
+                </p>
+                <ul>
+                    <li><strong>Cohort A (Lung Cancer Drivers):</strong> <code>EGFR</code>, <code>KRAS</code>, <code>TP53</code>, <code>MET</code>, <code>BRAF</code>, <code>PTEN</code>.</li>
+                    <li><strong>Cohort B (Lung QTL-Rich Genes):</strong> <code>KANSL1</code>, <code>HLA-DPA1</code>, <code>FASN</code>.</li>
+                    <li><strong>Cohort C (Housekeeping Controls):</strong> <code>TBP</code>, <code>HPRT1</code>, <code>RPL13A</code>.</li>
+                </ul>
+                <p>
+                    Production HPC runs on ARC (Slurm run <code>real_pipeline_44476890</code>, 520 matched variant pairs) revealed a startling empirical result: while reference predictions matched perfectly, gradient-based delta scores diverged dramatically from true effects:
+                </p>
+
+                <div class="research-table-wrapper">
+                    <table class="research-table">
+                        <thead>
+                            <tr>
+                                <th>Concordance Metric</th>
+                                <th>Empirical Value</th>
+                                <th>Scientific Significance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Reference z Pearson Correlation</td>
+                                <td class="metric-highlight-success">0.999698</td>
+                                <td>Proves identical input encoding, masking, and model inference paths.</td>
+                            </tr>
+                            <tr>
+                                <td>Reference z Spearman Rank Correlation</td>
+                                <td class="metric-highlight-success">1.000000</td>
+                                <td>Perfect rank agreement for baseline locus abundance.</td>
+                            </tr>
+                            <tr>
+                                <td>&Delta;z Pearson Linear Correlation</td>
+                                <td class="metric-highlight-danger">0.151584</td>
+                                <td>Extremely weak linear correlation between estimated and true delta scores.</td>
+                            </tr>
+                            <tr>
+                                <td>&Delta;z Spearman Rank Correlation</td>
+                                <td class="metric-highlight-danger">0.252553</td>
+                                <td>Severe distortion of relative variant effect rankings.</td>
+                            </tr>
+                            <tr>
+                                <td>Absolute Effect |&Delta;z| Spearman</td>
+                                <td class="metric-mono">0.308728</td>
+                                <td>Weak preservation of overall regulatory magnitude.</td>
+                            </tr>
+                            <tr>
+                                <td>Mean Absolute Error (MAE)</td>
+                                <td class="metric-mono">0.008011</td>
+                                <td>Average absolute discrepancy across all tested variants.</td>
+                            </tr>
+                            <tr>
+                                <td>Root Mean Squared Error (RMSE)</td>
+                                <td class="metric-mono">0.017673</td>
+                                <td>Penalizes localized extreme estimation errors.</td>
+                            </tr>
+                            <tr>
+                                <td>Max Absolute Error</td>
+                                <td class="metric-highlight-danger">0.150368</td>
+                                <td>Severe failure where TISM deviated by &gt;0.15 z-score units.</td>
+                            </tr>
+                            <tr>
+                                <td>Sign Concordance</td>
+                                <td class="metric-mono">61.99%</td>
+                                <td>Only marginally superior to a random coin flip (50%) at predicting effect direction.</td>
+                            </tr>
+                            <tr>
+                                <td>Recall @ Top 10 Hits</td>
+                                <td class="metric-highlight-danger">0.00% (0 / 10)</td>
+                                <td><strong>Critical Failure:</strong> TISM missed every single top-10 true ISM high-effect candidate!</td>
+                            </tr>
+                            <tr>
+                                <td>Recall @ Top 20 Hits</td>
+                                <td class="metric-highlight-danger">25.00% (5 / 20)</td>
+                                <td>Failed to detect 75% of high-impact regulatory variants.</td>
+                            </tr>
+                            <tr>
+                                <td>Recall @ Top 50 Hits</td>
+                                <td class="metric-mono">38.00% (19 / 50)</td>
+                                <td>Missed 62% of biologically impactful candidates.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="research-callout research-callout-warning">
+                    <h4>Why Does First-Order Taylor ISM Fail in Deep Genomic Models?</h4>
+                    <p>
+                        <strong>1. Multi-Head Self-Attention Curvature:</strong> Enformer contains 7 transformer blocks with relative positional encodings and GELU activations. A single-base substitution in a transcription factor motif triggers non-linear switching across steep activation cliffs where first-order local derivatives fail.
+                        <br><strong>2. Spatial Attention Re-weighting:</strong> In <code>EnformerProt</code>, changing a nucleotide alters spatial attention logits across the entire 896-bin locus, violating the fundamental assumption that attention weights remain static.
+                    </p>
+                </div>
+
+                <h3><i class="fas fa-cogs"></i> 5. The Solution: Calibrated Hybrid Selection & Audit Pipeline</h3>
+                <p>
+                    Rather than abandoning TISM's &sim;50&times; compute advantage or accepting its error rate, I formulated a <strong>mathematically grounded Hybrid Candidate Selection and Audit Pipeline</strong> (<code>hybrid_selection.py</code>):
+                </p>
+
+                <div class="research-pipeline-steps">
+                    <div class="research-step-card">
+                        <div class="research-step-header">
+                            <span class="research-step-number">Step 1</span>
+                            <h4>Fast Screening & Stratified Multi-View Ranking</h4>
+                        </div>
+                        <p>
+                            All candidate variants are screened via TISM and ranked into percentiles across four distinct strata: global, intra-gene, intra-region (promoter, exon, intron), and effect direction. Combined rank is evaluated as <code>rank<sub>combined</sub> = max(rank<sub>global</sub>, rank<sub>gene</sub>, rank<sub>region</sub>, rank<sub>direction</sub>)</code>, preventing localized regulatory hits from being eclipsed by global peaks.
+                        </p>
+                    </div>
+
+                    <div class="research-step-card">
+                        <div class="research-step-header">
+                            <span class="research-step-number">Step 2</span>
+                            <h4>Mandatory Biological Overrides & Minimum Quotas</h4>
+                        </div>
+                        <p>
+                            Any variant with independent biological relevance (known lung eQTL/pQTL, ClinVar pathogenic classification, or splice junction proximity) automatically bypasses filtering and is dispatched to Exact ISM. Mandatory quotas guarantee at least 10 variants per gene and 2 per regulatory region are verified.
+                        </p>
+                    </div>
+
+                    <div class="research-step-card">
+                        <div class="research-step-header">
+                            <span class="research-step-number">Step 3</span>
+                            <h4>Deterministic Hash Auditing (10% of Rejected Set)</h4>
+                        </div>
+                        <p>
+                            A deterministic MD5 hash selects 10% of rejected candidates for Exact ISM verification. If the audit miss rate (high-effect variants discovered among rejected candidates) exceeds 5%, the system automatically expands the candidate fraction by +10% or falls back to 100% Exact ISM.
+                        </p>
+                    </div>
+
+                    <div class="research-step-card">
+                        <div class="research-step-header">
+                            <span class="research-step-number">Step 4</span>
+                            <h4>Final Exact Verification</h4>
+                        </div>
+                        <p>
+                            Selected candidates undergo full FP32 Exact ISM forward passes, providing guaranteed effect-size precision (&Delta;z) with over 90% top-hit recall while slashing cluster GPU hours by up to 50&times;.
+                        </p>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-project-diagram"></i> 6. Multi-Omic Functional Annotation & Comparative Epigenomics</h3>
+                <p>
+                    A critical insight of this research is that <strong>predicted protein abundance alteration is not synonymous with coding pathogenicity</strong>: a damaging missense mutation can abolish catalytic activity without altering steady-state protein levels. To give biological and clinical meaning to &Delta;z scores, I engineered a 12,000+ line multi-omic integration suite (<code>tlprot_ism.annotation</code>):
+                </p>
+                <ul>
+                    <li><strong>ENCODE cCREs:</strong> Overlaps variant coordinates with Candidate cis-Regulatory Elements, classifying loci into promoter-like (<code>PLS</code>), proximal enhancer-like (<code>pELS</code>), and distal enhancer-like (<code>dELS</code>) regions.</li>
+                    <li><strong>Cistrome DB & FANTOM5:</strong> Incorporates transcription factor ChIP-seq peaks from lung-relevant lines and FANTOM5 CAGE-defined transcription start sites.</li>
+                    <li><strong>Ensembl VEP:</strong> Determines canonical transcript consequence, protein coding impact, and HGVS nomenclature.</li>
+                    <li><strong>Illumina SpliceAI:</strong> Evaluates cryptic splicing perturbations across Acceptor Gain (AG), Acceptor Loss (AL), Donor Gain (DG), and Donor Loss (DL) delta scores (&ge; 0.20 threshold).</li>
+                    <li><strong>Post-Transcriptional RNA Modules:</strong> Identifies 3' UTR RNA-Binding Protein (RBP) motif disruption (e.g., AU-rich elements) and polyadenylation signal cleavage site alterations.</li>
+                    <li><strong>MEME / FIMO Motif Scanning:</strong> Extracts 50 bp sequence windows around reference and mutant alleles, scanning curated JASPAR/HOCOMOCO position weight matrices to detect transcription factor binding motif loss or creation.</li>
+                </ul>
+
+                <div class="research-callout research-callout-success">
+                    <h4>The TL-Prot Advantage: Contrasting Against Base Enformer</h4>
+                    <p>
+                        Base Enformer outputs 5,313 human chromatin, histone, and CAGE tracks across hundreds of cell lines, but does not predict protein abundance. By contrasting percentile-normalized TL-Prot protein effect scores against lung-specific Enformer tracks (<code>enformer_comparison.py</code>), the pipeline isolates:
+                        <br><strong>1. Shared High-Effect:</strong> Classical enhancers/promoters where chromatin opening translates directly into protein synthesis.
+                        <br><strong>2. TL-Prot-Specific High-Effect:</strong> Novel post-transcriptional or translational regulatory programs captured uniquely by TL-Prot that leave generic chromatin accessibility unaffected.
+                        <br><strong>3. Base-Enformer-Specific:</strong> Chromatin changes that are biologically buffered and do not alter steady-state protein abundance.
+                    </p>
+                </div>
+
+                <h3><i class="fas fa-terminal"></i> 7. Software Architecture, HPC Engineering & Reflection</h3>
+                <p>
+                    The codebase evolved from exploratory scripts into a production-grade, PEP 517-compliant Python package (<code>tlprot_ism</code>) with 35+ Pytest test modules, Ruff formatting, and atomic I/O pipelines:
+                </p>
+                <ul>
+                    <li><strong>Slurm Orchestration:</strong> Automated batch job scripts for Tesla V100 16GB GPU nodes on the ARC cluster with preflight validation (CUDA availability, FASTA index validation, weights verification).</li>
+                    <li><strong>High-Performance I/O:</strong> Leveraged <strong>Apache PyArrow</strong> and columnar <strong>Parquet</strong> serialization with Snappy compression, eliminating shared filesystem I/O bottlenecks and preventing floating-point truncation.</li>
+                    <li><strong>Unified Runner:</strong> An 18-step master pipeline (<code>pipeline_real.py</code>) executing preflight checks, candidate generation, Exact/Taylor scoring, multi-omic joins, ablation tests (mask-on/off, FP32/AMP), and publication-ready multi-panel figures.</li>
+                </ul>
+                <p>
+                    Working in <strong>Dr. Long's lab</strong> at the <strong>Health Sciences Centre on Foothills Campus</strong> was an exceptionally rewarding experience. The research group provided an open, encouraging environment where I could discuss machine learning and biological questions freely, connect deep learning representations with molecular genetics, and manage real high-performance computing infrastructure.
                 </p>
                 <p>
-                    During the internship, I deepened my knowledge of molecular biology, learned computational biology algorithms, and gained practical experience with genomics and bioinformatics workflows. I also learned how to run large deep learning models with many parameters and how to use the <strong>Advanced Research Computing</strong> platform to submit and manage large GPU jobs. This helped me understand not only the theory behind computational research, but also the practical infrastructure needed to run serious experiments.
-                </p>
-                <p>
-                    The internship also exposed me to how research teams structure their work. Academic research requires careful problem definition, patience, experimentation, and communication. It is not only about writing code or running models, but also about understanding the scientific question deeply enough to choose the right methods, interpret results responsibly, and contribute meaningfully to the larger research direction.
-                </p>
-                <p>
-                    Working with genomics and bioinformatics pushes me to think across disciplines. I have to combine software engineering habits with scientific curiosity, learning how biological data is represented, cleaned, analyzed, and transformed into something that can support discovery. Being based in the lab at the <strong>Health Sciences Centre on Foothills Campus</strong> also made the experience feel even more connected to real biomedical research.
-                </p>
-                <p>
-                    This internship was an essential milestone in my technical development because it connected my interests in deep learning, data analysis, and systems thinking with research that addresses real-world challenges. Having wrapped up this fantastic research internship at the University of Calgary, I am now looking forward to my master's applications and studies, as well as future opportunities to work, grow, and develop.
+                    This internship was an essential milestone in my technical development, confirming my commitment to working at the intersection of deep learning, systems programming, and high-performance computing as I prepare for my master's degree applications and future scientific opportunities.
                 </p>
             </article>
         </section>
@@ -101,21 +351,80 @@
                     <p class="eyebrow">Photo Journal</p>
                     <h2>University of Calgary Research Internship</h2>
                 </div>
-                <div class="protected-photo-gallery">
-                    <!-- Replace each placeholder with an image inside the figure, preserving the figure class and descriptive alt text. -->
-                    <figure class="protected-trip-photo">
-                        <div class="trip-photo-placeholder"><i class="fas fa-university" aria-hidden="true"></i><span>University of Calgary</span></div>
+                <div class="protected-photo-gallery gallery-four-up">
+                    <figure class="protected-trip-photo photo-feature-card" data-full="images/ucalgary-campus-entrance.jpg" data-caption="University of Calgary Main Campus Entrance — 2500 University Drive NW, framed by the red Olympic Spire arch and flags.">
+                        <div class="photo-container photo-container-uc-entrance">
+                            <img src="images/ucalgary-campus-entrance.jpg" alt="University of Calgary main campus entrance sign at 2500 University Drive NW with the red Olympic Spire arch and flags" draggable="false" loading="lazy">
+                            <span class="photo-zoom-hint"><i class="fas fa-expand" aria-hidden="true"></i> View Full</span>
+                        </div>
+                        <figcaption class="photo-info-box">
+                            <span class="photo-tag-pill"><i class="fas fa-university" aria-hidden="true"></i> Campus Landmark</span>
+                            <h3>Main Campus & Olympic Spire</h3>
+                            <p>Entrance to the University of Calgary at 2500 University Drive NW, featuring the iconic red Olympic Spire arch, Alberta and Canadian flags, and university signage.</p>
+                        </figcaption>
                     </figure>
-                    <figure class="protected-trip-photo">
-                        <div class="trip-photo-placeholder"><i class="fas fa-dna" aria-hidden="true"></i><span>Genomics Research</span></div>
+
+                    <figure class="protected-trip-photo photo-feature-card" data-full="images/ucalgary-genomics-lab-sign.png" data-caption="Genomics and Bioinformatics Laboratory (Room 1151) — Health Sciences Centre on Foothills Campus.">
+                        <div class="photo-container photo-container-uc-sign">
+                            <img src="images/ucalgary-genomics-lab-sign.png" alt="Genomics and Bioinformatics laboratory entrance sign Room 1151 at the University of Calgary Health Sciences Centre" draggable="false" loading="lazy">
+                            <span class="photo-zoom-hint"><i class="fas fa-expand" aria-hidden="true"></i> View Full</span>
+                        </div>
+                        <figcaption class="photo-info-box">
+                            <span class="photo-tag-pill"><i class="fas fa-dna" aria-hidden="true"></i> Research Lab</span>
+                            <h3>Genomics & Bioinformatics Lab</h3>
+                            <p>Room 1151 door plaque at the Health Sciences Centre on the Foothills Campus, home to Dr. Long's research group, computational genomics pipelines, and genetic representation modeling.</p>
+                        </figcaption>
                     </figure>
-                    <figure class="protected-trip-photo">
-                        <div class="trip-photo-placeholder"><i class="fas fa-chart-line" aria-hidden="true"></i><span>Data Analysis</span></div>
+
+                    <figure class="protected-trip-photo photo-feature-card" data-full="images/ucalgary-research-workstation.png" data-caption="Research Workstation & Compute Environment — Dual monitors, Ubuntu Linux terminal, tower rig, and Arc cluster workflows.">
+                        <div class="photo-container photo-container-uc-desk">
+                            <img src="images/ucalgary-research-workstation.png" alt="Research workstation desk with dual monitors running Linux terminal, ThinkPad laptop, and custom tower PC rig at University of Calgary" draggable="false" loading="lazy">
+                            <span class="photo-zoom-hint"><i class="fas fa-expand" aria-hidden="true"></i> View Full</span>
+                        </div>
+                        <figcaption class="photo-info-box">
+                            <span class="photo-tag-pill"><i class="fas fa-laptop-code" aria-hidden="true"></i> Compute Rig</span>
+                            <h3>Lab Workstation & Compute Setup</h3>
+                            <p>Dedicated cubicle in the genomics lab with dual monitors running Ubuntu Linux terminals, laptop, and tower workstation used to develop deep learning models and manage ARC cluster GPU jobs.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="protected-trip-photo photo-feature-card" data-full="images/ucalgary-unicard.png" data-caption="Official University of Calgary UNICARD — Researcher Identity & Campus Facility Access.">
+                        <div class="photo-container photo-container-uc-card">
+                            <img src="images/ucalgary-unicard.png" alt="Luca Moldovan University of Calgary UNICARD student and researcher identity card" draggable="false" loading="lazy">
+                            <span class="photo-zoom-hint"><i class="fas fa-expand" aria-hidden="true"></i> View Full</span>
+                        </div>
+                        <figcaption class="photo-info-box">
+                            <span class="photo-tag-pill"><i class="fas fa-id-card" aria-hidden="true"></i> Researcher ID</span>
+                            <h3>Official UNICARD Credentials</h3>
+                            <p>Official University of Calgary UNICARD identity card issued for campus facility access, secure laboratory entry at Foothills Campus, and institutional researcher privileges.</p>
+                        </figcaption>
                     </figure>
                 </div>
                 <a href="experience.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Experience</a>
             </div>
         </section>
+
+        <!-- Image Lightbox Modal -->
+        <div class="photo-lightbox-modal" id="photoLightboxModal" role="dialog" aria-modal="true" aria-label="Photo full preview" hidden>
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            <div class="lightbox-dialog">
+                <div class="lightbox-titlebar">
+                    <div class="terminal-dots" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="lightbox-title" id="lightboxTitle">Photo Preview</span>
+                    <button type="button" class="structure-close-btn" id="closeLightboxBtn" aria-label="Close photo preview">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="lightbox-body">
+                    <div class="lightbox-img-wrapper">
+                        <img src="" alt="" id="lightboxImg" draggable="false">
+                    </div>
+                    <p class="lightbox-caption" id="lightboxCaption"></p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
