@@ -311,9 +311,9 @@ textarea:focus-visible {
 
 .detail-header-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr);
-    gap: var(--spacing-xl);
-    align-items: start;
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 2rem;
+    align-items: center;
 }
 
 .cv-two-column {
@@ -1929,6 +1929,18 @@ body.modal-open {
     max-width: 760px;
 }
 
+.detail-header p:not(.eyebrow) + p {
+    margin-top: 0.75rem;
+}
+
+.detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: var(--spacing-md);
+}
+
 .detail-card > i {
     color: var(--primary-color);
     font-size: 1.8rem;
@@ -3399,11 +3411,13 @@ body.is-protected-blurred .protected-content {
 .btn-primary {
     background: var(--primary-color);
     color: white;
+    border: 2px solid var(--primary-color);
     box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
+    border-color: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
@@ -4889,7 +4903,7 @@ body {
 }
 
 .detail-header-grid {
-    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.9fr);
+    grid-template-columns: minmax(0, 1fr) 230px;
 }
 
 .detail-grid,
@@ -4906,12 +4920,34 @@ body {
     width: 100%;
 }
 
+.detail-header .protected-image {
+    width: 100%;
+    max-width: 230px;
+    justify-self: end;
+    background: #f1f5f9;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
 .detail-header .protected-image img {
-    max-height: min(62vh, 560px);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top center;
+    max-height: 200px;
+    display: block;
+}
+
+.detail-header .image-shield {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
 }
 
 .cv-actions,
 .hero-cta,
+.detail-actions,
 .compact-tags,
 .tech-stack,
 .project-tech,
@@ -4965,12 +5001,12 @@ body {
     }
 
     .detail-header .protected-image {
-        justify-self: start;
-        max-width: min(100%, 420px);
+        justify-self: center;
+        max-width: 240px;
     }
 
     .detail-header .protected-image img {
-        max-height: 520px;
+        max-height: 200px;
     }
 }
 
@@ -5027,14 +5063,17 @@ body {
     }
 
     .cv-actions,
-    .hero-cta {
+    .hero-cta,
+    .detail-actions {
         align-items: stretch;
         flex-direction: column;
     }
 
     .cv-actions .btn,
-    .hero-cta .btn {
+    .hero-cta .btn,
+    .detail-actions .btn {
         width: 100%;
+        justify-content: center;
     }
 
     .cv-panel,
