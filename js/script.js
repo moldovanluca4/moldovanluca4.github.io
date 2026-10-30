@@ -701,8 +701,22 @@ function initPhotoLightbox() {
     });
 }
 
-function initSkillsPortal() {
-    // Skills page is in permanent complete view with display-only skill cards
+function initInteractiveCards() {
+    qsa(".timeline-card-interactive, .skills-context-card").forEach((card) => {
+        const primaryLink = qs(".timeline-card-link, .skills-context-link", card);
+        if (!primaryLink) return;
+
+        card.addEventListener("click", (event) => {
+            if (event.defaultPrevented) return;
+            if (event.target.closest("a, button, input, textarea, select")) return;
+
+            if (event.metaKey || event.ctrlKey) {
+                window.open(primaryLink.href, "_blank", "noopener");
+            } else {
+                primaryLink.click();
+            }
+        });
+    });
 }
 
 function initPresentationModal() {
@@ -777,7 +791,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initWebsiteStructureModal();
     initCvPreviewModal();
     initPhotoLightbox();
-    initSkillsPortal();
+    initInteractiveCards();
     initPresentationModal();
 });
 
