@@ -121,44 +121,52 @@
                     <h2>Home Lab, Systems &amp; Future Projects</h2>
                 </div>
                 <div class="readable-grid">
-                <article class="detail-card">
-                    <i class="fas fa-network-wired"></i>
-                    <h2>Home Lab</h2>
-                    <p>
-                        My homelab currently consists of a Raspberry Pi 5 running OMV, OpenMediaVault, a dedicated operating system that turns the board into a homemade network-attached server.
-                    </p>
-                    <p>
-                        Setting it up pushed me to research practical security and network security so I could keep personal documents safer and understand the operational side of running services at home.
-                    </p>
-                    <div class="compact-tags"><span>Raspberry Pi 5</span><span>OMV</span><span>NAS</span><span>Linux</span><span>Network Security</span></div>
-                </article>
+                    <article class="detail-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h2>Home Lab</h2>
+                        <p>
+                            My homelab centers around a Raspberry Pi 5 (4 GB RAM, ARM64) running Debian 13 (Trixie), OpenMediaVault 8, and OMV-Extras for local storage, DNS filtering, and Linux experiments. It boots from an EXT4 USB system drive with zram swap while isolating personal shares and dedicated Docker volumes (<code>docker/</code>, <code>compose/</code>, <code>appdata/</code>) onto an external 2 TB Western Digital HDD, running Pi-hole v6 in Docker via OMV Compose with Quad9 DNSSEC-validated upstreams.
+                        </p>
+                        <p>
+                            Beyond the NAS, the lab repurposes a legacy Fujitsu laptop (&lt;1 GB RAM) for older Ubuntu kernel/hardware compatibility and GUI troubleshooting, a separate laptop for comparing Arch Linux and Void Linux (<code>XBPS</code> and <code>runit</code>), and salvaged desktop components retained for microcontroller reuse. Ongoing and planned work includes OpenWrt firewall rules, VLAN network segmentation (trusted, IoT, guest, and experimental zones), DNS resolution-path tracing, backup recovery verification, and Jetson Nano local AI experiments.
+                        </p>
+                        <div class="compact-tags"><span>Raspberry Pi 5</span><span>OpenMediaVault 8</span><span>Debian 13</span><span>Docker</span><span>Pi-hole v6</span><span>Quad9 DNSSEC</span><span>OpenWrt</span><span>Arch &amp; Void Linux</span><span>Network Security</span><span>Hardware Reuse</span></div>
+                        <a href="https://github.com/moldovanluca4/homelab" class="text-link" target="_blank" rel="noopener noreferrer">View repository <i class="fas fa-arrow-right"></i></a>
+                    </article>
 
-                <article class="detail-card">
-                    <i class="fas fa-diagram-project"></i>
-                    <h2>Operating Systems Development</h2>
-                    <p>
-                        I plan to work on MentOS and Linux From Scratch to deepen my kernel and operating systems development skills. I also want to build more C++ and Rust projects to explore the capabilities, tradeoffs, and design patterns of both languages.
-                    </p>
-                    <p>
-                        These projects connect directly to my long-term interest in systems programming, operating systems, and building software that helps me understand computers below the surface level.
-                    </p>
-                    <div class="compact-tags"><span>MentOS</span><span>Linux From Scratch</span><span>C++</span><span>Rust</span><span>Operating Systems</span></div>
-                </article>
+                    <article class="detail-card">
+                        <i class="fas fa-diagram-project"></i>
+                        <h2>Operating Systems Development</h2>
+                        <p>
+                            I plan to work on MentOS and Linux From Scratch to deepen my kernel and operating systems development skills. I also want to build more C++ and Rust projects to explore the capabilities, tradeoffs, and design patterns of both languages.
+                        </p>
+                        <p>
+                            These projects connect directly to my long-term interest in systems programming, operating systems, and building software that helps me understand computers below the surface level.
+                        </p>
+                        <div class="compact-tags"><span>MentOS</span><span>Linux From Scratch</span><span>C++</span><span>Rust</span><span>Operating Systems</span></div>
+                    </article>
+                </div>
 
-                <article class="detail-card">
+                <article class="detail-card detail-card-horizontal">
                     <i class="fas fa-terminal"></i>
                     <h2>Planned Software Projects</h2>
                     <p>
-                        I am planning two software projects: one in C++ and one in Rust. The C++ project may become a game, using game development as a way to practice software-engineering principles such as modular design, maintainable architecture, and thoughtful user interaction. I plan to use the Qt framework to build both the application logic and its graphical user interface.
+                        I am currently working on <strong>Linux Atlas</strong> (<em>&ldquo;Explore, understand, and inspect your Linux systems&rdquo;</em>), an open-source application aimed at making Linux more accessible to beginners while providing practical system-inspection capabilities for developers and homelab enthusiasts. The project is designed to discover and categorize installed applications, command-line utilities, system services, hardware details, and configuration metadata across different Linux distributions, presenting them through a user-friendly graphical interface with beginner-friendly educational explanations and technical details.
                     </p>
                     <p>
-                        The Rust project will be a terminal designed for my homelab, with the goal of letting me work across multiple devices at the same time. It will be an opportunity to explore systems programming, terminal design, and practical multi-device workflows in an environment I manage myself.
+                        Architecturally, Linux Atlas combines a <strong>C++ and Qt</strong> graphical interface with a modular, concurrent, read-only <strong>Rust</strong> inspection engine that supports both local systems and headless remote machines accessed over SSH. Currently in early design and architecture planning, its planned feature set includes distribution-agnostic modular collectors, a <code>fastfetch</code>-powered loading and landing overview when available, system inventory snapshot comparisons, and structured system report exports.
                     </p>
-                    <div class="compact-tags"><span>C++</span><span>Qt Framework</span><span>Game Development</span><span>Rust</span><span>Terminal</span><span>Home Lab</span></div>
+                    <p>
+                        Alongside Linux Atlas, I am designing <strong>homelab-status</strong>, a read-only Rust terminal tool for my homelab that queries configured machines over SSH to aggregate OS identity, kernel release, uptime, memory and disk usage, load averages, and service statuses across different init systems (such as <code>systemd</code> and Void Linux’s <code>runit</code>) into a single terminal view with explicit failure and staleness states.
+                    </p>
+                    <div class="compact-tags"><span>Linux Atlas</span><span>C++</span><span>Qt Framework</span><span>Rust</span><span>System Inspection</span><span>SSH</span><span>Fastfetch</span><span>homelab-status</span><span>Terminal Tooling</span><span>Home Lab</span></div>
+                    <div class="detail-card-links">
+                        <a href="https://github.com/moldovanluca4/Linux-Atlas" class="text-link" target="_blank" rel="noopener noreferrer">View Linux Atlas repository <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/moldovanluca4/homelab/blob/main/projects/homelab-status.md" class="text-link" target="_blank" rel="noopener noreferrer">View homelab-status design <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </article>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
 
     <footer class="footer">

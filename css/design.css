@@ -1858,6 +1858,27 @@ body.modal-open {
     gap: var(--spacing-lg);
 }
 
+.detail-card-horizontal {
+    margin-top: var(--spacing-lg);
+}
+
+.detail-card-horizontal p {
+    flex-grow: 0;
+    margin-bottom: 0.65rem;
+}
+
+.detail-card-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.75rem;
+    margin-top: var(--spacing-sm);
+}
+
+.detail-card-links .text-link {
+    margin-top: 0;
+}
+
 .detail-back-action {
     margin-top: var(--spacing-xl);
 }
