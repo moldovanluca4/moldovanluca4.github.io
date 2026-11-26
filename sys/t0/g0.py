@@ -6,7 +6,7 @@ Uses pycairo to render vector text, rules, badges, and layout.
 
 import cairo
 
-def create_cv_pdf(filename="files/cv.pdf"):
+def create_cv_pdf(filename="res/d0/d02.pdf"):
     # A4 Dimensions in points (72 points/inch)
     width = 595.28
     height = 841.89
@@ -251,5 +251,4 @@ def create_cv_pdf(filename="files/cv.pdf"):
     print(f"Successfully generated {filename}")
 
 if __name__ == "__main__":
-    create_cv_pdf("files/Luca_Moldovan_CV_Summary.pdf")
-    create_cv_pdf("files/cv-summary.pdf")
+    create_cv_pdf("res/d0/d02.pdf")

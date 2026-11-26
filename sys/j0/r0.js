@@ -741,7 +741,7 @@ function initPresentationModal() {
         closeBtn?.focus();
 
         if (iframe && !iframe.getAttribute("src")) {
-            iframe.src = "files/amc-mainframe-convention-presentation.pdf#toolbar=0&navpanes=0&scrollbar=1";
+            iframe.src = "../../res/d0/d03.pdf#toolbar=0&navpanes=0&scrollbar=1";
         }
     };
 

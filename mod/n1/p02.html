@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readings &amp; Coursework - Luca Moldovan</title>
+    <meta name="description" content="Books, research papers, technical resources, and completed bachelor's courses that shaped Luca Moldovan's engineering and research projects.">
+    <meta name="robots" content="noarchive, noimageindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,SOFT,WONK,wght@0,9..144,0..100,0..1,400..800;1,9..144,0..100,0..1,400..700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../../sys/c0/u0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="protected-page">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">LM<span class="terminal-cursor">_</span></a>
+            <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-menu">
+                <li><a href="../n0/v01.html" class="nav-link">CV</a></li>
+                <li><a href="../n0/v02.html" class="nav-link">About</a></li>
+                <li><a href="../n2/e00.html" class="nav-link">Experience</a></li>
+                <li><a href="../n1/p01.html" class="nav-link active">Projects</a></li>
+                <li><a href="../n0/v03.html" class="nav-link">Skills</a></li>
+                <li><a href="../n0/v04.html" class="nav-link">Achievements</a></li>
+                <li><a href="../n3/x00.html" class="nav-link">Extracurricular</a></li>
+                <li><a href="../n0/v05.html" class="nav-link nav-btn-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="detail-page protected-content">
+        <header class="detail-header">
+            <div class="container">
+                <p class="eyebrow">Projects / Readings &amp; Academic Foundation</p>
+                <h1>Books, research papers, technical resources, and bachelor’s coursework behind my projects.</h1>
+                <p>
+                    Every project I have built—from deep genomic sequence modeling and enterprise mainframe integration to C++/Qt desktop software, Rust system-inspection tools, and self-hosted Linux infrastructure—grew out of focused reading, primary literature, documentation deep-dives, and university coursework.
+                </p>
+                <p>
+                    This page brings together the books, scientific papers, engineering resources, and completed bachelor’s courses at <strong>Constructor University</strong> (B.Sc. in Computer Science with a Minor in Mathematics) that helped me develop my understanding and turn theoretical concepts into working systems.
+                </p>
+                <div class="detail-actions">
+                    <a href="#books" class="btn btn-primary">
+                        <i class="fas fa-book"></i> Books
+                    </a>
+                    <a href="#papers" class="btn btn-secondary">
+                        <i class="fas fa-file-lines"></i> Research Papers
+                    </a>
+                    <a href="#resources" class="btn btn-secondary">
+                        <i class="fas fa-compass"></i> Technical Resources
+                    </a>
+                    <a href="#courses" class="btn btn-secondary">
+                        <i class="fas fa-graduation-cap"></i> Bachelor’s Courses
+                    </a>
+                    <a href="../n1/p01.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> Back to Projects
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== 1. BOOKS & TECHNICAL LITERATURE ===== -->
+        <section class="detail-section" id="books">
+            <div class="container">
+                <div class="achievement-section-heading">
+                    <p class="eyebrow">01 / Foundational Literature</p>
+                    <h2>Books That Shaped My Engineering &amp; Systems Mindset</h2>
+                </div>
+
+                <div class="detail-grid readings-grid">
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Systems &amp; Architecture</span>
+                            <span class="reading-project-pill">Mainframe Integration &amp; OS</span>
+                        </div>
+                        <h2>Computer Systems: A Programmer’s Perspective (CS:APP)</h2>
+                        <p class="reading-authors">Randal E. Bryant &amp; David R. O’Hallaron</p>
+                        <p>
+                            A foundational text connecting hardware architecture, representation, machine-level execution, memory hierarchies, linking, virtual memory, and system-level I/O. It shaped how I reason about what happens underneath high-level code when a C executable interacts with the operating system and higher-level Python layers.
+                        </p>
+                        <div class="compact-tags"><span>Computer Architecture</span><span>C Programming</span><span>Memory Hierarchy</span><span>Systems I/O</span><span>Linking</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Operating Systems</span>
+                            <span class="reading-project-pill">MentOS &amp; Homelab</span>
+                        </div>
+                        <h2>Operating Systems: Three Easy Pieces (OSTEP)</h2>
+                        <p class="reading-authors">Remzi H. Arpaci-Dusseau &amp; Andrea C. Arpaci-Dusseau</p>
+                        <p>
+                            Structured around virtualization, concurrency, and persistence, OSTEP clarified CPU scheduling, address spaces, page tables, locks, and file systems. These concepts directly guide my kernel development exploration with MentOS and my practical resource and zram memory tuning across homelab Linux machines.
+                        </p>
+                        <div class="compact-tags"><span>Operating Systems</span><span>Virtualization</span><span>Concurrency</span><span>File Systems</span><span>Kernel Internals</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Modern C++</span>
+                            <span class="reading-project-pill">Bug Simulator &amp; Linux Atlas</span>
+                        </div>
+                        <h2>A Tour of C++ &amp; The C++ Programming Language</h2>
+                        <p class="reading-authors">Bjarne Stroustrup</p>
+                        <p>
+                            Deepened my grasp of modern C++ abstractions, RAII, resource safety, templates, and modular class design. These principles helped me write clean, maintainable C++ code for the Qt-based <em>Bug Simulator</em> project and architect the C++/Qt graphical frontend for <em>Linux Atlas</em>.
+                        </p>
+                        <div class="compact-tags"><span>C++</span><span>RAII</span><span>Object-Oriented Design</span><span>Modularity</span><span>Qt GUI</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Rust &amp; Concurrency</span>
+                            <span class="reading-project-pill">Linux Atlas</span>
+                        </div>
+                        <h2>The Rust Programming Language</h2>
+                        <p class="reading-authors">Steve Klabnik &amp; Carol Nichols</p>
+                        <p>
+                            My primary reference for ownership, borrowing, lifetimes, fearless concurrency, and error handling in Rust. It provided the foundation for designing the concurrent, read-only Rust system-inspection engine that powers local and SSH-based hardware/service discovery in <em>Linux Atlas</em>.
+                        </p>
+                        <div class="compact-tags"><span>Rust</span><span>Memory Safety</span><span>Ownership</span><span>Concurrency</span><span>Systems Tooling</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Relational Databases</span>
+                            <span class="reading-project-pill">Campus Information Center</span>
+                        </div>
+                        <h2>Database System Concepts</h2>
+                        <p class="reading-authors">Abraham Silberschatz, Henry F. Korth &amp; S. Sudarshan</p>
+                        <p>
+                            Covered relational algebra, Entity-Relationship modeling, ISA hierarchies, functional dependencies, normalization, and query execution. These concepts were applied directly when designing normalized SQL schemas for the <em>Campus Information Center</em> application and consolidating SQLite master tables.
+                        </p>
+                        <div class="compact-tags"><span>Relational Algebra</span><span>SQL Normalization</span><span>ISA Hierarchies</span><span>Schema Design</span><span>SQLite</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Software Engineering &amp; AI</span>
+                            <span class="reading-project-pill">Bug Simulator &amp; TL-Prot-ISM</span>
+                        </div>
+                        <h2>Clean Code &amp; Deep Learning Foundations</h2>
+                        <p class="reading-authors">Robert C. Martin · Ian Goodfellow, Yoshua Bengio &amp; Aaron Courville</p>
+                        <p>
+                            <em>Clean Code</em> reinforced disciplined naming, modular boundaries, and readable handovers across rotating two-week Agile sprints in our Software Engineering course project, while <em>Deep Learning</em> strengthened the mathematical intuition behind gradient optimization, representations, and deep sequence architectures.
+                        </p>
+                        <div class="compact-tags"><span>Software Craftsmanship</span><span>Agile Handovers</span><span>Deep Learning</span><span>Gradient Optimization</span><span>Representation Learning</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 2. RESEARCH PAPERS & SCIENTIFIC LITERATURE ===== -->
+        <section class="detail-section cv-muted" id="papers">
+            <div class="container">
+                <div class="achievement-section-heading">
+                    <p class="eyebrow">02 / Scientific Literature</p>
+                    <h2>Research Papers Behind My Genomics &amp; Deep Learning Work</h2>
+                </div>
+
+                <div class="detail-grid readings-grid">
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature Methods · 2021</span>
+                            <span class="reading-project-pill">TL-Prot-ISM Research</span>
+                        </div>
+                        <h2>Effective gene expression prediction from sequence by integrating long-range interactions (Enformer)</h2>
+                        <p class="reading-authors">Žiga Avsec, Vikram Agarwal, Daniel Visentin, Joseph R. Ledsam, Agnieszka Grabska-Barwinska et al.</p>
+                        <p>
+                            Introduced the Enformer transformer architecture capable of integrating regulatory information across 196,608 bp of DNA. Studying this paper and its 896-bin spatial pooling geometry was essential to wrapping the 250M-parameter trunk in <code>EnformerProt</code>, implementing gene-body exon masking, and benchmarking lung protein abundance predictions against 5,313 base chromatin and CAGE tracks.
+                        </p>
+                        <div class="compact-tags"><span>Enformer</span><span>Genomic Transformers</span><span>196 kb Context</span><span>Self-Attention</span><span>Epigenomics</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Cell · 2019</span>
+                            <span class="reading-project-pill">TL-Prot-ISM Annotation Suite</span>
+                        </div>
+                        <h2>Predicting splicing from primary sequence with deep learning (SpliceAI)</h2>
+                        <p class="reading-authors">Kishore Jaganathan, Sofia Kyriazopoulou Panagiotopoulou, Jeremy F. McRae, Siavash Fazel Darbandi et al.</p>
+                        <p>
+                            Demonstrated how deep residual networks predict cryptic splice-site creation and disruption directly from pre-mRNA sequence. This paper informed the post-transcriptional splicing module in my 12,000-line multi-omic annotation pipeline, using Acceptor/Donor Gain and Loss delta scores to explain non-coding variants that alter steady-state protein abundance via transcript stability.
+                        </p>
+                        <div class="compact-tags"><span>Illumina SpliceAI</span><span>Cryptic Splicing</span><span>Post-Transcriptional Regulation</span><span>Variant Interpretation</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> NeurIPS &amp; Attribution Literature</span>
+                            <span class="reading-project-pill">ISM vs. Taylor ISM</span>
+                        </div>
+                        <h2>Self-Attention Curvature &amp; First-Order Gradient Attribution in Deep Genomic Models</h2>
+                        <p class="reading-authors">Ashish Vaswani et al. (2017) · Genomic Saliency &amp; Taylor In-Silico Mutagenesis Literature</p>
+                        <p>
+                            Combining transformer self-attention theory with first-order gradient attribution methods motivated our empirical comparison of Exact In-Silico Mutagenesis (&Delta;z<sub>ISM</sub>) against Taylor ISM (&Delta;z<sub>TISM</sub>). Understanding non-linear GELU cliffs and spatial attention re-weighting across 896 bins explained why first-order gradients missed top regulatory hits and led directly to my calibrated Hybrid Selection &amp; Audit Pipeline.
+                        </p>
+                        <div class="compact-tags"><span>In-Silico Mutagenesis</span><span>Taylor Approximation</span><span>Attention Curvature</span><span>Hybrid Auditing</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature · Genome Biology · Bioinformatics</span>
+                            <span class="reading-project-pill">Multi-Omic Integration</span>
+                        </div>
+                        <h2>ENCODE cCREs, Ensembl VEP &amp; MEME/FIMO Motif Scanning</h2>
+                        <p class="reading-authors">The ENCODE Project Consortium (2020) · William McLaren et al. (2016) · Charles E. Grant, Timothy L. Bailey &amp; William S. Noble (2011)</p>
+                        <p>
+                            Provided the biological annotation framework for mapping high-effect variants to Candidate cis-Regulatory Elements (promoters <code>PLS</code>, proximal/distal enhancers <code>pELS</code>/<code>dELS</code>), canonical transcript consequences via Ensembl VEP, and transcription factor binding site gain/loss across JASPAR and HOCOMOCO position weight matrices using FIMO.
+                        </p>
+                        <div class="compact-tags"><span>ENCODE cCREs</span><span>Ensembl VEP</span><span>MEME / FIMO</span><span>TF Motifs</span><span>Cis-Regulatory Grammar</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 3. TECHNICAL RESOURCES & DOCUMENTATION ===== -->
+        <section class="detail-section" id="resources">
+            <div class="container">
+                <div class="achievement-section-heading">
+                    <p class="eyebrow">03 / Engineering Resources &amp; Guides</p>
+                    <h2>Documentation, Platforms &amp; Practical References</h2>
+                </div>
+
+                <div class="readable-grid">
+                    <article class="detail-card reading-card">
+                        <i class="fab fa-linux"></i>
+                        <h2>Linux From Scratch (LFS), MentOS &amp; OSDev Wiki</h2>
+                        <p>
+                            Hands-on kernel and system-building resources that guide my operating systems work. <em>Linux From Scratch</em> walks through compiling a complete Linux system from source (toolchains, kernel configuration, init scripts, and userland), while <em>MentOS</em> and the <em>OSDev Wiki</em> provide clean, educational implementations of bootloaders, schedulers, virtual memory, and VFS layers.
+                        </p>
+                        <div class="compact-tags"><span>Linux From Scratch</span><span>MentOS</span><span>OSDev</span><span>Kernel Compilation</span><span>System Calls</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <i class="fas fa-server"></i>
+                        <h2>IBM Z XPLORE &amp; IBM Redbooks (z/OS, JCL, COBOL, Db2)</h2>
+                        <p>
+                            Enterprise mainframe training platform and official IBM architectural guides that supported earning the <strong>IBM Z XPLORE Advanced</strong> credential, delivering my keynote at the 2025 AMC Young Talents Mainframe Convention in Böblingen, and building C/Python/Flask/SQLite integration tools alongside COBOL and JCL workloads at <em>Living Mainframe GmbH</em>.
+                        </p>
+                        <div class="compact-tags"><span>IBM Z XPLORE</span><span>IBM Redbooks</span><span>z/OS</span><span>JCL &amp; COBOL</span><span>IBM Db2</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h2>ArchWiki, Debian Handbook, OpenMediaVault &amp; OpenWrt Docs</h2>
+                        <p>
+                            Essential system-administration references used daily to build and secure my homelab: configuring Debian 13 (Trixie) and OpenMediaVault 8 on a Raspberry Pi 5 NAS, isolating Docker volumes on external storage, deploying Pi-hole v6 with Quad9 DNSSEC validation, tuning minimal Arch and Void Linux machines under tight RAM budgets, and designing OpenWrt firewall and VLAN rules.
+                        </p>
+                        <div class="compact-tags"><span>ArchWiki</span><span>Debian 13</span><span>OpenMediaVault 8</span><span>Pi-hole v6 &amp; DNSSEC</span><span>OpenWrt &amp; VLANs</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <i class="fas fa-cubes"></i>
+                        <h2>Qt 6, PyTorch, Apache PyArrow, Playwright &amp; Gemini API Docs</h2>
+                        <p>
+                            Primary framework documentation powering my software and research builds: <strong>Qt 6</strong> for modular C++ desktop interfaces (<em>Bug Simulator</em>, <em>Linux Atlas</em>); <strong>PyTorch</strong>, <strong>Slurm</strong>, and <strong>Apache PyArrow Parquet</strong> for multi-GPU HPC genomics pipelines on the University of Calgary ARC cluster; and <strong>Playwright</strong>, <strong>Pandas</strong>, <strong>Gemini API</strong>, and <strong>n8n</strong> for our hackathon-winning <em>Market Research Automation Agent</em>.
+                        </p>
+                        <div class="compact-tags"><span>Qt 6 Docs</span><span>PyTorch &amp; CUDA</span><span>Apache PyArrow</span><span>Slurm HPC</span><span>Playwright &amp; Gemini API</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 4. COMPLETED BACHELOR'S COURSEWORK ===== -->
+        <section class="detail-section cv-muted" id="courses">
+            <div class="container">
+                <div class="achievement-section-heading">
+                    <p class="eyebrow">04 / Academic Curriculum · Constructor University (2024–2027)</p>
+                    <h2>Completed Bachelor’s Courses (B.Sc. Computer Science &amp; Mathematics Minor)</h2>
+                </div>
+
+                <div class="skills-ledger coursework-ledger">
+                    <article class="skills-ledger-row">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Track 01 / Programming &amp; Theory</span>
+                            <h3>Core Computer Science &amp; Algorithms</h3>
+                            <p>Foundational programming, memory management, algorithmic complexity, and formal computational structures.</p>
+                        </div>
+                        <div class="skills-ledger-body">
+                            <div class="course-cards-grid">
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Core CS</span>
+                                        <span class="course-project-link">Used in: Mainframe C Tooling &amp; Bug Simulator</span>
+                                    </div>
+                                    <h4>Programming in C and C++</h4>
+                                    <p>Low-level procedural programming in C (pointers, manual memory allocation, bit manipulation, file I/O) and object-oriented/generic programming in C++ (classes, RAII, inheritance, templates, STL, and error handling).</p>
+                                </div>
+
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Core CS</span>
+                                        <span class="course-project-link">Used in: Hybrid Selection &amp; Audit Pipeline</span>
+                                    </div>
+                                    <h4>Algorithms and Data Structures</h4>
+                                    <p>Asymptotic analysis, trees, balanced search structures, hash tables, graph algorithms, sorting, and dynamic programming—applied directly when designing stratified multi-view ranking and deterministic hash auditing.</p>
+                                </div>
+
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Core CS</span>
+                                        <span class="course-project-link">Used in: Parser &amp; State Machine Design</span>
+                                    </div>
+                                    <h4>Core Computer Science &amp; Formal Foundations</h4>
+                                    <p>Boolean logic, state machines, formal languages, regular expressions, automata theory, computability, and structured problem-solving across theoretical computer science.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="skills-ledger-row">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Track 02 / Systems &amp; Infrastructure</span>
+                            <h3>Architecture, Operating Systems &amp; Networks</h3>
+                            <p>How software executes on physical hardware, how kernels manage resources, and how distributed systems communicate.</p>
+                        </div>
+                        <div class="skills-ledger-body">
+                            <div class="course-cards-grid">
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Systems</span>
+                                        <span class="course-project-link">Used in: MentOS, LFS &amp; Linux Atlas</span>
+                                    </div>
+                                    <h4>Operating Systems</h4>
+                                    <p>Kernel architecture, processes, threads, CPU scheduling, synchronization primitives, deadlocks, virtual memory paging, file systems, and device management in UNIX/Linux environments.</p>
+                                </div>
+
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Systems</span>
+                                        <span class="course-project-link">Used in: HPC GPU Workloads &amp; C Integration</span>
+                                    </div>
+                                    <h4>Computer Architecture &amp; Programming Languages</h4>
+                                    <p>Instruction set architectures, processor pipelining, cache coherence, memory buses, assembly-level execution models, and how language abstractions map to machine instructions.</p>
+                                </div>
+
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Systems &amp; Networking</span>
+                                        <span class="course-project-link">Used in: Home Lab, DNSSEC &amp; SSH Collectors</span>
+                                    </div>
+                                    <h4>Computer Networks &amp; Secure Systems</h4>
+                                    <p>Layered network architecture (OSI/TCP-IP), routing, DNS resolution paths, transport protocols, firewall rules, and secure remote communication across networked Linux hosts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="skills-ledger-row">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Track 03 / Engineering &amp; Data</span>
+                            <h3>Software Engineering, Databases &amp; AI</h3>
+                            <p>Full-stack relational systems, industry-style collaborative software delivery, and machine learning workflows.</p>
+                        </div>
+                        <div class="skills-ledger-body">
+                            <div class="course-cards-grid">
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Fall 2025</span>
+                                        <span class="course-project-link">Project: Campus Information Center</span>
+                                    </div>
+                                    <h4>Databases and Web Services</h4>
+                                    <p>Relational data modeling, Entity-Relationship and ISA hierarchies, SQL schema normalization (3NF/BCNF), transactions, indexing, user authentication/security, and building database-driven Python/Flask web applications.</p>
+                                </div>
+
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Spring 2026</span>
+                                        <span class="course-project-link">Project: Bug Simulator (C++ / Qt)</span>
+                                    </div>
+                                    <h4>Software Engineering</h4>
+                                    <p>Industry-simulated development with rotating teams, two-week Agile/Scrum sprints, rapid repository onboarding, structured project handovers, unit testing, and sustainable C++/Qt GUI architecture.</p>
+                                </div>
+
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">AI &amp; Data</span>
+                                        <span class="course-project-link">Used in: TL-Prot-ISM &amp; AI Automation Agent</span>
+                                    </div>
+                                    <h4>Machine Learning &amp; Scientific Data Processing</h4>
+                                    <p>Supervised and unsupervised learning, regression, neural network optimization, feature representations, and reproducible scientific computing pipelines in Python.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="skills-ledger-row">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Track 04 / Mathematics Minor</span>
+                            <h3>Calculus, Linear Algebra, Discrete Math &amp; Statistics</h3>
+                            <p>Mathematical rigor, formal proofs, linear transformations, and statistical inference underpinning scientific computing.</p>
+                        </div>
+                        <div class="skills-ledger-body">
+                            <div class="course-cards-grid">
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Math Minor · Later TA</span>
+                                        <span class="course-project-link">Used in: Taylor ISM (TISM) Gradient Analysis</span>
+                                    </div>
+                                    <h4>Elements of Calculus I &amp; II</h4>
+                                    <p>Limits, continuity, single- and multivariable differentiation, Taylor series expansions, partial derivatives, gradients, and integration. Later served as <strong>Teaching Assistant</strong> for this course in Spring 2026.</p>
+                                </div>
+
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Math Minor</span>
+                                        <span class="course-project-link">Used in: Transformer Projections &amp; Embeddings</span>
+                                    </div>
+                                    <h4>Linear Algebra</h4>
+                                    <p>Vector spaces, linear transformations, matrix factorizations, eigenvalues and eigenvectors, orthogonality, and high-dimensional projections used across deep learning and scientific computing.</p>
+                                </div>
+
+                                <div class="course-item-card">
+                                    <div class="course-item-header">
+                                        <span class="course-badge">Math Minor</span>
+                                        <span class="course-project-link">Used in: Concordance &amp; Empirical Benchmarking</span>
+                                    </div>
+                                    <h4>Discrete Mathematics, Probability &amp; Statistics</h4>
+                                    <p>Formal proof methods, combinatorics, graph theory, probability distributions, z-score standardization, Pearson linear and Spearman rank correlations, and statistical error auditing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="detail-back-action">
+                    <a href="../n1/p01.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p class="footer-copyright">© <span id="currentYear"></span> Luca Moldovan. All rights reserved.</p></div>
+    </footer>
+    <div class="copy-warning" id="copyWarning" role="status" aria-live="polite">Content protection is active.</div>
+    <script src="../../sys/j0/r0.js"></script>
+</body>
+</html>
