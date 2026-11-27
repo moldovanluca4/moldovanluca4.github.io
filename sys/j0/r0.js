@@ -428,6 +428,7 @@ function initContentProtection() {
     });
 
     let isShieldActive = false;
+    let isMetaPreBlurred = false;
     let shieldTimeout = null;
 
     const scrubClipboard = () => {
@@ -438,12 +439,13 @@ function initContentProtection() {
         } catch (_) {}
     };
 
-    const activateScreenshotShield = (message = "Screenshots are disabled on this page.", duration = 1800) => {
+    const activateScreenshotShield = (message = "Screenshots are disabled on this page.", duration = 3500) => {
         isShieldActive = true;
         document.body.classList.add("is-protected-blurred");
         scrubClipboard();
         window.setTimeout(scrubClipboard, 60);
-        window.setTimeout(scrubClipboard, 180);
+        window.setTimeout(scrubClipboard, 200);
+        window.setTimeout(scrubClipboard, 500);
         showProtectionWarning(message);
 
         window.clearTimeout(shieldTimeout);
@@ -456,7 +458,8 @@ function initContentProtection() {
     };
 
     const isScreenshotKey = (event) => {
-        const key = (event.key || "").toLowerCase();
+        const rawKey = event.key || "";
+        const key = rawKey.toLowerCase();
         const code = (event.code || "").toLowerCase();
         const keyCode = event.keyCode || event.which || 0;
 
@@ -467,10 +470,18 @@ function initContentProtection() {
             key === "sysrq" ||
             key === "execute" ||
             key === "f13" ||
+            key === "unidentified" ||
+            key.includes("screen") ||
+            key.includes("print") ||
+            key.includes("snap") ||
             code === "printscreen" ||
             code === "f13" ||
+            code.includes("screen") ||
+            code.includes("print") ||
             keyCode === 44 ||
-            keyCode === 124
+            keyCode === 124 ||
+            keyCode === 0 ||
+            keyCode === 255
         ) {
             return true;
         }
@@ -493,13 +504,14 @@ function initContentProtection() {
             return;
         }
 
-        // Pre-emptively engage blur shield when Meta/Super + Shift is held (e.g. Win+Shift+S / Cmd+Shift+4)
-        // before the OS intercepts the final key.
-        if (event.metaKey && event.shiftKey) {
+        const key = (event.key || "").toLowerCase();
+
+        // Pre-emptively engage blur shield when Meta/Super is pressed or Meta+Shift is held
+        if (event.metaKey || key === "meta" || key === "super" || key === "os") {
+            isMetaPreBlurred = true;
             document.body.classList.add("is-protected-blurred");
         }
 
-        const key = (event.key || "").toLowerCase();
         const blocked =
             event.key === "F12" ||
             ((event.ctrlKey || event.metaKey) && ["s", "p", "u", "c", "x"].includes(key)) ||
@@ -513,6 +525,8 @@ function initContentProtection() {
     }, true);
 
     window.addEventListener("keyup", (event) => {
+        if (isEditableElement(event.target)) return;
+
         if (isScreenshotKey(event)) {
             event.preventDefault();
             event.stopPropagation();
@@ -521,8 +535,11 @@ function initContentProtection() {
             return;
         }
 
-        if (!isShieldActive && !event.metaKey && document.hasFocus() && !document.hidden) {
-            document.body.classList.remove("is-protected-blurred");
+        if (isMetaPreBlurred && !event.metaKey) {
+            isMetaPreBlurred = false;
+            if (!isShieldActive && document.hasFocus() && !document.hidden) {
+                document.body.classList.remove("is-protected-blurred");
+            }
         }
     }, true);
 
@@ -531,7 +548,7 @@ function initContentProtection() {
     });
 
     window.addEventListener("focus", () => {
-        if (!isShieldActive) {
+        if (!isShieldActive && !isMetaPreBlurred) {
             document.body.classList.remove("is-protected-blurred");
         }
     });
@@ -539,7 +556,7 @@ function initContentProtection() {
     document.addEventListener("visibilitychange", () => {
         if (document.hidden) {
             document.body.classList.add("is-protected-blurred");
-        } else if (!isShieldActive && document.hasFocus()) {
+        } else if (!isShieldActive && !isMetaPreBlurred && document.hasFocus()) {
             document.body.classList.remove("is-protected-blurred");
         }
     });
