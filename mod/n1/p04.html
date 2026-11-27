@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Papers I’ve Read - Luca Moldovan</title>
-    <meta name="description" content="Scientific research papers in computational genomics, deep learning, transfer learning, in-silico mutagenesis, and AI agent security read by Luca Moldovan.">
+    <meta name="description" content="Scientific research papers in bioinformatics, computational genomics, deep learning, in-silico mutagenesis, and LLM security read by Luca Moldovan.">
     <meta name="robots" content="noarchive, noimageindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
                 <p class="eyebrow">Readings / 02 · Scientific Literature</p>
                 <h1>Research Papers I’ve Read</h1>
                 <p>
-                    Peer-reviewed papers and preprints that shaped my research in computational genomics and deep learning at the University of Calgary, as well as my ongoing exploration of AI agent security and systems reliability.
+                    Organized by research domain for fast scanning—covering <strong>Bioinformatics &amp; Proteogenomics</strong>, <strong>Deep Learning &amp; In-Silico Mutagenesis</strong>, and <strong>LLM &amp; AI Agent Security</strong>.
                 </p>
                 <div class="detail-actions">
                     <a href="../n1/p02.html" class="btn btn-outline">
@@ -57,116 +57,192 @@
 
         <section class="detail-section">
             <div class="container">
-                <div class="detail-grid readings-grid">
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> PLOS Genetics · 2026</span>
-                            <span class="reading-project-pill">Dr. Long’s Lab · Transfer Learning</span>
+                <!-- Fast-Scan Category Bar -->
+                <nav class="reading-category-bar" aria-label="Research paper categories">
+                    <span class="reading-category-label"><i class="fas fa-layer-group" aria-hidden="true"></i> Quick Scan by Category:</span>
+                    <a href="#cat-bioinformatics" class="reading-category-chip"><i class="fas fa-dna" aria-hidden="true"></i> Bioinformatics &amp; Proteogenomics (4)</a>
+                    <a href="#cat-deep-learning-ism" class="reading-category-chip"><i class="fas fa-microchip" aria-hidden="true"></i> Deep Learning &amp; In-Silico Mutagenesis (3)</a>
+                    <a href="#cat-llm-security" class="reading-category-chip"><i class="fas fa-shield-halved" aria-hidden="true"></i> LLM &amp; AI Agent Security (1)</a>
+                </nav>
+
+                <div class="skills-ledger readings-category-ledger">
+                    <!-- CATEGORY 1: BIOINFORMATICS & PROTEOGENOMICS -->
+                    <article class="skills-ledger-row" id="cat-bioinformatics">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Category 01 / Bioinformatics</span>
+                            <h3>Bioinformatics, Proteogenomics &amp; Variant Effects</h3>
+                            <p>Tissue-specific regulatory biology, mRNA–protein abundance decoupling, lung adenocarcinoma proteogenomics, and coding vs. non-coding variant pathogenicity.</p>
                         </div>
-                        <h2>Tissue-specific transfer learning improves functional variant and therapeutic target discoveries in breast and prostate cancer</h2>
-                        <p class="reading-authors">Qing Li, Dinghao Wang, Zilong Zhang, Deshan Perera, Zhishan Chen, Wanqing Wen, M. Ethan MacDonald, Weijia Cai, Jun Yan, Xiao-Ou Shu, Wei Zheng, Xingyi Guo &amp; Quan Long</p>
-                        <p>
-                            Published by Dr. Quan Long’s research group, this paper establishes the tissue-specific transfer learning paradigm for adapting broad genomic sequence models (Enformer) to targeted tissue and cancer regulatory tracks—forming the architectural foundation that <strong>TL-Prot</strong> extends to human lung protein abundance.
-                        </p>
-                        <div class="compact-tags"><span>Transfer Learning</span><span>Enformer Adaptation</span><span>Functional Variants</span><span>Tissue-Specific Regulation</span></div>
-                        <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1012145" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (PLOS Genetics) <i class="fas fa-arrow-right"></i></a>
+                        <div class="skills-ledger-body">
+                            <div class="readings-ledger-cards">
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> PLOS Genetics · 2026</span>
+                                        <span class="reading-project-pill">Dr. Long’s Lab · Transfer Learning</span>
+                                    </div>
+                                    <h2>Tissue-specific transfer learning improves functional variant and therapeutic target discoveries in breast and prostate cancer</h2>
+                                    <p class="reading-authors">Qing Li, Dinghao Wang, Zilong Zhang, Deshan Perera, Zhishan Chen, Wanqing Wen, M. Ethan MacDonald, Weijia Cai, Jun Yan, Xiao-Ou Shu, Wei Zheng, Xingyi Guo &amp; Quan Long</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Key Takeaway:</strong> Adapts Enformer via transfer learning to capture tissue-specific regulatory grammar</div>
+                                        <div><strong>Applied In:</strong> Architectural foundation for <code>TL-Prot</code> lung protein modeling</div>
+                                    </div>
+                                    <p>
+                                        Published by Dr. Quan Long’s research group, this paper establishes the tissue-specific transfer learning paradigm for adapting broad genomic sequence models to targeted tissue and cancer regulatory tracks.
+                                    </p>
+                                    <div class="compact-tags"><span>Bioinformatics</span><span>Transfer Learning</span><span>Functional Variants</span><span>Tissue Regulation</span></div>
+                                    <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1012145" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (PLOS Genetics) <i class="fas fa-arrow-right"></i></a>
+                                </article>
+
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature Reviews Genetics · 2012</span>
+                                        <span class="reading-project-pill">mRNA–Protein Decoupling</span>
+                                    </div>
+                                    <h2>Insights into the regulation of protein abundance from proteomic and transcriptomic analyses</h2>
+                                    <p class="reading-authors">Christine Vogel &amp; Edward M. Marcotte</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Key Takeaway:</strong> Steady-state protein levels decouple from mRNA (<em>r &approx; 0.40</em>) via post-transcriptional control</div>
+                                        <div><strong>Applied In:</strong> Biological motivation for predicting protein abundance directly from DNA</div>
+                                    </div>
+                                    <p>
+                                        Dissects the relative contributions of transcription, translation kinetics, 5’/3’ UTR miRNA and RNA-binding protein regulation, and proteasomal degradation in governing cellular protein levels.
+                                    </p>
+                                    <div class="compact-tags"><span>Bioinformatics</span><span>Proteomics</span><span>Post-Transcriptional Regulation</span><span>Protein Abundance</span></div>
+                                    <a href="https://www.nature.com/articles/nrg3185" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Nature Reviews Genetics) <i class="fas fa-arrow-right"></i></a>
+                                </article>
+
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Cell · 2020</span>
+                                        <span class="reading-project-pill">Lung Proteogenomics (CPTAC)</span>
+                                    </div>
+                                    <h2>Proteogenomic Characterization of Human Lung Adenocarcinoma</h2>
+                                    <p class="reading-authors">Michael A. Gillette, Shankha Satpathy, Shayan Cao et al. (Clinical Proteomic Tumor Analysis Consortium — CPTAC)</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Key Takeaway:</strong> Multi-omic profiling of 110 human lung tumors and matched normal adjacent tissues</div>
+                                        <div><strong>Applied In:</strong> Lung tissue proteomics context &amp; cancer driver benchmark cohorts (<code>KRAS</code>, <code>EGFR</code>, <code>TP53</code>)</div>
+                                    </div>
+                                    <p>
+                                        Integrates genomics, epigenomics, and deep-scale mass-spectrometry proteomics across human lung tissues, grounding our biological benchmark cohorts.
+                                    </p>
+                                    <div class="compact-tags"><span>Bioinformatics</span><span>Lung Adenocarcinoma</span><span>CPTAC</span><span>Proteogenomics</span></div>
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S0092867420307443?via%3Dihub" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Cell) <i class="fas fa-arrow-right"></i></a>
+                                </article>
+
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Science · 2023</span>
+                                        <span class="reading-project-pill">Coding vs. Regulatory Impact</span>
+                                    </div>
+                                    <h2>Accurate proteome-wide missense variant effect prediction with AlphaMissense</h2>
+                                    <p class="reading-authors">Jun Cheng, Guido Novati, Joshua Pan, Clare Bycroft, Demis Hassabis, Pushmeet Kohli, Žiga Avsec et al. (Google DeepMind)</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Key Takeaway:</strong> Predicts coding missense pathogenicity using AlphaFold structural context</div>
+                                        <div><strong>Applied In:</strong> Distinguishing catalytic protein damage from non-coding protein abundance shifts</div>
+                                    </div>
+                                    <p>
+                                        Helped sharpen a core biological insight in our multi-omic annotation suite: a coding missense variant can abolish protein function without changing steady-state abundance, whereas non-coding cis-regulatory variants modulate abundance directly.
+                                    </p>
+                                    <div class="compact-tags"><span>Bioinformatics</span><span>AlphaMissense</span><span>Missense Variants</span><span>Protein Structure</span></div>
+                                    <a href="https://www.science.org/doi/10.1126/science.adg7492" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Science) <i class="fas fa-arrow-right"></i></a>
+                                </article>
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature Methods · 2021</span>
-                            <span class="reading-project-pill">TL-Prot-ISM Backbone</span>
+                    <!-- CATEGORY 2: DEEP LEARNING & IN-SILICO MUTAGENESIS -->
+                    <article class="skills-ledger-row" id="cat-deep-learning-ism">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Category 02 / Genomic Deep Learning</span>
+                            <h3>Deep Learning, Sequence Transformers &amp; Taylor ISM</h3>
+                            <p>Long-range DNA sequence transformers, first-order Taylor series approximations for in-silico mutagenesis, and multimodal biomedical data fusion.</p>
                         </div>
-                        <h2>Effective gene expression prediction from sequence by integrating long-range interactions (Enformer)</h2>
-                        <p class="reading-authors">Žiga Avsec, Vikram Agarwal, Daniel Visentin, Joseph R. Ledsam, Agnieszka Grabska-Barwinska et al.</p>
-                        <p>
-                            Introduced the 250M-parameter Enformer transformer architecture capable of integrating cis-regulatory interactions across 196,608 bp of DNA. Studying its 896-bin spatial pooling geometry and 5,313 human chromatin, histone, and CAGE tracks was essential to engineering <code>EnformerProt</code> exon masking and comparative epigenomic benchmarks.
-                        </p>
-                        <div class="compact-tags"><span>Enformer</span><span>Genomic Transformers</span><span>196 kb Context</span><span>Self-Attention</span><span>Epigenomics</span></div>
-                        <a href="https://www.nature.com/articles/s41592-021-01252-x" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Nature Methods) <i class="fas fa-arrow-right"></i></a>
+                        <div class="skills-ledger-body">
+                            <div class="readings-ledger-cards">
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature Methods · 2021</span>
+                                        <span class="reading-project-pill">TL-Prot-ISM Transformer Trunk</span>
+                                    </div>
+                                    <h2>Effective gene expression prediction from sequence by integrating long-range interactions (Enformer)</h2>
+                                    <p class="reading-authors">Žiga Avsec, Vikram Agarwal, Daniel Visentin, Joseph R. Ledsam, Agnieszka Grabska-Barwinska et al.</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Key Takeaway:</strong> 250M-parameter transformer integrating 196,608 bp DNA windows into 896 spatial bins</div>
+                                        <div><strong>Applied In:</strong> <code>EnformerProt</code> gene-body exon masking &amp; 5,313-track comparative benchmarks</div>
+                                    </div>
+                                    <p>
+                                        Provided the backbone architecture and 128 bp spatial bin geometry that I used to map RefSeq/Gencode exon masks and contrast lung protein abundance effects against baseline chromatin accessibility.
+                                    </p>
+                                    <div class="compact-tags"><span>Deep Learning</span><span>Enformer</span><span>196 kb Context</span><span>Self-Attention</span></div>
+                                    <a href="https://www.nature.com/articles/s41592-021-01252-x" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Nature Methods) <i class="fas fa-arrow-right"></i></a>
+                                </article>
+
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Algorithmic Genomics · Taylor ISM</span>
+                                        <span class="reading-project-pill">TISM Concordance &amp; Hybrid Audit</span>
+                                    </div>
+                                    <h2>Approximating In-Silico Saturation Mutagenesis Using First-Order Taylor Series Expansions</h2>
+                                    <p class="reading-authors">Alexander Sasse, Maria Chikina &amp; Sara Mostafavi (Taylor ISM / Fast Gradient Approximation Literature)</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Key Takeaway:</strong> Approximates variant mutagenesis in <em>&Omicron;(1)</em> via first-order input gradients (&Delta;z<sub>TISM</sub>)</div>
+                                        <div><strong>Applied In:</strong> Discovered TISM attention-curvature failure &amp; built Hybrid Selection &amp; Audit Pipeline</div>
+                                    </div>
+                                    <p>
+                                        Studying how first-order Taylor expansions estimate mutagenesis from a single backward pass led to my empirical concordance benchmark on the ARC GPU cluster and my calibrated hybrid screening-and-audit algorithm.
+                                    </p>
+                                    <div class="compact-tags"><span>In-Silico Mutagenesis</span><span>Taylor Series (TISM)</span><span>Gradient Attribution</span><span>Hybrid Auditing</span></div>
+                                </article>
+
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Briefings in Bioinformatics · 2022</span>
+                                        <span class="reading-project-pill">Multi-Omic Data Fusion</span>
+                                    </div>
+                                    <h2>Multimodal deep learning for biomedical data fusion: a review</h2>
+                                    <p class="reading-authors">Sören Richard Stahlschmidt, Benjamin Ulfenborg &amp; Jane Synnergren</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Key Takeaway:</strong> Taxonomy of early, intermediate, and late deep learning fusion across multi-omics</div>
+                                        <div><strong>Applied In:</strong> Architectural context for integrating DNA sequence, epigenomic, and proteomic signals</div>
+                                    </div>
+                                    <p>
+                                        Surveys how joint representation learning and intermediate fusion layers capture cross-modality biological interactions across heterogeneous biomedical datasets.
+                                    </p>
+                                    <div class="compact-tags"><span>Multimodal Deep Learning</span><span>Data Fusion</span><span>Multi-Omics</span><span>Representation Learning</span></div>
+                                    <a href="https://academic.oup.com/bib/article/23/2/bbab569/6516346" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Oxford Academic) <i class="fas fa-arrow-right"></i></a>
+                                </article>
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature Reviews Genetics · 2012</span>
-                            <span class="reading-project-pill">mRNA–Protein Decoupling</span>
+                    <!-- CATEGORY 3: LLM & AI AGENT SECURITY -->
+                    <article class="skills-ledger-row" id="cat-llm-security">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Category 03 / LLM &amp; Agent Security</span>
+                            <h3>LLM &amp; AI Agent Security</h3>
+                            <p>Empirical security analysis of autonomous LLM agent extensions, supply-chain vulnerabilities, and adversarial instruction hijacking.</p>
                         </div>
-                        <h2>Insights into the regulation of protein abundance from proteomic and transcriptomic analyses</h2>
-                        <p class="reading-authors">Christine Vogel &amp; Edward M. Marcotte</p>
-                        <p>
-                            Explains why steady-state cellular protein abundance frequently decouples from mRNA transcript levels (genome-wide correlation <em>r &approx; 0.40</em>), dissecting the roles of translation kinetics, miRNA/RBP interactions in 5’/3’ UTRs, and proteasomal degradation. This paper framed the central biological motivation for predicting protein abundance directly from DNA in <strong>TL-Prot-ISM</strong>.
-                        </p>
-                        <div class="compact-tags"><span>Proteomics</span><span>Post-Transcriptional Regulation</span><span>Protein Abundance</span><span>Translational Control</span></div>
-                        <a href="https://www.nature.com/articles/nrg3185" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Nature Reviews Genetics) <i class="fas fa-arrow-right"></i></a>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Cell · 2020</span>
-                            <span class="reading-project-pill">Lung Proteogenomics (CPTAC)</span>
+                        <div class="skills-ledger-body">
+                            <div class="readings-ledger-cards">
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv · 2026</span>
+                                        <span class="reading-project-pill">AI Agents &amp; Systems Security</span>
+                                    </div>
+                                    <h2>Malicious Agent Skills in the Wild: A Large-Scale Security Empirical Study</h2>
+                                    <p class="reading-authors">arXiv:2602.06547v1 (“Do Not Mention This to the User: Detecting and Understanding Malicious Agent Skills in the Wild”)</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Key Takeaway:</strong> Audited 98,380 third-party agent skills; uncovered 157 malicious skills &amp; 632 vulnerabilities</div>
+                                        <div><strong>Connected To:</strong> AI automation agent development &amp; systems security engineering</div>
+                                    </div>
+                                    <p>
+                                        Categorizes real-world attacks on LLM coding and automation agents into credential/supply-chain data theft via remote code execution (RCE) and stealthy agent logic hijacking using hidden instructions and undocumented shadow features.
+                                    </p>
+                                    <div class="compact-tags"><span>LLM Security</span><span>AI Agent Skills</span><span>Supply Chain Security</span><span>Prompt Hijacking</span></div>
+                                    <a href="https://arxiv.org/html/2602.06547v1" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (arXiv) <i class="fas fa-arrow-right"></i></a>
+                                </article>
+                            </div>
                         </div>
-                        <h2>Proteogenomic Characterization of Human Lung Adenocarcinoma</h2>
-                        <p class="reading-authors">Michael A. Gillette, Shankha Satpathy, Shayan Cao et al. (Clinical Proteomic Tumor Analysis Consortium — CPTAC)</p>
-                        <p>
-                            Comprehensive proteogenomic characterization of 110 human lung adenocarcinoma (LUAD) tumors and matched normal adjacent lung tissues. Provided the biological and clinical foundation for our lung tissue proteomics cohorts and benchmark cancer driver genes (<code>KRAS</code>, <code>EGFR</code>, <code>TP53</code>, <code>BRAF</code>, <code>MET</code>, <code>PTEN</code>).
-                        </p>
-                        <div class="compact-tags"><span>Lung Adenocarcinoma</span><span>CPTAC</span><span>Proteogenomics</span><span>Cancer Drivers</span></div>
-                        <a href="https://www.sciencedirect.com/science/article/pii/S0092867420307443?via%3Dihub" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Cell) <i class="fas fa-arrow-right"></i></a>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Computational Genomics · Taylor ISM</span>
-                            <span class="reading-project-pill">TISM Algorithm &amp; Concordance Study</span>
-                        </div>
-                        <h2>Approximating In-Silico Saturation Mutagenesis Using First-Order Taylor Series Expansions</h2>
-                        <p class="reading-authors">Alexander Sasse, Maria Chikina &amp; Sara Mostafavi (Taylor ISM / Fast Gradient Approximation Literature)</p>
-                        <p>
-                            Formulates how first-order Taylor expansions around a reference sequence can approximate in-silico mutagenesis (&Delta;z<sub>TISM</sub>) from a single forward-and-backward pass. Studying this algorithm led directly to my implementation of TISM for <code>EnformerProt</code>, my empirical discovery that first-order gradients break down across deep attention curvature, and my calibrated Hybrid Selection &amp; Audit Pipeline.
-                        </p>
-                        <div class="compact-tags"><span>In-Silico Mutagenesis</span><span>Taylor Series (TISM)</span><span>Gradient Attribution</span><span>Hybrid Auditing</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Science · 2023</span>
-                            <span class="reading-project-pill">Variant Pathogenicity Contrast</span>
-                        </div>
-                        <h2>Accurate proteome-wide missense variant effect prediction with AlphaMissense</h2>
-                        <p class="reading-authors">Jun Cheng, Guido Novati, Joshua Pan, Clare Bycroft, Demis Hassabis, Pushmeet Kohli, Žiga Avsec et al. (Google DeepMind)</p>
-                        <p>
-                            Combines AlphaFold structural context with evolutionary conservation to classify coding missense variant pathogenicity across the human proteome. Reading this work helped sharpen a crucial distinction in my research: coding missense pathogenicity (loss of catalytic/structural function) is distinct from non-coding cis-regulatory alterations in steady-state protein abundance.
-                        </p>
-                        <div class="compact-tags"><span>AlphaMissense</span><span>Missense Variants</span><span>Protein Structure</span><span>Variant Effect Prediction</span></div>
-                        <a href="https://www.science.org/doi/10.1126/science.adg7492" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Science) <i class="fas fa-arrow-right"></i></a>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Briefings in Bioinformatics · 2022</span>
-                            <span class="reading-project-pill">Multi-Omic Data Fusion</span>
-                        </div>
-                        <h2>Multimodal deep learning for biomedical data fusion: a review</h2>
-                        <p class="reading-authors">Sören Richard Stahlschmidt, Benjamin Ulfenborg &amp; Jane Synnergren</p>
-                        <p>
-                            Reviews deep learning architectures and early, intermediate, and late fusion taxonomies for combining heterogeneous multi-omic and biomedical modalities—providing broader architectural context for how sequence representations integrate with epigenomic and proteomic signals.
-                        </p>
-                        <div class="compact-tags"><span>Multimodal Deep Learning</span><span>Biomedical Data Fusion</span><span>Multi-Omics</span><span>Representation Learning</span></div>
-                        <a href="https://academic.oup.com/bib/article/23/2/bbab569/6516346" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Oxford Academic) <i class="fas fa-arrow-right"></i></a>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv · 2026</span>
-                            <span class="reading-project-pill">AI Agents &amp; Systems Security</span>
-                        </div>
-                        <h2>Malicious Agent Skills in the Wild: A Large-Scale Security Empirical Study</h2>
-                        <p class="reading-authors">arXiv:2602.06547v1 (“Do Not Mention This to the User: Detecting and Understanding Malicious Agent Skills in the Wild”)</p>
-                        <p>
-                            An empirical security study analyzing 98,380 third-party LLM agent skills across community registries, uncovering 157 malicious skills and 632 vulnerabilities ranging from credential theft and remote code execution (RCE) to adversarial instruction hijacking and undocumented shadow features. Connects directly to my work building AI automation agents and my interest in systems security.
-                        </p>
-                        <div class="compact-tags"><span>AI Agent Security</span><span>Supply Chain Security</span><span>Prompt Hijacking</span><span>Empirical Security</span></div>
-                        <a href="https://arxiv.org/html/2602.06547v1" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (arXiv) <i class="fas fa-arrow-right"></i></a>
                     </article>
                 </div>
 

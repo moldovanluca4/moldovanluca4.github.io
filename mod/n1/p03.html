@@ -60,33 +60,58 @@
 
         <section class="detail-section">
             <div class="container">
-                <div class="detail-grid readings-grid">
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · MIT Press</span>
-                            <span class="reading-project-pill">Briefly Read · Revisiting Soon</span>
-                        </div>
-                        <h2>Deep Learning</h2>
-                        <p class="reading-authors">Ian Goodfellow, Yoshua Bengio &amp; Aaron Courville</p>
-                        <p>
-                            I briefly read through selected sections of this foundational text to build mathematical intuition around linear algebra for machine learning, gradient-based optimization, backpropagation, and representation learning during my genomics research. I plan to revisit this book with much greater care and depth when my schedule allows.
-                        </p>
-                        <div class="compact-tags"><span>Deep Learning Foundations</span><span>Representation Learning</span><span>Gradient Optimization</span><span>Neural Networks</span></div>
-                        <a href="https://www.deeplearningbook.org/" class="text-link" target="_blank" rel="noopener noreferrer">View book online <i class="fas fa-arrow-right"></i></a>
-                    </article>
+                <!-- Fast-Scan Category Bar -->
+                <nav class="reading-category-bar" aria-label="Book categories">
+                    <span class="reading-category-label"><i class="fas fa-layer-group" aria-hidden="true"></i> Quick Scan by Category:</span>
+                    <a href="#cat-dl-books" class="reading-category-chip"><i class="fas fa-brain" aria-hidden="true"></i> Deep Learning &amp; Neural Architectures (2)</a>
+                </nav>
 
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · MIT Press (2023)</span>
-                            <span class="reading-project-pill">Briefly Read · Revisiting Soon</span>
+                <div class="skills-ledger readings-category-ledger">
+                    <article class="skills-ledger-row" id="cat-dl-books">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Category 01 / Deep Learning &amp; AI</span>
+                            <h3>Deep Learning &amp; Neural Architectures</h3>
+                            <p>Foundational textbooks consulted for mathematical intuition, backpropagation, and transformer attention during my genomics research—planned for a thorough revisit.</p>
                         </div>
-                        <h2>Understanding Deep Learning</h2>
-                        <p class="reading-authors">Simon J.D. Prince</p>
-                        <p>
-                            A modern treatment of deep learning covering transformers, self-attention mechanisms, residual networks, and gradient attribution. I briefly consulted relevant chapters while working with 250M-parameter transformer architectures and plan to study the full text thoroughly when I have more dedicated time for deep learning theory.
-                        </p>
-                        <div class="compact-tags"><span>Transformers</span><span>Self-Attention</span><span>Deep Architectures</span><span>Modern Deep Learning</span></div>
-                        <a href="https://udlbook.github.io/udlbook/" class="text-link" target="_blank" rel="noopener noreferrer">View book online <i class="fas fa-arrow-right"></i></a>
+                        <div class="skills-ledger-body">
+                            <div class="readings-ledger-cards">
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> MIT Press · Textbook</span>
+                                        <span class="reading-project-pill">Briefly Read · Revisiting Soon</span>
+                                    </div>
+                                    <h2>Deep Learning</h2>
+                                    <p class="reading-authors">Ian Goodfellow, Yoshua Bengio &amp; Aaron Courville</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Core Focus:</strong> Linear algebra for ML, gradient optimization, backpropagation &amp; representation learning</div>
+                                        <div><strong>Connected To:</strong> Mathematical foundations for <code>TL-Prot-ISM</code></div>
+                                    </div>
+                                    <p>
+                                        I briefly read through selected chapters of this foundational book to strengthen my mathematical intuition while working on genomic representation learning. I plan to revisit the full text with more care when my schedule allows.
+                                    </p>
+                                    <div class="compact-tags"><span>Deep Learning Foundations</span><span>Representation Learning</span><span>Gradient Optimization</span><span>Neural Networks</span></div>
+                                    <a href="https://www.deeplearningbook.org/" class="text-link" target="_blank" rel="noopener noreferrer">View book online <i class="fas fa-arrow-right"></i></a>
+                                </article>
+
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> MIT Press · 2023</span>
+                                        <span class="reading-project-pill">Briefly Read · Revisiting Soon</span>
+                                    </div>
+                                    <h2>Understanding Deep Learning</h2>
+                                    <p class="reading-authors">Simon J.D. Prince</p>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Core Focus:</strong> Transformers, multi-head self-attention, residual networks &amp; gradient attribution</div>
+                                        <div><strong>Connected To:</strong> 250M-parameter Enformer trunk &amp; attention pooling</div>
+                                    </div>
+                                    <p>
+                                        A modern treatment of deep learning architectures. I briefly consulted relevant sections on transformers and gradients during my research internship and plan to study it systematically when I have more dedicated time.
+                                    </p>
+                                    <div class="compact-tags"><span>Transformers</span><span>Self-Attention</span><span>Deep Architectures</span><span>Modern Deep Learning</span></div>
+                                    <a href="https://udlbook.github.io/udlbook/" class="text-link" target="_blank" rel="noopener noreferrer">View book online <i class="fas fa-arrow-right"></i></a>
+                                </article>
+                            </div>
+                        </div>
                     </article>
                 </div>
 

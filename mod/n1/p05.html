@@ -36,7 +36,7 @@
                 <p class="eyebrow">Readings / 03 · Datasets, Blogs &amp; Technical References</p>
                 <h1>Resources, Datasets &amp; Engineering Blogs</h1>
                 <p>
-                    Biomedical study cohorts, security engineering reports, kernel build guides, and technical documentation that supported my research and engineering projects.
+                    Grouped by domain for quick scanning—covering <strong>Bioinformatics Cohort Datasets</strong>, <strong>Linux Kernel &amp; AI Security Blogs</strong>, and <strong>Systems &amp; Enterprise Documentation</strong>.
                 </p>
                 <div class="detail-actions">
                     <a href="../n1/p02.html" class="btn btn-outline">
@@ -57,55 +57,115 @@
 
         <section class="detail-section">
             <div class="container">
-                <div class="readable-grid">
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-database" aria-hidden="true"></i> NIH dbGaP Study · phs001287.v22.p7</span>
-                            <span class="reading-project-pill">TL-Prot-ISM Cohort Data</span>
+                <!-- Fast-Scan Category Bar -->
+                <nav class="reading-category-bar" aria-label="Resource categories">
+                    <span class="reading-category-label"><i class="fas fa-layer-group" aria-hidden="true"></i> Quick Scan by Category:</span>
+                    <a href="#cat-bio-datasets" class="reading-category-chip"><i class="fas fa-dna" aria-hidden="true"></i> Bioinformatics Datasets (1)</a>
+                    <a href="#cat-security-blogs" class="reading-category-chip"><i class="fas fa-shield-halved" aria-hidden="true"></i> Kernel &amp; AI Security Blogs (1)</a>
+                    <a href="#cat-systems-docs" class="reading-category-chip"><i class="fas fa-terminal" aria-hidden="true"></i> Systems, Mainframe &amp; Framework Docs (2)</a>
+                </nav>
+
+                <div class="skills-ledger readings-category-ledger">
+                    <!-- CATEGORY 1: BIOINFORMATICS DATASETS -->
+                    <article class="skills-ledger-row" id="cat-bio-datasets">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Category 01 / Bioinformatics Data</span>
+                            <h3>Proteogenomic &amp; Clinical Cohort Studies</h3>
+                            <p>Controlled-access multi-omic sequencing and proteomics cohorts underpinning tissue-level modeling.</p>
                         </div>
-                        <h2>Clinical Proteomic Tumor Analysis Consortium (CPTAC) dbGaP Study</h2>
-                        <p>
-                            The National Cancer Institute (NCI) / NIH dbGaP controlled-access proteogenomic cohort study (<code>phs001287.v22.p7</code>) housing paired genomic sequencing, transcriptomic, and mass-spectrometry proteomic profiles across cancer cohorts that underpin tissue-level proteogenomic modeling.
-                        </p>
-                        <div class="compact-tags"><span>NIH dbGaP</span><span>phs001287.v22.p7</span><span>CPTAC Cohort</span><span>Proteogenomics</span></div>
-                        <a href="https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001287.v22.p7" class="text-link" target="_blank" rel="noopener noreferrer">View study on NCBI dbGaP <i class="fas fa-arrow-right"></i></a>
+                        <div class="skills-ledger-body">
+                            <div class="readings-ledger-cards">
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-database" aria-hidden="true"></i> NIH dbGaP Study · phs001287.v22.p7</span>
+                                        <span class="reading-project-pill">TL-Prot-ISM Cohort Data</span>
+                                    </div>
+                                    <h2>Clinical Proteomic Tumor Analysis Consortium (CPTAC) dbGaP Study</h2>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Focus:</strong> Paired whole-genome/transcriptome sequencing &amp; mass-spectrometry proteomics</div>
+                                        <div><strong>Used For:</strong> Ground-truth tissue proteogenomics in <code>TL-Prot-ISM</code></div>
+                                    </div>
+                                    <p>
+                                        The National Cancer Institute (NCI) / NIH dbGaP controlled-access proteogenomic cohort study (<code>phs001287.v22.p7</code>) housing genomic, transcriptomic, and proteomic profiles across cancer cohorts.
+                                    </p>
+                                    <div class="compact-tags"><span>Bioinformatics</span><span>NIH dbGaP</span><span>phs001287.v22.p7</span><span>CPTAC Cohort</span></div>
+                                    <a href="https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001287.v22.p7" class="text-link" target="_blank" rel="noopener noreferrer">View study on NCBI dbGaP <i class="fas fa-arrow-right"></i></a>
+                                </article>
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-shield-halved" aria-hidden="true"></i> OpenAI Security Blog · 2026</span>
-                            <span class="reading-project-pill">Linux Kernel &amp; AI Security</span>
+                    <!-- CATEGORY 2: KERNEL & AI SECURITY BLOGS -->
+                    <article class="skills-ledger-row" id="cat-security-blogs">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Category 02 / Systems &amp; AI Security</span>
+                            <h3>Linux Kernel &amp; Autonomous Security Engineering</h3>
+                            <p>Industry security research at the intersection of operating system kernels, vulnerability discovery, and AI agents.</p>
                         </div>
-                        <h2>A Thousand Fewer Paths to Root</h2>
-                        <p>
-                            A fascinating engineering report from OpenAI detailing how an autonomous AI security pipeline audited the Linux kernel at scale—dynamically reproducing and generating candidate patches for 948 local privilege escalation (LPE) vulnerabilities. A great read at the intersection of Linux kernel internals, operating systems security, and autonomous AI systems.
-                        </p>
-                        <div class="compact-tags"><span>Linux Kernel</span><span>Privilege Escalation</span><span>Autonomous Security</span><span>OpenAI Research</span></div>
-                        <a href="https://openai.com/index/a-thousand-fewer-paths-to-root/" class="text-link" target="_blank" rel="noopener noreferrer">Read article on OpenAI <i class="fas fa-arrow-right"></i></a>
+                        <div class="skills-ledger-body">
+                            <div class="readings-ledger-cards">
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-shield-halved" aria-hidden="true"></i> OpenAI Security Blog · 2026</span>
+                                        <span class="reading-project-pill">Linux Kernel &amp; AI Security</span>
+                                    </div>
+                                    <h2>A Thousand Fewer Paths to Root</h2>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Focus:</strong> Autonomous auditing, reproduction &amp; patching of 948 Linux kernel LPE vulnerabilities</div>
+                                        <div><strong>Connected To:</strong> Linux kernel internals, OS security &amp; AI automation</div>
+                                    </div>
+                                    <p>
+                                        Details how OpenAI’s autonomous security pipeline audited the Linux kernel at scale—dynamically reproducing and generating candidate patches for 948 local privilege escalation (LPE) flaws.
+                                    </p>
+                                    <div class="compact-tags"><span>Linux Kernel</span><span>Privilege Escalation</span><span>Autonomous Security</span><span>OpenAI Research</span></div>
+                                    <a href="https://openai.com/index/a-thousand-fewer-paths-to-root/" class="text-link" target="_blank" rel="noopener noreferrer">Read article on OpenAI <i class="fas fa-arrow-right"></i></a>
+                                </article>
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fab fa-linux" aria-hidden="true"></i> Systems &amp; Kernel Guides</span>
-                            <span class="reading-project-pill">OS Dev &amp; Homelab</span>
+                    <!-- CATEGORY 3: SYSTEMS, MAINFRAME & FRAMEWORK DOCS -->
+                    <article class="skills-ledger-row" id="cat-systems-docs">
+                        <div class="skills-ledger-meta">
+                            <span class="skills-ledger-index">Category 03 / Systems &amp; Engineering Docs</span>
+                            <h3>Operating Systems, Mainframe &amp; Software Documentation</h3>
+                            <p>Official technical manuals and hands-on guides used to build and deploy my software, mainframe, and homelab systems.</p>
                         </div>
-                        <h2>Linux From Scratch (LFS), MentOS, ArchWiki &amp; OpenMediaVault Docs</h2>
-                        <p>
-                            Hands-on systems references that guide my operating systems and homelab work: <em>Linux From Scratch</em> and <em>MentOS</em> for kernel/system compilation and process/memory internals, alongside the <em>ArchWiki</em>, <em>Debian Handbook</em>, <em>OpenMediaVault 8</em>, and <em>OpenWrt</em> documentation for administering my Raspberry Pi 5 NAS, Pi-hole v6 DNSSEC stack, and Arch/Fedora machines.
-                        </p>
-                        <div class="compact-tags"><span>Linux From Scratch</span><span>MentOS</span><span>ArchWiki</span><span>OpenMediaVault 8</span><span>OpenWrt</span></div>
-                    </article>
+                        <div class="skills-ledger-body">
+                            <div class="readings-ledger-cards">
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fab fa-linux" aria-hidden="true"></i> Systems &amp; Kernel Guides</span>
+                                        <span class="reading-project-pill">OS Dev &amp; Homelab</span>
+                                    </div>
+                                    <h2>Linux From Scratch (LFS), MentOS, ArchWiki &amp; OpenMediaVault Docs</h2>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Focus:</strong> Source-built Linux toolchains/kernels, educational OS schedulers &amp; NAS networking</div>
+                                        <div><strong>Used For:</strong> OS development exploration &amp; Raspberry Pi 5 / Arch / Fedora homelab</div>
+                                    </div>
+                                    <p>
+                                        Hands-on references for compiling Linux systems from source and administering my self-hosted OpenMediaVault 8 NAS, Pi-hole v6 Quad9 DNSSEC stack, and minimal Arch Linux machines.
+                                    </p>
+                                    <div class="compact-tags"><span>Linux From Scratch</span><span>MentOS</span><span>ArchWiki</span><span>OpenMediaVault 8</span><span>OpenWrt</span></div>
+                                </article>
 
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-server" aria-hidden="true"></i> Enterprise &amp; Framework Docs</span>
-                            <span class="reading-project-pill">Mainframe, HPC &amp; Desktop Apps</span>
+                                <article class="detail-card reading-card">
+                                    <div class="reading-card-top">
+                                        <span class="reading-type-badge"><i class="fas fa-server" aria-hidden="true"></i> Enterprise &amp; Framework Docs</span>
+                                        <span class="reading-project-pill">Mainframe, HPC &amp; Desktop Apps</span>
+                                    </div>
+                                    <h2>IBM Z XPLORE, Qt 6, PyTorch, Apache PyArrow &amp; Playwright Docs</h2>
+                                    <div class="reading-fast-summary">
+                                        <div><strong>Focus:</strong> IBM z/OS &amp; Redbooks, C++/Qt &amp; Rust desktop tooling, Slurm multi-GPU HPC &amp; browser agents</div>
+                                        <div><strong>Used For:</strong> Living Mainframe tool, <em>Bug Simulator</em>, <em>Linux Atlas</em> &amp; Hackathon Agent</div>
+                                    </div>
+                                    <p>
+                                        Primary documentation powering my enterprise mainframe integration, modular C++/Qt and Rust desktop software, columnar Parquet HPC pipelines, and AI market-research automation.
+                                    </p>
+                                    <div class="compact-tags"><span>IBM Z XPLORE</span><span>Qt 6 &amp; Rust Docs</span><span>PyTorch &amp; Slurm</span><span>Apache PyArrow</span><span>Playwright</span></div>
+                                </article>
+                            </div>
                         </div>
-                        <h2>IBM Z XPLORE, Qt 6, PyTorch, Apache PyArrow &amp; Playwright Docs</h2>
-                        <p>
-                            Primary technical documentation used across my software builds: <strong>IBM Z XPLORE &amp; IBM Redbooks</strong> for z/OS, JCL, COBOL, and C mainframe integration; <strong>Qt 6</strong> and <strong>The Rust Book</strong> for <em>Bug Simulator</em> and <em>Linux Atlas</em>; <strong>PyTorch</strong>, <strong>Slurm</strong>, and <strong>PyArrow Parquet</strong> for ARC HPC cluster pipelines; and <strong>Playwright</strong> + <strong>Gemini API</strong> for AI research automation.
-                        </p>
-                        <div class="compact-tags"><span>IBM Z XPLORE</span><span>Qt 6 &amp; Rust Docs</span><span>PyTorch &amp; Slurm</span><span>Apache PyArrow</span><span>Playwright</span></div>
                     </article>
                 </div>
 
