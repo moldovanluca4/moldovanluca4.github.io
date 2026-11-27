@@ -574,15 +574,64 @@ function initPresentationModal() {
     });
 }
 
+function initRevealAnimations() {
+    const animatedElements = qsa(`
+        .skill-category,
+        .timeline-item,
+        .project-card,
+        .achievement-card,
+        .stat-card
+    `);
+
+    if (!("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    animatedElements.forEach((element) => {
+        element.classList.add("reveal-on-scroll");
+        observer.observe(element);
+    });
+}
+
+function initInteractiveCards() {
+    qsa(".timeline-card-interactive, .skills-context-card").forEach((card) => {
+        const primaryLink = qs(".timeline-card-link, .skills-context-link", card);
+        if (!primaryLink) return;
+
+        card.addEventListener("click", (event) => {
+            if (event.defaultPrevented) return;
+            if (event.target.closest("a, button, input, textarea, select")) return;
+
+            if (event.metaKey || event.ctrlKey) {
+                window.open(primaryLink.href, "_blank", "noopener");
+            } else {
+                primaryLink.click();
+            }
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     initTerminalLanding();
     initMobileNavigation();
     initNavbarScroll();
+    initRevealAnimations();
     initBackToTopButton();
     initContactForm();
     initFooterYear();
     initContentProtection();
     initCvPreviewModal();
     initPhotoLightbox();
+    initInteractiveCards();
     initPresentationModal();
 });
