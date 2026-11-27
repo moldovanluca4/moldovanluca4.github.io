@@ -4,52 +4,70 @@ const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)
 function initTerminalLanding() {
     const output = qs("#terminalOutput");
     const enterCv = qs("#enterCv");
+    const typedCmd = qs("#terminalTypedCommand");
+    const terminalWindow = qs("#terminalWindow") || qs(".terminal-window");
+    const terminalLanding = qs("#terminalLanding") || qs(".terminal-landing");
     if (!output || !enterCv) return;
 
-    const lines = [
-        { command: "whoami", response: "luca-moldovan" },
-        { command: "pwd", response: "/home/luca/portfolio" },
-        { command: "ls --skills", response: "operating systems  software-engineering  research" },
-        { command: "git status", response: "On branch: building-things-that-matter" },
-        { command: "echo $READY", response: "portfolio online" }
-    ];
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    enterCv.hidden = false;
+    enterCv.classList.add("is-ready");
 
-    const addLine = (line) => {
-        const commandLine = document.createElement("p");
-        commandLine.className = "terminal-command";
-        commandLine.innerHTML = '<span>luca@portfolio</span>:<span>~</span>$ ';
-        const command = document.createElement("span");
-        command.textContent = line.command;
-        commandLine.append(command);
-        output.append(commandLine);
+    let isExiting = false;
 
-        const response = document.createElement("p");
-        response.className = "terminal-response";
-        response.textContent = line.response;
-        output.append(response);
-    };
+    enterCv.addEventListener("click", (event) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        if (isExiting) return;
+        isExiting = true;
 
-    if (reducedMotion) {
-        lines.forEach(addLine);
-        enterCv.hidden = false;
-        return;
-    }
-
-    let lineIndex = 0;
-    const renderNextLine = () => {
-        if (lineIndex >= lines.length) {
-            enterCv.hidden = false;
-            enterCv.classList.add("is-ready");
+        const targetHref = enterCv.getAttribute("href") || "mod/n0/v01.html";
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reducedMotion) {
+            window.location.href = targetHref;
             return;
         }
 
-        addLine(lines[lineIndex]);
-        lineIndex += 1;
-        window.setTimeout(renderNextLine, 520);
-    };
+        enterCv.classList.add("is-exiting");
+        enterCv.setAttribute("aria-disabled", "true");
 
-    window.setTimeout(renderNextLine, 450);
+        const commandText = "exit";
+        let charIdx = 0;
+
+        const typeNextChar = () => {
+            if (charIdx < commandText.length) {
+                if (typedCmd) {
+                    typedCmd.textContent += commandText[charIdx];
+                }
+                charIdx += 1;
+                window.setTimeout(typeNextChar, 70);
+                return;
+            }
+
+            // Show logout confirmation line and trigger terminal window closing transition
+            window.setTimeout(() => {
+                const logoutLine = document.createElement("p");
+                logoutLine.className = "terminal-response terminal-logout-msg";
+                logoutLine.textContent = "logout — closing terminal session...";
+                const promptEl = qs("#terminalPrompt");
+                if (promptEl) {
+                    promptEl.insertAdjacentElement("afterend", logoutLine);
+                } else {
+                    output.append(logoutLine);
+                }
+
+                window.setTimeout(() => {
+                    terminalWindow?.classList.add("is-closing");
+                    terminalLanding?.classList.add("is-closing");
+
+                    window.setTimeout(() => {
+                        window.location.href = targetHref;
+                    }, 440);
+                }, 180);
+            }, 140);
+        };
+
+        typeNextChar();
+    });
 }
 
 function initMobileNavigation() {

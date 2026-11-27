@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="landing-page protected-page">
-    <main class="terminal-landing">
-        <section class="terminal-window" aria-label="Linux terminal session">
+    <main class="terminal-landing" id="terminalLanding">
+        <section class="terminal-window" id="terminalWindow" aria-label="Linux terminal session">
             <div class="terminal-titlebar" aria-hidden="true">
                 <div class="terminal-controls"><span></span><span></span><span></span></div>
                 <span>luca@portfolio:~</span>
@@ -22,9 +22,20 @@
             <div class="terminal-screen">
                 <p class="terminal-banner">Luca Moldovan / Portfolio</p>
                 <p class="terminal-subtitle">Ubuntu 24.04 LTS / systems session initialized</p>
-                <div id="terminalOutput" class="terminal-output" aria-live="polite"></div>
-                <p class="terminal-prompt"><span>luca@portfolio</span>:<span>~</span>$ <span class="terminal-cursor">_</span></p>
-                <a href="mod/n0/v01.html" class="btn terminal-enter" id="enterCv" hidden><i class="fas fa-arrow-right"></i> Enter CV</a>
+                <div id="terminalOutput" class="terminal-output" aria-live="polite">
+                    <p class="terminal-command"><span>luca@portfolio</span>:<span>~</span>$ <span>whoami</span></p>
+                    <p class="terminal-response">luca-moldovan</p>
+                    <p class="terminal-command"><span>luca@portfolio</span>:<span>~</span>$ <span>pwd</span></p>
+                    <p class="terminal-response">/home/luca/portfolio</p>
+                    <p class="terminal-command"><span>luca@portfolio</span>:<span>~</span>$ <span>ls --skills</span></p>
+                    <p class="terminal-response">operating systems  software-engineering  research</p>
+                    <p class="terminal-command"><span>luca@portfolio</span>:<span>~</span>$ <span>git status</span></p>
+                    <p class="terminal-response">On branch: building-things-that-matter</p>
+                    <p class="terminal-command"><span>luca@portfolio</span>:<span>~</span>$ <span>echo $READY</span></p>
+                    <p class="terminal-response">portfolio online</p>
+                </div>
+                <p class="terminal-prompt" id="terminalPrompt"><span>luca@portfolio</span>:<span>~</span>$ <span id="terminalTypedCommand" class="terminal-typed-cmd"></span><span class="terminal-cursor" id="terminalCursor">_</span></p>
+                <a href="mod/n0/v01.html" class="btn terminal-enter" id="enterCv"><i class="fas fa-arrow-right"></i> Enter CV</a>
             </div>
         </section>
     </main>
