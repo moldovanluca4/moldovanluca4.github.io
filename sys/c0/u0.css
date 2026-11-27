@@ -188,8 +188,7 @@ button {
 
 .terminal-screen {
     font-family: var(--font-mono);
-    min-height: 31rem;
-    padding: clamp(1.25rem, 4vw, 2.75rem);
+    padding: clamp(1.25rem, 3.5vw, 2.25rem);
 }
 
 .terminal-banner {
@@ -202,11 +201,11 @@ button {
 .terminal-subtitle {
     color: #91a6b5;
     font-size: 0.9rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .terminal-output {
-    min-height: 12.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .terminal-command,
