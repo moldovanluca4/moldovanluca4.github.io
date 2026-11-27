@@ -34,26 +34,14 @@
         <header class="detail-header">
             <div class="container">
                 <p class="eyebrow">Projects / Readings &amp; Academic Foundation</p>
-                <h1>Books, research papers, technical resources, and bachelor’s coursework behind my projects.</h1>
+                <h1>The books, research papers, technical resources, and bachelor’s courses behind my work.</h1>
                 <p>
-                    Every project I have built—from deep genomic sequence modeling and enterprise mainframe integration to C++/Qt desktop software, Rust system-inspection tools, and self-hosted Linux infrastructure—grew out of focused reading, primary literature, documentation deep-dives, and university coursework.
+                    Every project I have built—from deep genomic sequence modeling and enterprise mainframe integration to C++/Qt desktop software, Rust system-inspection tools, and self-hosted Linux infrastructure—grew out of focused reading, primary research literature, documentation deep-dives, and university coursework.
                 </p>
                 <p>
-                    This page brings together the books, scientific papers, engineering resources, and completed bachelor’s courses at <strong>Constructor University</strong> (B.Sc. in Computer Science with a Minor in Mathematics) that helped me develop my understanding and turn theoretical concepts into working systems.
+                    Select any category below to explore the individual books, scientific papers, engineering resources, and completed bachelor’s courses at <strong>Constructor University</strong>.
                 </p>
                 <div class="detail-actions">
-                    <a href="#books" class="btn btn-primary">
-                        <i class="fas fa-book"></i> Books
-                    </a>
-                    <a href="#papers" class="btn btn-secondary">
-                        <i class="fas fa-file-lines"></i> Research Papers
-                    </a>
-                    <a href="#resources" class="btn btn-secondary">
-                        <i class="fas fa-compass"></i> Technical Resources
-                    </a>
-                    <a href="#courses" class="btn btn-secondary">
-                        <i class="fas fa-graduation-cap"></i> Bachelor’s Courses
-                    </a>
                     <a href="../n1/p01.html" class="btn btn-outline">
                         <i class="fas fa-arrow-left"></i> Back to Projects
                     </a>
@@ -61,484 +49,129 @@
             </div>
         </header>
 
-        <!-- ===== 1. BOOKS & TECHNICAL LITERATURE ===== -->
-        <section class="detail-section" id="books">
+        <section class="detail-section">
             <div class="container">
-                <div class="achievement-section-heading">
-                    <p class="eyebrow">01 / Foundational Literature</p>
-                    <h2>Books That Shaped My Engineering &amp; Systems Mindset</h2>
-                </div>
-
-                <div class="detail-grid readings-grid">
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Systems &amp; Architecture</span>
-                            <span class="reading-project-pill">Mainframe Integration &amp; OS</span>
+                <div class="readings-hub-stack">
+                    <!-- 1. BOOKS -->
+                    <article class="reading-hub-card skills-context-card">
+                        <div class="reading-hub-icon" aria-hidden="true">
+                            <i class="fas fa-book-open"></i>
                         </div>
-                        <h2>Computer Systems: A Programmer’s Perspective (CS:APP)</h2>
-                        <p class="reading-authors">Randal E. Bryant &amp; David R. O’Hallaron</p>
-                        <p>
-                            A foundational text connecting hardware architecture, representation, machine-level execution, memory hierarchies, linking, virtual memory, and system-level I/O. It shaped how I reason about what happens underneath high-level code when a C executable interacts with the operating system and higher-level Python layers.
-                        </p>
-                        <div class="compact-tags"><span>Computer Architecture</span><span>C Programming</span><span>Memory Hierarchy</span><span>Systems I/O</span><span>Linking</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Operating Systems</span>
-                            <span class="reading-project-pill">MentOS &amp; Homelab</span>
-                        </div>
-                        <h2>Operating Systems: Three Easy Pieces (OSTEP)</h2>
-                        <p class="reading-authors">Remzi H. Arpaci-Dusseau &amp; Andrea C. Arpaci-Dusseau</p>
-                        <p>
-                            Structured around virtualization, concurrency, and persistence, OSTEP clarified CPU scheduling, address spaces, page tables, locks, and file systems. These concepts directly guide my kernel development exploration with MentOS and my practical resource and zram memory tuning across homelab Linux machines.
-                        </p>
-                        <div class="compact-tags"><span>Operating Systems</span><span>Virtualization</span><span>Concurrency</span><span>File Systems</span><span>Kernel Internals</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Modern C++</span>
-                            <span class="reading-project-pill">Bug Simulator &amp; Linux Atlas</span>
-                        </div>
-                        <h2>A Tour of C++ &amp; The C++ Programming Language</h2>
-                        <p class="reading-authors">Bjarne Stroustrup</p>
-                        <p>
-                            Deepened my grasp of modern C++ abstractions, RAII, resource safety, templates, and modular class design. These principles helped me write clean, maintainable C++ code for the Qt-based <em>Bug Simulator</em> project and architect the C++/Qt graphical frontend for <em>Linux Atlas</em>.
-                        </p>
-                        <div class="compact-tags"><span>C++</span><span>RAII</span><span>Object-Oriented Design</span><span>Modularity</span><span>Qt GUI</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Rust &amp; Concurrency</span>
-                            <span class="reading-project-pill">Linux Atlas</span>
-                        </div>
-                        <h2>The Rust Programming Language</h2>
-                        <p class="reading-authors">Steve Klabnik &amp; Carol Nichols</p>
-                        <p>
-                            My primary reference for ownership, borrowing, lifetimes, fearless concurrency, and error handling in Rust. It provided the foundation for designing the concurrent, read-only Rust system-inspection engine that powers local and SSH-based hardware/service discovery in <em>Linux Atlas</em>.
-                        </p>
-                        <div class="compact-tags"><span>Rust</span><span>Memory Safety</span><span>Ownership</span><span>Concurrency</span><span>Systems Tooling</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Relational Databases</span>
-                            <span class="reading-project-pill">Campus Information Center</span>
-                        </div>
-                        <h2>Database System Concepts</h2>
-                        <p class="reading-authors">Abraham Silberschatz, Henry F. Korth &amp; S. Sudarshan</p>
-                        <p>
-                            Covered relational algebra, Entity-Relationship modeling, ISA hierarchies, functional dependencies, normalization, and query execution. These concepts were applied directly when designing normalized SQL schemas for the <em>Campus Information Center</em> application and consolidating SQLite master tables.
-                        </p>
-                        <div class="compact-tags"><span>Relational Algebra</span><span>SQL Normalization</span><span>ISA Hierarchies</span><span>Schema Design</span><span>SQLite</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-book" aria-hidden="true"></i> Book · Software Engineering &amp; AI</span>
-                            <span class="reading-project-pill">Bug Simulator &amp; TL-Prot-ISM</span>
-                        </div>
-                        <h2>Clean Code &amp; Deep Learning Foundations</h2>
-                        <p class="reading-authors">Robert C. Martin · Ian Goodfellow, Yoshua Bengio &amp; Aaron Courville</p>
-                        <p>
-                            <em>Clean Code</em> reinforced disciplined naming, modular boundaries, and readable handovers across rotating two-week Agile sprints in our Software Engineering course project, while <em>Deep Learning</em> strengthened the mathematical intuition behind gradient optimization, representations, and deep sequence architectures.
-                        </p>
-                        <div class="compact-tags"><span>Software Craftsmanship</span><span>Agile Handovers</span><span>Deep Learning</span><span>Gradient Optimization</span><span>Representation Learning</span></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== 2. RESEARCH PAPERS & SCIENTIFIC LITERATURE ===== -->
-        <section class="detail-section cv-muted" id="papers">
-            <div class="container">
-                <div class="achievement-section-heading">
-                    <p class="eyebrow">02 / Scientific Literature</p>
-                    <h2>Research Papers Behind My Genomics &amp; Deep Learning Work</h2>
-                </div>
-
-                <div class="detail-grid readings-grid">
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature Methods · 2021</span>
-                            <span class="reading-project-pill">TL-Prot-ISM Research</span>
-                        </div>
-                        <h2>Effective gene expression prediction from sequence by integrating long-range interactions (Enformer)</h2>
-                        <p class="reading-authors">Žiga Avsec, Vikram Agarwal, Daniel Visentin, Joseph R. Ledsam, Agnieszka Grabska-Barwinska et al.</p>
-                        <p>
-                            Introduced the Enformer transformer architecture capable of integrating regulatory information across 196,608 bp of DNA. Studying this paper and its 896-bin spatial pooling geometry was essential to wrapping the 250M-parameter trunk in <code>EnformerProt</code>, implementing gene-body exon masking, and benchmarking lung protein abundance predictions against 5,313 base chromatin and CAGE tracks.
-                        </p>
-                        <div class="compact-tags"><span>Enformer</span><span>Genomic Transformers</span><span>196 kb Context</span><span>Self-Attention</span><span>Epigenomics</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Cell · 2019</span>
-                            <span class="reading-project-pill">TL-Prot-ISM Annotation Suite</span>
-                        </div>
-                        <h2>Predicting splicing from primary sequence with deep learning (SpliceAI)</h2>
-                        <p class="reading-authors">Kishore Jaganathan, Sofia Kyriazopoulou Panagiotopoulou, Jeremy F. McRae, Siavash Fazel Darbandi et al.</p>
-                        <p>
-                            Demonstrated how deep residual networks predict cryptic splice-site creation and disruption directly from pre-mRNA sequence. This paper informed the post-transcriptional splicing module in my 12,000-line multi-omic annotation pipeline, using Acceptor/Donor Gain and Loss delta scores to explain non-coding variants that alter steady-state protein abundance via transcript stability.
-                        </p>
-                        <div class="compact-tags"><span>Illumina SpliceAI</span><span>Cryptic Splicing</span><span>Post-Transcriptional Regulation</span><span>Variant Interpretation</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> NeurIPS &amp; Attribution Literature</span>
-                            <span class="reading-project-pill">ISM vs. Taylor ISM</span>
-                        </div>
-                        <h2>Self-Attention Curvature &amp; First-Order Gradient Attribution in Deep Genomic Models</h2>
-                        <p class="reading-authors">Ashish Vaswani et al. (2017) · Genomic Saliency &amp; Taylor In-Silico Mutagenesis Literature</p>
-                        <p>
-                            Combining transformer self-attention theory with first-order gradient attribution methods motivated our empirical comparison of Exact In-Silico Mutagenesis (&Delta;z<sub>ISM</sub>) against Taylor ISM (&Delta;z<sub>TISM</sub>). Understanding non-linear GELU cliffs and spatial attention re-weighting across 896 bins explained why first-order gradients missed top regulatory hits and led directly to my calibrated Hybrid Selection &amp; Audit Pipeline.
-                        </p>
-                        <div class="compact-tags"><span>In-Silico Mutagenesis</span><span>Taylor Approximation</span><span>Attention Curvature</span><span>Hybrid Auditing</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <div class="reading-card-top">
-                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature · Genome Biology · Bioinformatics</span>
-                            <span class="reading-project-pill">Multi-Omic Integration</span>
-                        </div>
-                        <h2>ENCODE cCREs, Ensembl VEP &amp; MEME/FIMO Motif Scanning</h2>
-                        <p class="reading-authors">The ENCODE Project Consortium (2020) · William McLaren et al. (2016) · Charles E. Grant, Timothy L. Bailey &amp; William S. Noble (2011)</p>
-                        <p>
-                            Provided the biological annotation framework for mapping high-effect variants to Candidate cis-Regulatory Elements (promoters <code>PLS</code>, proximal/distal enhancers <code>pELS</code>/<code>dELS</code>), canonical transcript consequences via Ensembl VEP, and transcription factor binding site gain/loss across JASPAR and HOCOMOCO position weight matrices using FIMO.
-                        </p>
-                        <div class="compact-tags"><span>ENCODE cCREs</span><span>Ensembl VEP</span><span>MEME / FIMO</span><span>TF Motifs</span><span>Cis-Regulatory Grammar</span></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== 3. TECHNICAL RESOURCES & DOCUMENTATION ===== -->
-        <section class="detail-section" id="resources">
-            <div class="container">
-                <div class="achievement-section-heading">
-                    <p class="eyebrow">03 / Engineering Resources &amp; Guides</p>
-                    <h2>Documentation, Platforms &amp; Practical References</h2>
-                </div>
-
-                <div class="readable-grid">
-                    <article class="detail-card reading-card">
-                        <i class="fab fa-linux"></i>
-                        <h2>Linux From Scratch (LFS), MentOS &amp; OSDev Wiki</h2>
-                        <p>
-                            Hands-on kernel and system-building resources that guide my operating systems work. <em>Linux From Scratch</em> walks through compiling a complete Linux system from source (toolchains, kernel configuration, init scripts, and userland), while <em>MentOS</em> and the <em>OSDev Wiki</em> provide clean, educational implementations of bootloaders, schedulers, virtual memory, and VFS layers.
-                        </p>
-                        <div class="compact-tags"><span>Linux From Scratch</span><span>MentOS</span><span>OSDev</span><span>Kernel Compilation</span><span>System Calls</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <i class="fas fa-server"></i>
-                        <h2>IBM Z XPLORE &amp; IBM Redbooks (z/OS, JCL, COBOL, Db2)</h2>
-                        <p>
-                            Enterprise mainframe training platform and official IBM architectural guides that supported earning the <strong>IBM Z XPLORE Advanced</strong> credential, delivering my keynote at the 2025 AMC Young Talents Mainframe Convention in Böblingen, and building C/Python/Flask/SQLite integration tools alongside COBOL and JCL workloads at <em>Living Mainframe GmbH</em>.
-                        </p>
-                        <div class="compact-tags"><span>IBM Z XPLORE</span><span>IBM Redbooks</span><span>z/OS</span><span>JCL &amp; COBOL</span><span>IBM Db2</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <i class="fas fa-network-wired"></i>
-                        <h2>ArchWiki, Debian Handbook, OpenMediaVault &amp; OpenWrt Docs</h2>
-                        <p>
-                            Essential system-administration references used daily to build and secure my homelab: configuring Debian 13 (Trixie) and OpenMediaVault 8 on a Raspberry Pi 5 NAS, isolating Docker volumes on external storage, deploying Pi-hole v6 with Quad9 DNSSEC validation, tuning minimal Arch and Void Linux machines under tight RAM budgets, and designing OpenWrt firewall and VLAN rules.
-                        </p>
-                        <div class="compact-tags"><span>ArchWiki</span><span>Debian 13</span><span>OpenMediaVault 8</span><span>Pi-hole v6 &amp; DNSSEC</span><span>OpenWrt &amp; VLANs</span></div>
-                    </article>
-
-                    <article class="detail-card reading-card">
-                        <i class="fas fa-cubes"></i>
-                        <h2>Qt 6, PyTorch, Apache PyArrow, Playwright &amp; Gemini API Docs</h2>
-                        <p>
-                            Primary framework documentation powering my software and research builds: <strong>Qt 6</strong> for modular C++ desktop interfaces (<em>Bug Simulator</em>, <em>Linux Atlas</em>); <strong>PyTorch</strong>, <strong>Slurm</strong>, and <strong>Apache PyArrow Parquet</strong> for multi-GPU HPC genomics pipelines on the University of Calgary ARC cluster; and <strong>Playwright</strong>, <strong>Pandas</strong>, <strong>Gemini API</strong>, and <strong>n8n</strong> for our hackathon-winning <em>Market Research Automation Agent</em>.
-                        </p>
-                        <div class="compact-tags"><span>Qt 6 Docs</span><span>PyTorch &amp; CUDA</span><span>Apache PyArrow</span><span>Slurm HPC</span><span>Playwright &amp; Gemini API</span></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== 4. COMPLETED BACHELOR'S COURSEWORK ===== -->
-        <section class="detail-section cv-muted" id="courses">
-            <div class="container">
-                <div class="achievement-section-heading">
-                    <p class="eyebrow">04 / Academic Curriculum · Constructor University (2024–2027)</p>
-                    <h2>Completed Bachelor’s Courses (B.Sc. Computer Science &amp; Mathematics Minor)</h2>
-                </div>
-
-                <div class="skills-ledger coursework-ledger">
-                    <article class="skills-ledger-row">
-                        <div class="skills-ledger-meta">
-                            <span class="skills-ledger-index">Track 01 / Programming &amp; Paradigms</span>
-                            <h3>Programming, Paradigms &amp; Scientific Computing</h3>
-                            <p>Low-level systems languages, JVM/Kotlin development, functional abstractions, and scientific modeling in Python.</p>
-                        </div>
-                        <div class="skills-ledger-body">
-                            <div class="course-cards-grid">
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Core CS</span>
-                                        <span class="course-project-link">Mainframe C Tooling &amp; Bug Simulator</span>
-                                    </div>
-                                    <h4>Programming in C and C++</h4>
-                                    <p>Low-level procedural programming in C (pointers, manual memory allocation, bit manipulation, file I/O) and object-oriented/generic programming in C++ (classes, RAII, inheritance, templates, STL, and error handling).</p>
+                        <div class="reading-hub-body">
+                            <div class="reading-hub-top">
+                                <span class="skills-context-meta">01 / Good Books</span>
+                                <span class="timeline-card-cue" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                            <h2>Books I Actually Have Patience to Read</h2>
+                            <p>
+                                Sometimes I feel the need to hold a physical book when I am learning something new. Even when a book might be considered old or outdated—or when there is already a GitHub repository, documentation site, or interactive website teaching the exact same subject—I still love owning the books, making inscriptions and notes in the margins, and working through the ideas myself.
+                            </p>
+                            <p>
+                                Maybe one day I will have my own bookshelf filled with all of the computer science and mathematics books I have worked through, looking back at everything I have studied along the way. Do not give up on books just because there is a repository or a website out there.
+                            </p>
+                            <div class="reading-hub-footer">
+                                <div class="compact-tags">
+                                    <span>Deep Learning</span>
+                                    <span>Understanding Deep Learning</span>
+                                    <span>MIT Press</span>
+                                    <span>Physical Bookshelf</span>
                                 </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">JVM / Kotlin</span>
-                                        <span class="course-project-link">Application Development</span>
-                                    </div>
-                                    <h4>Development in JVM Languages (Kotlin)</h4>
-                                    <p>Modern JVM software development centered on Kotlin, covering null safety, coroutines, object-oriented and functional constructs, type systems, interoperability, and modular application design.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Paradigms</span>
-                                        <span class="course-project-link">Declarative &amp; Type-Safe Design</span>
-                                    </div>
-                                    <h4>Functional Programming</h4>
-                                    <p>Pure functions, immutability, higher-order functions, algebraic data types, pattern matching, recursion, and declarative problem decomposition—principles that also inform my idiomatic Rust and Python pipelines.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Scientific Python</span>
-                                        <span class="course-project-link">TL-Prot-ISM &amp; Data Pipelines</span>
-                                    </div>
-                                    <h4>Scientific Computing with Python</h4>
-                                    <p>Numerical computation, vectorized array manipulation with NumPy/Pandas, scientific data processing, data visualization, and reproducible analysis workflows in Python.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Modeling</span>
-                                        <span class="course-project-link">Simulation &amp; Quantitative Analysis</span>
-                                    </div>
-                                    <h4>Computational Modeling</h4>
-                                    <p>Formulating mathematical and algorithmic models of complex systems, numerical approximation, simulation design, parameter sensitivity, and quantitative evaluation.</p>
-                                </div>
+                                <a href="../n1/p03.html" class="text-link skills-context-link">Explore books <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="skills-ledger-row">
-                        <div class="skills-ledger-meta">
-                            <span class="skills-ledger-index">Track 02 / Algorithms &amp; Theory</span>
-                            <h3>Algorithms, Complexity &amp; Formal Foundations</h3>
-                            <p>Algorithmic efficiency, data structures, formal languages, computability theory, and mathematical logic.</p>
+                    <!-- 2. RESEARCH PAPERS -->
+                    <article class="reading-hub-card skills-context-card">
+                        <div class="reading-hub-icon" aria-hidden="true">
+                            <i class="fas fa-file-lines"></i>
                         </div>
-                        <div class="skills-ledger-body">
-                            <div class="course-cards-grid">
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Core CS</span>
-                                        <span class="course-project-link">Hybrid Selection &amp; Audit Pipeline</span>
-                                    </div>
-                                    <h4>Algorithms and Data Structures</h4>
-                                    <p>Asymptotic complexity, trees, balanced search structures, hash tables, graph algorithms, sorting, and dynamic programming—applied directly when designing stratified multi-view ranking and deterministic hash auditing.</p>
+                        <div class="reading-hub-body">
+                            <div class="reading-hub-top">
+                                <span class="skills-context-meta">02 / Scientific Literature</span>
+                                <span class="timeline-card-cue" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                            <h2>Research Papers I’ve Read</h2>
+                            <p>
+                                Peer-reviewed papers and preprints that shaped how I approach genomic representation learning, tissue-specific transfer learning, in-silico mutagenesis (Exact ISM and Taylor series approximations), steady-state protein abundance regulation, and AI agent security.
+                            </p>
+                            <p>
+                                Reading primary literature closely—rather than treating models as black boxes—helped me connect mathematical assumptions in deep attention architectures with real biological mechanisms and empirical benchmarks on high-performance computing clusters.
+                            </p>
+                            <div class="reading-hub-footer">
+                                <div class="compact-tags">
+                                    <span>PLOS Genetics</span>
+                                    <span>Nature Methods (Enformer)</span>
+                                    <span>Nature Reviews Genetics</span>
+                                    <span>Science (AlphaMissense)</span>
+                                    <span>Cell (CPTAC)</span>
+                                    <span>Taylor ISM</span>
+                                    <span>AI Agent Security</span>
                                 </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Theoretical CS</span>
-                                        <span class="course-project-link">Formal Languages &amp; Complexity</span>
-                                    </div>
-                                    <h4>Automata, Computability, and Complexity</h4>
-                                    <p>Finite automata, regular and context-free languages, pushdown automata, Turing machines, decidability, halting problems, and computational complexity classes (P, NP, NP-completeness).</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Foundations</span>
-                                        <span class="course-project-link">Formal Logic &amp; Proofs</span>
-                                    </div>
-                                    <h4>Mathematical Foundations of Computer Science</h4>
-                                    <p>Propositional and predicate logic, formal proof strategies, mathematical induction, set theory, relations, functions, and rigorous analytical reasoning for computer science.</p>
-                                </div>
+                                <a href="../n1/p04.html" class="text-link skills-context-link">Explore research papers <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="skills-ledger-row">
-                        <div class="skills-ledger-meta">
-                            <span class="skills-ledger-index">Track 03 / Systems, Networks &amp; Security</span>
-                            <h3>Operating Systems, Networks &amp; Dependable Infrastructure</h3>
-                            <p>Kernel internals, process management, network protocols, and security engineering across distributed hosts.</p>
+                    <!-- 3. TECHNICAL RESOURCES, DATASETS & BLOGS -->
+                    <article class="reading-hub-card skills-context-card">
+                        <div class="reading-hub-icon" aria-hidden="true">
+                            <i class="fas fa-compass"></i>
                         </div>
-                        <div class="skills-ledger-body">
-                            <div class="course-cards-grid">
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Systems</span>
-                                        <span class="course-project-link">MentOS, LFS &amp; Linux Atlas</span>
-                                    </div>
-                                    <h4>Operating Systems</h4>
-                                    <p>Kernel architecture, processes, threads, CPU scheduling, synchronization primitives, deadlocks, virtual memory paging, file systems, and device management in UNIX/Linux environments.</p>
+                        <div class="reading-hub-body">
+                            <div class="reading-hub-top">
+                                <span class="skills-context-meta">03 / Datasets, Blogs &amp; Technical Guides</span>
+                                <span class="timeline-card-cue" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                            <h2>Resources, Datasets &amp; Engineering Blogs</h2>
+                            <p>
+                                Practical engineering references, biomedical study cohorts, kernel build documentation, and security write-ups that helped me turn ideas into working software and self-hosted systems.
+                            </p>
+                            <p>
+                                Includes the NIH dbGaP CPTAC proteogenomic cohort study (<code>phs001287.v22.p7</code>), OpenAI’s Linux kernel security research blog (<em>A Thousand Fewer Paths to Root</em>), and hands-on documentation for Linux From Scratch, MentOS, ArchWiki, OpenMediaVault, IBM Z XPLORE, Qt 6, and PyTorch.
+                            </p>
+                            <div class="reading-hub-footer">
+                                <div class="compact-tags">
+                                    <span>NIH dbGaP (CPTAC)</span>
+                                    <span>OpenAI Kernel Security Blog</span>
+                                    <span>Linux From Scratch &amp; MentOS</span>
+                                    <span>ArchWiki &amp; OMV 8</span>
+                                    <span>IBM Z XPLORE</span>
                                 </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Networking</span>
-                                        <span class="course-project-link">Home Lab, DNSSEC &amp; SSH Engine</span>
-                                    </div>
-                                    <h4>Computer Networks</h4>
-                                    <p>Layered network architecture (OSI/TCP-IP), routing algorithms, DNS resolution paths, transport protocols, congestion control, and client-server communication across networked Linux machines.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Security &amp; Reliability</span>
-                                        <span class="course-project-link">Home Lab Hardening &amp; Auditing</span>
-                                    </div>
-                                    <h4>Secure and Dependable Systems</h4>
-                                    <p>System dependability, fault tolerance, threat modeling, access controls, cryptographic fundamentals, network hardening, and designing resilient software and self-hosted infrastructure.</p>
-                                </div>
+                                <a href="../n1/p05.html" class="text-link skills-context-link">Explore resources &amp; blogs <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="skills-ledger-row">
-                        <div class="skills-ledger-meta">
-                            <span class="skills-ledger-index">Track 04 / Software, Data &amp; Interfaces</span>
-                            <h3>Software Engineering, Databases &amp; HCI</h3>
-                            <p>Collaborative Agile software delivery, normalized relational database systems, and user-centered interface design.</p>
+                    <!-- 4. BACHELOR'S COURSES -->
+                    <article class="reading-hub-card skills-context-card">
+                        <div class="reading-hub-icon" aria-hidden="true">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="skills-ledger-body">
-                            <div class="course-cards-grid">
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Fall 2025</span>
-                                        <span class="course-project-link">Project: Campus Information Center</span>
-                                    </div>
-                                    <h4>Databases</h4>
-                                    <p>Relational data modeling, Entity-Relationship and ISA hierarchies, SQL schema normalization (3NF/BCNF), transactions, indexing, and building full-stack database-driven Python/Flask web applications.</p>
+                        <div class="reading-hub-body">
+                            <div class="reading-hub-top">
+                                <span class="skills-context-meta">04 / Constructor University (2024–2027)</span>
+                                <span class="timeline-card-cue" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                            </div>
+                            <h2>Courses Completed During My Bachelor’s</h2>
+                            <p>
+                                The academic foundation behind my engineering and research work: 22 completed courses across my <strong>B.Sc. in Computer Science</strong> and <strong>Minor in Mathematics</strong> at Constructor University.
+                            </p>
+                            <p>
+                                Covers systems programming in C and C++, JVM development in Kotlin, functional programming, scientific computing with Python, algorithms and data structures, operating systems, databases, software engineering, computer networks, secure and dependable systems, rigorous analysis, linear algebra, number theory, discrete mathematics, microeconomics, and German (A2.2).
+                            </p>
+                            <div class="reading-hub-footer">
+                                <div class="compact-tags">
+                                    <span>22 Completed Courses</span>
+                                    <span>B.Sc. Computer Science</span>
+                                    <span>Mathematics Minor</span>
+                                    <span>Systems &amp; Theory</span>
+                                    <span>German A2.2</span>
                                 </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Spring 2026</span>
-                                        <span class="course-project-link">Project: Bug Simulator (C++ / Qt)</span>
-                                    </div>
-                                    <h4>Software Engineering</h4>
-                                    <p>Industry-simulated development with rotating teams, two-week Agile/Scrum sprints, rapid repository onboarding, structured project handovers, unit testing, and sustainable C++/Qt GUI architecture.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">UI / UX</span>
-                                        <span class="course-project-link">Bug Simulator &amp; Linux Atlas GUI</span>
-                                    </div>
-                                    <h4>Human-Computer Interaction</h4>
-                                    <p>User-centered design, usability principles, interaction paradigms, cognitive ergonomics, interface prototyping, and designing clear visual workflows for desktop and web software.</p>
-                                </div>
+                                <a href="../n1/p06.html" class="text-link skills-context-link">Explore completed courses <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </article>
-
-                    <article class="skills-ledger-row">
-                        <div class="skills-ledger-meta">
-                            <span class="skills-ledger-index">Track 05 / Mathematics Minor</span>
-                            <h3>Calculus, Analysis, Linear Algebra, Discrete Math &amp; Number Theory</h3>
-                            <p>Rigorous mathematical foundations, proofs, linear transformations, and algebraic structures.</p>
-                        </div>
-                        <div class="skills-ledger-body">
-                            <div class="course-cards-grid">
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Math Minor · Later TA</span>
-                                        <span class="course-project-link">Taylor ISM (TISM) Gradient Analysis</span>
-                                    </div>
-                                    <h4>Elements of Calculus</h4>
-                                    <p>Limits, continuity, single- and multivariable differentiation, Taylor series expansions, partial derivatives, gradients, and integration. Later served as <strong>Teaching Assistant</strong> for this course in Spring 2026.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Math Minor</span>
-                                        <span class="course-project-link">Rigorous Real Analysis</span>
-                                    </div>
-                                    <h4>Analysis</h4>
-                                    <p>Formal real analysis, metric and topological properties, sequence and series convergence, epsilon-delta continuity, differentiability theorems, and rigorous integration theory.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Math Minor</span>
-                                        <span class="course-project-link">Matrix Systems &amp; Vector Spaces</span>
-                                    </div>
-                                    <h4>Elements of Linear Algebra</h4>
-                                    <p>Systems of linear equations, Gaussian elimination, matrix algebra, determinants, foundational vector spaces, bases, dimension, and linear maps.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Math Minor</span>
-                                        <span class="course-project-link">Transformer Projections &amp; Embeddings</span>
-                                    </div>
-                                    <h4>Linear Algebra</h4>
-                                    <p>Advanced vector spaces, spectral theory, eigenvalues and eigenvectors, orthogonality, inner product spaces, canonical forms, and matrix factorizations powering high-dimensional deep learning models.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Math Minor</span>
-                                        <span class="course-project-link">Combinatorics &amp; Graph Structures</span>
-                                    </div>
-                                    <h4>Discrete Mathematics</h4>
-                                    <p>Combinatorial counting, recurrence relations, generating functions, graph theory, trees, discrete probability, and formal proof techniques.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Math Minor</span>
-                                        <span class="course-project-link">Hashing &amp; Cryptographic Foundations</span>
-                                    </div>
-                                    <h4>Number Theory</h4>
-                                    <p>Divisibility, prime numbers, modular arithmetic, congruences, Chinese Remainder Theorem, Diophantine equations, quadratic reciprocity, and number-theoretic foundations of hashing and cryptography.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="skills-ledger-row">
-                        <div class="skills-ledger-meta">
-                            <span class="skills-ledger-index">Track 06 / Interdisciplinary &amp; Languages</span>
-                            <h3>Economics &amp; German Language Track</h3>
-                            <p>Broader university coursework in microeconomic decision theory and German language proficiency.</p>
-                        </div>
-                        <div class="skills-ledger-body">
-                            <div class="course-cards-grid">
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Economics</span>
-                                        <span class="course-project-link">Market Research &amp; Decision Models</span>
-                                    </div>
-                                    <h4>Microeconomics</h4>
-                                    <p>Consumer and producer behavior, supply and demand equilibrium, market structures, elasticity, game theory fundamentals, and quantitative resource-allocation models.</p>
-                                </div>
-
-                                <div class="course-item-card">
-                                    <div class="course-item-header">
-                                        <span class="course-badge">Language · CEFR A2.2</span>
-                                        <span class="course-project-link">Bremen &amp; Böblingen Communication</span>
-                                    </div>
-                                    <h4>German Language Courses (Reached A2.2 Level)</h4>
-                                    <p>Progressive German language sequence completed through CEFR level A2.2, building practical conversational fluency, grammar, listening, and reading comprehension for academic and professional life in Germany.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="detail-back-action">
-                    <a href="../n1/p01.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Projects</a>
                 </div>
             </div>
         </section>

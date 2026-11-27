@@ -427,38 +427,121 @@ function initContentProtection() {
         }
     });
 
-    document.addEventListener("keydown", (event) => {
+    let isShieldActive = false;
+    let shieldTimeout = null;
+
+    const scrubClipboard = () => {
+        try {
+            if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+                navigator.clipboard.writeText("").catch(() => {});
+            }
+        } catch (_) {}
+    };
+
+    const activateScreenshotShield = (message = "Screenshots are disabled on this page.", duration = 1800) => {
+        isShieldActive = true;
+        document.body.classList.add("is-protected-blurred");
+        scrubClipboard();
+        window.setTimeout(scrubClipboard, 60);
+        window.setTimeout(scrubClipboard, 180);
+        showProtectionWarning(message);
+
+        window.clearTimeout(shieldTimeout);
+        shieldTimeout = window.setTimeout(() => {
+            isShieldActive = false;
+            if (document.hasFocus() && !document.hidden) {
+                document.body.classList.remove("is-protected-blurred");
+            }
+        }, duration);
+    };
+
+    const isScreenshotKey = (event) => {
+        const key = (event.key || "").toLowerCase();
+        const code = (event.code || "").toLowerCase();
+        const keyCode = event.keyCode || event.which || 0;
+
+        if (
+            key === "printscreen" ||
+            key === "print" ||
+            key === "snapshot" ||
+            key === "sysrq" ||
+            key === "execute" ||
+            key === "f13" ||
+            code === "printscreen" ||
+            code === "f13" ||
+            keyCode === 44 ||
+            keyCode === 124
+        ) {
+            return true;
+        }
+
+        if ((event.ctrlKey || event.metaKey) && event.shiftKey && ["s", "3", "4", "5", "6"].includes(key)) {
+            return true;
+        }
+
+        return false;
+    };
+
+    window.addEventListener("keydown", (event) => {
         if (isEditableElement(event.target)) return;
 
-        const key = event.key.toLowerCase();
+        if (isScreenshotKey(event)) {
+            event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            activateScreenshotShield("Screenshots are disabled on this page.");
+            return;
+        }
+
+        // Pre-emptively engage blur shield when Meta/Super + Shift is held (e.g. Win+Shift+S / Cmd+Shift+4)
+        // before the OS intercepts the final key.
+        if (event.metaKey && event.shiftKey) {
+            document.body.classList.add("is-protected-blurred");
+        }
+
+        const key = (event.key || "").toLowerCase();
         const blocked =
             event.key === "F12" ||
-            event.key === "PrintScreen" ||
             ((event.ctrlKey || event.metaKey) && ["s", "p", "u", "c", "x"].includes(key)) ||
             ((event.ctrlKey || event.metaKey) && event.shiftKey && ["i", "j", "c"].includes(key));
 
         if (!blocked) return;
 
         event.preventDefault();
+        event.stopPropagation();
         showProtectionWarning("This shortcut is disabled on this page.");
-    });
+    }, true);
 
-    document.addEventListener("keyup", (event) => {
-        if (event.key === "PrintScreen") {
-            showProtectionWarning("Screenshots cannot be fully blocked in a browser.");
+    window.addEventListener("keyup", (event) => {
+        if (isScreenshotKey(event)) {
+            event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            activateScreenshotShield("Screenshots are disabled on this page.");
+            return;
         }
-    });
+
+        if (!isShieldActive && !event.metaKey && document.hasFocus() && !document.hidden) {
+            document.body.classList.remove("is-protected-blurred");
+        }
+    }, true);
 
     window.addEventListener("blur", () => {
         document.body.classList.add("is-protected-blurred");
     });
 
     window.addEventListener("focus", () => {
-        document.body.classList.remove("is-protected-blurred");
+        if (!isShieldActive) {
+            document.body.classList.remove("is-protected-blurred");
+        }
     });
 
     document.addEventListener("visibilitychange", () => {
-        document.body.classList.toggle("is-protected-blurred", document.hidden);
+        if (document.hidden) {
+            document.body.classList.add("is-protected-blurred");
+        } else if (!isShieldActive && document.hasFocus()) {
+            document.body.classList.remove("is-protected-blurred");
+        }
     });
 }
 

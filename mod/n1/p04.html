@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers I’ve Read - Luca Moldovan</title>
+    <meta name="description" content="Scientific research papers in computational genomics, deep learning, transfer learning, in-silico mutagenesis, and AI agent security read by Luca Moldovan.">
+    <meta name="robots" content="noarchive, noimageindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,SOFT,WONK,wght@0,9..144,0..100,0..1,400..800;1,9..144,0..100,0..1,400..700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../../sys/c0/u0.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="protected-page">
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">LM<span class="terminal-cursor">_</span></a>
+            <button class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-menu">
+                <li><a href="../n0/v01.html" class="nav-link">CV</a></li>
+                <li><a href="../n0/v02.html" class="nav-link">About</a></li>
+                <li><a href="../n2/e00.html" class="nav-link">Experience</a></li>
+                <li><a href="../n1/p01.html" class="nav-link active">Projects</a></li>
+                <li><a href="../n0/v03.html" class="nav-link">Skills</a></li>
+                <li><a href="../n0/v04.html" class="nav-link">Achievements</a></li>
+                <li><a href="../n3/x00.html" class="nav-link">Extracurricular</a></li>
+                <li><a href="../n0/v05.html" class="nav-link nav-btn-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="detail-page protected-content">
+        <header class="detail-header">
+            <div class="container">
+                <p class="eyebrow">Readings / 02 · Scientific Literature</p>
+                <h1>Research Papers I’ve Read</h1>
+                <p>
+                    Peer-reviewed papers and preprints that shaped my research in computational genomics and deep learning at the University of Calgary, as well as my ongoing exploration of AI agent security and systems reliability.
+                </p>
+                <div class="detail-actions">
+                    <a href="../n1/p02.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> Back to Readings Overview
+                    </a>
+                    <a href="../n1/p03.html" class="btn btn-secondary">
+                        <i class="fas fa-book-open"></i> Good Books
+                    </a>
+                    <a href="../n1/p05.html" class="btn btn-secondary">
+                        <i class="fas fa-compass"></i> Resources &amp; Blogs
+                    </a>
+                    <a href="../n1/p06.html" class="btn btn-secondary">
+                        <i class="fas fa-graduation-cap"></i> Bachelor’s Courses
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-grid readings-grid">
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> PLOS Genetics · 2026</span>
+                            <span class="reading-project-pill">Dr. Long’s Lab · Transfer Learning</span>
+                        </div>
+                        <h2>Tissue-specific transfer learning improves functional variant and therapeutic target discoveries in breast and prostate cancer</h2>
+                        <p class="reading-authors">Qing Li, Dinghao Wang, Zilong Zhang, Deshan Perera, Zhishan Chen, Wanqing Wen, M. Ethan MacDonald, Weijia Cai, Jun Yan, Xiao-Ou Shu, Wei Zheng, Xingyi Guo &amp; Quan Long</p>
+                        <p>
+                            Published by Dr. Quan Long’s research group, this paper establishes the tissue-specific transfer learning paradigm for adapting broad genomic sequence models (Enformer) to targeted tissue and cancer regulatory tracks—forming the architectural foundation that <strong>TL-Prot</strong> extends to human lung protein abundance.
+                        </p>
+                        <div class="compact-tags"><span>Transfer Learning</span><span>Enformer Adaptation</span><span>Functional Variants</span><span>Tissue-Specific Regulation</span></div>
+                        <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1012145" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (PLOS Genetics) <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature Methods · 2021</span>
+                            <span class="reading-project-pill">TL-Prot-ISM Backbone</span>
+                        </div>
+                        <h2>Effective gene expression prediction from sequence by integrating long-range interactions (Enformer)</h2>
+                        <p class="reading-authors">Žiga Avsec, Vikram Agarwal, Daniel Visentin, Joseph R. Ledsam, Agnieszka Grabska-Barwinska et al.</p>
+                        <p>
+                            Introduced the 250M-parameter Enformer transformer architecture capable of integrating cis-regulatory interactions across 196,608 bp of DNA. Studying its 896-bin spatial pooling geometry and 5,313 human chromatin, histone, and CAGE tracks was essential to engineering <code>EnformerProt</code> exon masking and comparative epigenomic benchmarks.
+                        </p>
+                        <div class="compact-tags"><span>Enformer</span><span>Genomic Transformers</span><span>196 kb Context</span><span>Self-Attention</span><span>Epigenomics</span></div>
+                        <a href="https://www.nature.com/articles/s41592-021-01252-x" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Nature Methods) <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Nature Reviews Genetics · 2012</span>
+                            <span class="reading-project-pill">mRNA–Protein Decoupling</span>
+                        </div>
+                        <h2>Insights into the regulation of protein abundance from proteomic and transcriptomic analyses</h2>
+                        <p class="reading-authors">Christine Vogel &amp; Edward M. Marcotte</p>
+                        <p>
+                            Explains why steady-state cellular protein abundance frequently decouples from mRNA transcript levels (genome-wide correlation <em>r &approx; 0.40</em>), dissecting the roles of translation kinetics, miRNA/RBP interactions in 5’/3’ UTRs, and proteasomal degradation. This paper framed the central biological motivation for predicting protein abundance directly from DNA in <strong>TL-Prot-ISM</strong>.
+                        </p>
+                        <div class="compact-tags"><span>Proteomics</span><span>Post-Transcriptional Regulation</span><span>Protein Abundance</span><span>Translational Control</span></div>
+                        <a href="https://www.nature.com/articles/nrg3185" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Nature Reviews Genetics) <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Cell · 2020</span>
+                            <span class="reading-project-pill">Lung Proteogenomics (CPTAC)</span>
+                        </div>
+                        <h2>Proteogenomic Characterization of Human Lung Adenocarcinoma</h2>
+                        <p class="reading-authors">Michael A. Gillette, Shankha Satpathy, Shayan Cao et al. (Clinical Proteomic Tumor Analysis Consortium — CPTAC)</p>
+                        <p>
+                            Comprehensive proteogenomic characterization of 110 human lung adenocarcinoma (LUAD) tumors and matched normal adjacent lung tissues. Provided the biological and clinical foundation for our lung tissue proteomics cohorts and benchmark cancer driver genes (<code>KRAS</code>, <code>EGFR</code>, <code>TP53</code>, <code>BRAF</code>, <code>MET</code>, <code>PTEN</code>).
+                        </p>
+                        <div class="compact-tags"><span>Lung Adenocarcinoma</span><span>CPTAC</span><span>Proteogenomics</span><span>Cancer Drivers</span></div>
+                        <a href="https://www.sciencedirect.com/science/article/pii/S0092867420307443?via%3Dihub" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Cell) <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Computational Genomics · Taylor ISM</span>
+                            <span class="reading-project-pill">TISM Algorithm &amp; Concordance Study</span>
+                        </div>
+                        <h2>Approximating In-Silico Saturation Mutagenesis Using First-Order Taylor Series Expansions</h2>
+                        <p class="reading-authors">Alexander Sasse, Maria Chikina &amp; Sara Mostafavi (Taylor ISM / Fast Gradient Approximation Literature)</p>
+                        <p>
+                            Formulates how first-order Taylor expansions around a reference sequence can approximate in-silico mutagenesis (&Delta;z<sub>TISM</sub>) from a single forward-and-backward pass. Studying this algorithm led directly to my implementation of TISM for <code>EnformerProt</code>, my empirical discovery that first-order gradients break down across deep attention curvature, and my calibrated Hybrid Selection &amp; Audit Pipeline.
+                        </p>
+                        <div class="compact-tags"><span>In-Silico Mutagenesis</span><span>Taylor Series (TISM)</span><span>Gradient Attribution</span><span>Hybrid Auditing</span></div>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Science · 2023</span>
+                            <span class="reading-project-pill">Variant Pathogenicity Contrast</span>
+                        </div>
+                        <h2>Accurate proteome-wide missense variant effect prediction with AlphaMissense</h2>
+                        <p class="reading-authors">Jun Cheng, Guido Novati, Joshua Pan, Clare Bycroft, Demis Hassabis, Pushmeet Kohli, Žiga Avsec et al. (Google DeepMind)</p>
+                        <p>
+                            Combines AlphaFold structural context with evolutionary conservation to classify coding missense variant pathogenicity across the human proteome. Reading this work helped sharpen a crucial distinction in my research: coding missense pathogenicity (loss of catalytic/structural function) is distinct from non-coding cis-regulatory alterations in steady-state protein abundance.
+                        </p>
+                        <div class="compact-tags"><span>AlphaMissense</span><span>Missense Variants</span><span>Protein Structure</span><span>Variant Effect Prediction</span></div>
+                        <a href="https://www.science.org/doi/10.1126/science.adg7492" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Science) <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> Briefings in Bioinformatics · 2022</span>
+                            <span class="reading-project-pill">Multi-Omic Data Fusion</span>
+                        </div>
+                        <h2>Multimodal deep learning for biomedical data fusion: a review</h2>
+                        <p class="reading-authors">Sören Richard Stahlschmidt, Benjamin Ulfenborg &amp; Jane Synnergren</p>
+                        <p>
+                            Reviews deep learning architectures and early, intermediate, and late fusion taxonomies for combining heterogeneous multi-omic and biomedical modalities—providing broader architectural context for how sequence representations integrate with epigenomic and proteomic signals.
+                        </p>
+                        <div class="compact-tags"><span>Multimodal Deep Learning</span><span>Biomedical Data Fusion</span><span>Multi-Omics</span><span>Representation Learning</span></div>
+                        <a href="https://academic.oup.com/bib/article/23/2/bbab569/6516346" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (Oxford Academic) <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="detail-card reading-card">
+                        <div class="reading-card-top">
+                            <span class="reading-type-badge"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv · 2026</span>
+                            <span class="reading-project-pill">AI Agents &amp; Systems Security</span>
+                        </div>
+                        <h2>Malicious Agent Skills in the Wild: A Large-Scale Security Empirical Study</h2>
+                        <p class="reading-authors">arXiv:2602.06547v1 (“Do Not Mention This to the User: Detecting and Understanding Malicious Agent Skills in the Wild”)</p>
+                        <p>
+                            An empirical security study analyzing 98,380 third-party LLM agent skills across community registries, uncovering 157 malicious skills and 632 vulnerabilities ranging from credential theft and remote code execution (RCE) to adversarial instruction hijacking and undocumented shadow features. Connects directly to my work building AI automation agents and my interest in systems security.
+                        </p>
+                        <div class="compact-tags"><span>AI Agent Security</span><span>Supply Chain Security</span><span>Prompt Hijacking</span><span>Empirical Security</span></div>
+                        <a href="https://arxiv.org/html/2602.06547v1" class="text-link" target="_blank" rel="noopener noreferrer">Read paper (arXiv) <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+
+                <div class="detail-back-action">
+                    <a href="../n1/p02.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Readings Overview</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><p class="footer-copyright">© <span id="currentYear"></span> Luca Moldovan. All rights reserved.</p></div>
+    </footer>
+    <div class="copy-warning" id="copyWarning" role="status" aria-live="polite">Content protection is active.</div>
+    <script src="../../sys/j0/r0.js"></script>
+</body>
+</html>
