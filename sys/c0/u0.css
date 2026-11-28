@@ -3009,6 +3009,27 @@ body.modal-open {
     gap: 0.85rem;
 }
 
+.race-visuals-grid.race-visuals-single {
+    grid-template-columns: minmax(0, 560px);
+    justify-content: center;
+}
+
+.race-visuals-grid.race-visuals-single .race-visual-item {
+    height: clamp(280px, 32vw, 420px);
+    background: #f5f7f2;
+}
+
+.race-visuals-grid.race-visuals-single .race-visual-item img {
+    background: #f5f7f2;
+}
+
+.race-results-link {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 0.45rem;
+}
+
 .race-visual-item {
     position: relative;
     border-radius: var(--radius-md);
@@ -3056,6 +3077,98 @@ body.modal-open {
 
 .sports-nav-section {
     padding: 1.15rem 0 2.25rem;
+}
+
+.strava-breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.strava-discipline-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.equipment-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--primary-color);
+}
+
+.strava-discipline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.strava-discipline-header strong {
+    font-family: var(--font-mono);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.strava-discipline-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem 0.85rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.strava-discipline-metrics li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.4rem;
+    font-size: 0.84rem;
+}
+
+.strava-discipline-metrics li span {
+    color: var(--text-light);
+}
+
+.strava-discipline-metrics li strong {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.strava-shot-frame {
+    margin: 0.25rem 0 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.strava-shot-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .strava-breakdown-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .sports-nav-section .btn {
